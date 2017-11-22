@@ -14,6 +14,7 @@ public class controller : MonoBehaviour {
     bool ClimbAble = false;
     public GameObject Left;
     public GameObject Right;
+    public Vector3 ClimbTargetPos;
 
 
     // Use this for initialization
@@ -37,7 +38,16 @@ public class controller : MonoBehaviour {
 
     }
 
+    public void Climb(GameObject climbTarget)
+    {
+        //ClimbTargetPos = new Vector3(this.transform.position.x,climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y,0.05f);
 
+        Vector3 temp = transform.position;
+        temp.y = climbTarget.gameObject.transform.position.y + 0.05f;
+        //climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
+        transform.position = (transform.forward * 0.1f) + temp;
+        Debug.Log(transform.position);
+    }
 
 
     // Update is called once per frame
@@ -79,18 +89,10 @@ public class controller : MonoBehaviour {
         // climb
         if (Input.GetKey(KeyCode.E))
         {
-            GameObject[] hand;
-            
-
-            if (Left.GetComponent<HandAction>().LeftDetect)
-            {
-                Debug.Log("Left");
-            } else if (Left.GetComponent<HandAction>().RightDetect)
-            {
-                Debug.Log("Right");
-            } else if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect))
+            if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect))
             {
                 Debug.Log("execute");
+                Climb(Right.GetComponent<HandAction>().ClimbTargetHand);
             }
         }
 
