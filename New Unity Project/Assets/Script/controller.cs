@@ -11,7 +11,6 @@ public class controller : MonoBehaviour {
     Rigidbody RB;
 
     // action varible
-    bool ClimbAble = false;
     public GameObject Left;
     public GameObject Right;
     public Vector3 ClimbTargetPos;
@@ -43,9 +42,9 @@ public class controller : MonoBehaviour {
         //ClimbTargetPos = new Vector3(this.transform.position.x,climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y,0.05f);
 
         Vector3 temp = transform.position;
-        temp.y = climbTarget.gameObject.transform.position.y + 0.05f;
+        temp.y = climbTarget.gameObject.transform.position.y + 0.1f;
         //climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
-        transform.position = (transform.forward * 0.1f) + temp;
+        transform.position = (transform.forward * 0.2f) + temp;
         Debug.Log(transform.position);
     }
 
