@@ -24,8 +24,9 @@ public class MainCamera : MonoBehaviour {
     private float AdjDistance = 0;
     private float CurrentX = 0.0f;
     private float CurrentY = 0.0f;
-    private float SensitivityX = 4.0f;
-    private float SensitivityY = 1.0f;
+    public bool inverseY = false;
+    public float SensitivityX = 4.0f;
+    public float SensitivityY = 1.0f;
     // Use this for initialization
     void Start()
     {
@@ -41,7 +42,8 @@ public class MainCamera : MonoBehaviour {
     void Update()
     {
         CurrentX += Input.GetAxis("Mouse X");
-        CurrentY += Input.GetAxis("Mouse Y");
+        float InvY = inverseY ? -1 : 1;
+        CurrentY += InvY*Input.GetAxis("Mouse Y");
 
         CurrentY = Mathf.Clamp(CurrentY, -30, 85);
 
