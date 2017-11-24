@@ -86,7 +86,7 @@ public class MainCamera : MonoBehaviour {
                 //Debug.Log("near:" + AdjDistance);
                 Vector3 B = Quaternion.Euler(CurrentY * SensitivityY, CurrentX * SensitivityX, 0) * new Vector3(0, 0, -AdjDistance);
                 B += lookAt.position;
-                Debug.Log(AdjDistance);
+                //Debug.Log(AdjDistance);
                 SmoothedPosB = Vector3.Lerp(transform.position, B, smoothness);
                 // CamTransform.position = SmoothedPosB;
             }

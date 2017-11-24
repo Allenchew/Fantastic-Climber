@@ -21,7 +21,7 @@ public class HandAction : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit,HandOutDist + 0.1f, GrabAbleLayer))
         {
             ClimbTargetHand = hit.transform.gameObject;
-            Debug.Log("detected");
+            //Debug.Log("detected");
             if (this.gameObject.name == "Left")
             {
                 LeftDetect = true;

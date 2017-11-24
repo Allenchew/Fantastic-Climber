@@ -8,17 +8,28 @@ public class controller : MonoBehaviour {
     public float MouseSensitivity = 5.0f;
     public float jumpSpeed = 0.5f;
     bool isGrounded = true;
-    Rigidbody RB;
+    public Rigidbody RB;
 
     // action varible
     public GameObject Left;
     public GameObject Right;
     public Vector3 ClimbTargetPos;
 
+    public enum State
+    {
+        Idle = 0,
+        Move,
+        ClimbLow,
+        ClimbHigh,
+        Death,
+    }
+
+    public State PState = State.Idle;
 
     // Use this for initialization
     void Start()
     {
+        Rigidbody RB = this.gameObject.GetComponent<Rigidbody>();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -37,7 +48,7 @@ public class controller : MonoBehaviour {
 
     }
 
-    public void Climb(GameObject climbTarget)
+    public void Teleport(GameObject climbTarget)
     {
         //ClimbTargetPos = new Vector3(this.transform.position.x,climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y,0.05f);
 
@@ -48,12 +59,35 @@ public class controller : MonoBehaviour {
         Debug.Log(transform.position);
     }
 
+    public void Climb(GameObject climbTarget)
+    {
+        float CTHeight = climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
+
+        if (CTHeight < 1.1 && PState == State.Idle)
+        {
+            Vector3 destination = new Vector3(0, CTHeight + 1f, 0);
+            transform.position = Vector3.Lerp(transform.position, destination, 5f * Time.deltaTime);
+            //float ClimbUpSP = CTHeight ;
+            //transform.Translate(0, ClimbUpSP + 0.15f, 0);
+            //transform.Translate(0, 0, 0.2f);
+            //PState = State.Idle;
+        }
+        else if (CTHeight >= 1.1 && PState == State.Idle)
+        {
+
+        }
+    }
+
+
+
+
 
     // Update is called once per frame
     void Update()
     {
-        Rigidbody RB = this.gameObject.GetComponent<Rigidbody>();
         
+        // state change to idle if not moving
+        //if (RB.velocity == Vector3.zero && PState != State.ClimbLow && PState != State.ClimbHigh) PState = State.Idle;
 
         //characater movement
         if (Input.GetKey(KeyCode.W))
@@ -86,20 +120,16 @@ public class controller : MonoBehaviour {
         }
 
         // climb
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect))
             {
                 Debug.Log("execute");
                 Climb(Right.GetComponent<HandAction>().ClimbTargetHand);
+                //Teleport(Right.GetComponent<HandAction>().ClimbTargetHand);
             }
         }
 
-
-    }
-
-    void DetectCollider()
-    {
 
     }
 
