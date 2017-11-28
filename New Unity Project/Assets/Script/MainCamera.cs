@@ -13,6 +13,7 @@ public class MainCamera : MonoBehaviour {
     public bool Pulling = false;
     public bool Climbing = false;
     public bool PullBag = false;
+    public bool Onbag = false;
     private Camera cam;
 
     private Vector3 dir;
@@ -52,6 +53,13 @@ public class MainCamera : MonoBehaviour {
     void LateUpdate()
     {
         Vector3 SmoothedPosB;
+        if (Onbag)
+        {
+            distance = 0.7f;
+        }else
+        {
+            distance = 0.3f;
+        }
         if (Pulling)
         {
             var FixedCam = lookAt.position + new Vector3(-0.95f, 0.4f, -0.4f);
@@ -75,25 +83,21 @@ public class MainCamera : MonoBehaviour {
             destination += lookAt.position;
             if (CH.colliding)
             {
-                if (AdjDistance < 0.05f)
+                if (AdjDistance < 0.07f)
                 {
-                    iTween.FadeTo(Target, 0.5f, 1);
+                    iTween.FadeTo(Target,0.5f,0.5f);
                 }
                 else
                 {
                     iTween.FadeTo(Target, 1, 1);
                 }
-                //Debug.Log("near:" + AdjDistance);
                 Vector3 B = Quaternion.Euler(CurrentY * SensitivityY, CurrentX * SensitivityX, 0) * new Vector3(0, 0, -AdjDistance);
                 B += lookAt.position;
-                //Debug.Log(AdjDistance);
                 SmoothedPosB = Vector3.Lerp(transform.position, B, smoothness);
-                // CamTransform.position = SmoothedPosB;
             }
             else
             {
                 SmoothedPosB = Vector3.Lerp(transform.position, destination, smoothness);
-                //CamTransform.position = SmoothedPosB;
             }
         }
         CamTransform.position = SmoothedPosB;
