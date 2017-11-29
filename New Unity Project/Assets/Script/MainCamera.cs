@@ -85,11 +85,11 @@ public class MainCamera : MonoBehaviour {
             {
                 if (AdjDistance < 0.07f)
                 {
-                    iTween.FadeTo(Target,0.5f,0.5f);
+                   // iTween.FadeTo(Target,0.5f,0.5f);
                 }
                 else
                 {
-                    iTween.FadeTo(Target, 1, 1);
+                  //  iTween.FadeTo(Target, 1, 1);
                 }
                 Vector3 B = Quaternion.Euler(CurrentY * SensitivityY, CurrentX * SensitivityX, 0) * new Vector3(0, 0, -AdjDistance);
                 B += lookAt.position;

@@ -5,10 +5,12 @@ using UnityEngine;
 public class controller : MonoBehaviour {
     // movement variable
     public float MovementSpeed = 0.3f;
+    public float ClimbingSpeed = 0.2f;
     public float MouseSensitivity = 5.0f;
     public float jumpSpeed = 0.5f;
     bool isGrounded = true;
     public Rigidbody RB;
+    public GameObject Cam;
 
     // action varible
     public GameObject Left;
@@ -46,7 +48,7 @@ public class controller : MonoBehaviour {
             isGrounded = false;
         }
 
-    }
+    }   
 
     public void Teleport(GameObject climbTarget)
     {
@@ -65,9 +67,11 @@ public class controller : MonoBehaviour {
         Debug.Log(CTHeight);
         if (CTHeight < 0.2 && PState == State.Idle)
         {
+            PState = State.ClimbLow;
             Debug.Log("ShortClimb");
-            Vector3 destination = new Vector3(0, CTHeight + 1f, 0);
-            transform.position = Vector3.Lerp(transform.position, destination, 5f * Time.deltaTime);
+            Vector3 destination = new Vector3(gameObject.transform.position.x, CTHeight + 1f, transform.position.z+ 0.1f);
+            transform.position += new Vector3 (0, CTHeight + 10f,0) * ClimbingSpeed  * Time.deltaTime;
+
             //float ClimbUpSP = CTHeight ;
             //transform.Translate(0, ClimbUpSP + 0.15f, 0);
             //transform.Translate(0, 0, 0.2f);
@@ -75,6 +79,7 @@ public class controller : MonoBehaviour {
         }
         else if (CTHeight >= 0.1 && PState == State.Idle)
         {
+            PState = State.ClimbHigh;
             Debug.Log("LongClimb");
             float MaxClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.max.x;
             float MinClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.min.x;
@@ -94,8 +99,9 @@ public class controller : MonoBehaviour {
             {
                 transform.position = new Vector3(MinClimbX, transform.position.y, ClimbZ);
             }
-            if (transform.position.y > MaxClimbY)
+            if (transform.position.y > MaxClimbY - 0.03)
             {
+                Debug.Log("reach top");
                 transform.position = new Vector3(MaxClimbY, transform.position.y, ClimbZ);
             }
             if (transform.position.y < MinClimbY)
@@ -105,8 +111,28 @@ public class controller : MonoBehaviour {
         }
     }
 
+    //IEnumerable ClimbToTargetX(Vector3 CurrPos,Vector3 targetPos,float XMove, float ZMove)
+    //{
+    //    Vector3 StartPos = CurrPos;
+    //    while (CurrPos.x != XMove)
+    //    {
+    //        Vector3 NextXPos = new Vector3(CurrPos.x, XMove, CurrPos.z);
+    //        CurrPos = Vector3.Lerp(CurrPos, NextXPos, ClimbingSpeed);
+    //        yield return null;
+    //    }
+    //    StartCoroutine(ClimbToTargetZ(CurrPos, targetPos, XMove, ZMove));
+    //}
 
-
+    //IEnumerable ClimbToTargetZ(Vector3 CurrPos, Vector3 targetPos, float ZMove)
+    //{
+    //    Vector3 StartPos = CurrPos;
+    //    while (CurrPos.z != ZMove)
+    //    {
+    //        Vector3 NextZPos = new Vector3(CurrPos.x, CurrPos.y, ZMove);
+    //        CurrPos = Vector3.Lerp(CurrPos, NextZPos, ClimbingSpeed);
+    //        yield return null;
+    //    }
+    //}
 
 
     // Update is called once per frame
@@ -117,6 +143,8 @@ public class controller : MonoBehaviour {
         //if (RB.velocity == Vector3.zero && PState != State.ClimbLow && PState != State.ClimbHigh) PState = State.Idle;
 
         //characater movement
+        if (PState == State.Idle)
+        {
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * MovementSpeed * Time.deltaTime;
@@ -137,11 +165,61 @@ public class controller : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += transform.right * MovementSpeed * Time.deltaTime;
-        }       
+        }
+        }
+        // if state is climbing high
+        if (PState == State.ClimbHigh)
+        {
+            Cam.GetComponent<MainCamera>().Climbing = true;
+            if (RB != null)
+            {
+                RB.useGravity = false;
+                RB.constraints = RigidbodyConstraints.FreezePositionZ & RigidbodyConstraints.FreezeRotation;
+             }
+            else
+            {
+                Debug.Log("no Rigidbody");
+            }
+
+        } else
+        {
+            RB.useGravity = true;
+            RB.constraints = RigidbodyConstraints.FreezeRotation;
+            Cam.GetComponent<MainCamera>().Climbing = false;
+        }
+        
+        // if state is climb Low
+        if (PState == State.ClimbLow)
+        {
+            RB.useGravity = false;
+
+        }else
+        {
+            RB.useGravity = true;
+        }
+
+        // climbing Mode
+        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.W))
+        {
+            transform.position += transform.up * ClimbingSpeed * Time.deltaTime;
+        }      
+        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.S))
+        {
+            transform.position -= transform.up * ClimbingSpeed * Time.deltaTime;
+        }
+        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.A))
+        {
+            transform.position -= transform.right * ClimbingSpeed * Time.deltaTime;
+        }
+        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.D))
+        {
+            transform.position += transform.right * ClimbingSpeed * Time.deltaTime;
+        }
+
 
         //jump + ground check
         CheckGround();
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump") && PState == State.Idle || PState == State.Move)
         {
             RB.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
