@@ -10,7 +10,7 @@ public class HandAction : MonoBehaviour
     public bool LeftDetect = false;
     public bool RightDetect = false;
     public GameObject ClimbTargetHand;
-    
+    public float HitDistance;
 
     void ClimbableCheck()
     {
@@ -20,6 +20,7 @@ public class HandAction : MonoBehaviour
         float HandOutDist = this.gameObject.GetComponent<Collider>().bounds.extents.x;
         if (Physics.Raycast(transform.position, transform.forward, out hit,HandOutDist + 0.1f, GrabAbleLayer))
         {
+            HitDistance = hit.distance;
             ClimbTargetHand = hit.transform.gameObject;
             //Debug.Log("detected");
             if (this.gameObject.name == "Left")

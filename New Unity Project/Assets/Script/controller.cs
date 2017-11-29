@@ -62,9 +62,10 @@ public class controller : MonoBehaviour {
     public void Climb(GameObject climbTarget)
     {
         float CTHeight = climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
-
-        if (CTHeight < 1.1 && PState == State.Idle)
+        Debug.Log(CTHeight);
+        if (CTHeight < 0.2 && PState == State.Idle)
         {
+            Debug.Log("ShortClimb");
             Vector3 destination = new Vector3(0, CTHeight + 1f, 0);
             transform.position = Vector3.Lerp(transform.position, destination, 5f * Time.deltaTime);
             //float ClimbUpSP = CTHeight ;
@@ -72,9 +73,35 @@ public class controller : MonoBehaviour {
             //transform.Translate(0, 0, 0.2f);
             //PState = State.Idle;
         }
-        else if (CTHeight >= 1.1 && PState == State.Idle)
+        else if (CTHeight >= 0.1 && PState == State.Idle)
         {
+            Debug.Log("LongClimb");
+            float MaxClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.max.x;
+            float MinClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.min.x;
+            float MaxClimbY = climbTarget.gameObject.GetComponent<Collider>().bounds.max.y;
+            float MinClimbY = climbTarget.gameObject.GetComponent<Collider>().bounds.min.y;
+            float ClimbZ = Right.GetComponent<HandAction>().HitDistance - 0.5f;
 
+            Debug.Log(MaxClimbY);
+            Debug.Log(MinClimbY);
+
+
+            if (transform.position.x > MaxClimbX)
+            {
+                transform.position = new Vector3(MaxClimbX, transform.position.y, ClimbZ);
+            }
+            if (transform.position.x < MinClimbX)
+            {
+                transform.position = new Vector3(MinClimbX, transform.position.y, ClimbZ);
+            }
+            if (transform.position.y > MaxClimbY)
+            {
+                transform.position = new Vector3(MaxClimbY, transform.position.y, ClimbZ);
+            }
+            if (transform.position.y < MinClimbY)
+            {
+                transform.position = new Vector3(MinClimbY, transform.position.y, ClimbZ);
+            }
         }
     }
 
