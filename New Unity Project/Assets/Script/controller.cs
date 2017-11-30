@@ -17,6 +17,10 @@ public class controller : MonoBehaviour {
     public GameObject Right;
     public Vector3 ClimbTargetPos;
 
+    // climbing variable
+    bool TouchingDestinationX;
+    public LayerMask GrabAbleLayer;
+
     public enum State
     {
         Idle = 0,
@@ -61,57 +65,20 @@ public class controller : MonoBehaviour {
         Debug.Log(transform.position);
     }
 
-    public void Climb(GameObject climbTarget)
+    void ReachTopYCheck()
     {
-        float CTHeight = climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
-        Debug.Log(CTHeight);
-        if (CTHeight < 0.2 && PState == State.Idle)
-        {
-            PState = State.ClimbLow;
-            Debug.Log("ShortClimb");
-            Vector3 destination = new Vector3(gameObject.transform.position.x, CTHeight + 1f, transform.position.z+ 0.1f);
-            transform.position += new Vector3 (0, CTHeight + 10f,0) * ClimbingSpeed  * Time.deltaTime;
-
-            //float ClimbUpSP = CTHeight ;
-            //transform.Translate(0, ClimbUpSP + 0.15f, 0);
-            //transform.Translate(0, 0, 0.2f);
-            //PState = State.Idle;
-        }
-        else if (CTHeight >= 0.1 && PState == State.Idle)
-        {
-            PState = State.ClimbHigh;
-            Debug.Log("LongClimb");
-            float MaxClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.max.x;
-            float MinClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.min.x;
-            float MaxClimbY = climbTarget.gameObject.GetComponent<Collider>().bounds.max.y;
-            float MinClimbY = climbTarget.gameObject.GetComponent<Collider>().bounds.min.y;
-            float ClimbZ = Right.GetComponent<HandAction>().HitDistance - 0.5f;
-
-            Debug.Log(MaxClimbY);
-            Debug.Log(MinClimbY);
-
-
-            if (transform.position.x > MaxClimbX)
-            {
-                transform.position = new Vector3(MaxClimbX, transform.position.y, ClimbZ);
-            }
-            if (transform.position.x < MinClimbX)
-            {
-                transform.position = new Vector3(MinClimbX, transform.position.y, ClimbZ);
-            }
-            if (transform.position.y > MaxClimbY - 0.03)
-            {
-                Debug.Log("reach top");
-                transform.position = new Vector3(MaxClimbY, transform.position.y, ClimbZ);
-            }
-            if (transform.position.y < MinClimbY)
-            {
-                transform.position = new Vector3(MinClimbY, transform.position.y, ClimbZ);
-            }
-        }
+        Debug.Log("called");
+        RaycastHit hit;
+        float LegDistY = this.gameObject.GetComponent<Collider>().bounds.min.y;
+        Vector3 LegPosition = new Vector3(0, LegDistY, 0);
+        //Debug.DrawLine(LegPosition, transform.forward * 100,Color );
+        //if (Physics.Raycast(transform.position, transform.forward, out hit, LegDist + 0.5f, GrabAbleLayer))
+        //{
+        //    Debug.Log("hitsomething on leg");
+        //}
     }
 
-    //IEnumerable ClimbToTargetX(Vector3 CurrPos,Vector3 targetPos,float XMove, float ZMove)
+    //IEnumerable ClimbToTargetX(Vector3 CurrPos, Vector3 targetPos, float XMove, float ZMove)
     //{
     //    Vector3 StartPos = CurrPos;
     //    while (CurrPos.x != XMove)
@@ -134,11 +101,61 @@ public class controller : MonoBehaviour {
     //    }
     //}
 
+    public void Climb(GameObject climbTarget)
+    {
+        float CTHeight = climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
+        Debug.Log(CTHeight);
+        if (CTHeight < 0.2 && PState == State.Idle)
+        {
+            PState = State.ClimbLow;
+            Debug.Log("ShortClimb");
+            Vector3 destination = new Vector3(gameObject.transform.position.x, CTHeight + 1f, transform.position.z+ 0.1f);
+            transform.position += new Vector3 (0, CTHeight + 10f,0) * ClimbingSpeed  * Time.deltaTime;
+
+            //float ClimbUpSP = CTHeight ;
+            //transform.Translate(0, ClimbUpSP + 0.15f, 0);
+            //transform.Translate(0, 0, 0.2f);
+            //PState = State.Idle;
+        }
+        else if (CTHeight >= 0.1 && PState == State.Idle)
+        {
+            ReachTopYCheck();
+            PState = State.ClimbHigh;
+            Debug.Log("LongClimb");
+            float MaxClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.max.x;
+            float MinClimbX = climbTarget.gameObject.GetComponent<Collider>().bounds.min.x;
+            float MaxClimbY = climbTarget.gameObject.GetComponent<Collider>().bounds.max.y;
+            float MinClimbY = climbTarget.gameObject.GetComponent<Collider>().bounds.min.y;
+            float ClimbZ = Right.GetComponent<HandAction>().HitDistance - 0.5f;
+            
+
+            if (transform.position.x > MaxClimbX)
+            {
+                transform.position = new Vector3(MaxClimbX, transform.position.y, ClimbZ);
+            }
+            if (transform.position.x < MinClimbX)
+            {
+                transform.position = new Vector3(MinClimbX, transform.position.y, ClimbZ);
+            }
+            if (transform.position.y > MaxClimbY - 0.03)
+            {
+                Debug.Log("reach top");
+                transform.position = new Vector3(MaxClimbY, transform.position.y, ClimbZ);
+            }
+            if (transform.position.y < MinClimbY)
+            {
+                transform.position = new Vector3(MinClimbY, transform.position.y, ClimbZ);
+            }
+        }
+    }
+
+
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        ReachTopYCheck();
         // state change to idle if not moving
         //if (RB.velocity == Vector3.zero && PState != State.ClimbLow && PState != State.ClimbHigh) PState = State.Idle;
 
@@ -168,11 +185,12 @@ public class controller : MonoBehaviour {
         }
         }
         // if state is climbing high
-        if (PState == State.ClimbHigh)
+        if (PState == State.ClimbHigh || PState == State.ClimbLow)
         {
             Cam.GetComponent<MainCamera>().Climbing = true;
             if (RB != null)
             {
+                Debug.Log("remove gravity");
                 RB.useGravity = false;
                 RB.constraints = RigidbodyConstraints.FreezePositionZ & RigidbodyConstraints.FreezeRotation;
              }
@@ -187,16 +205,7 @@ public class controller : MonoBehaviour {
             RB.constraints = RigidbodyConstraints.FreezeRotation;
             Cam.GetComponent<MainCamera>().Climbing = false;
         }
-        
-        // if state is climb Low
-        if (PState == State.ClimbLow)
-        {
-            RB.useGravity = false;
 
-        }else
-        {
-            RB.useGravity = true;
-        }
 
         // climbing Mode
         if (PState == State.ClimbHigh && Input.GetKey(KeyCode.W))
