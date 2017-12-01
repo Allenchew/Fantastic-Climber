@@ -67,7 +67,7 @@ public class controller : MonoBehaviour {
 
     void ReachTopYCheck()
     {
-        Debug.Log("called");
+       // Debug.Log("called");
         RaycastHit hit;
         float LegDistY = this.gameObject.GetComponent<Collider>().bounds.min.y;
         Vector3 LegPosition = new Vector3(0, LegDistY, 0);
