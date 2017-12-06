@@ -5,6 +5,7 @@ using UnityEngine;
 public class controller : MonoBehaviour
 {
     // movement variable
+    //　動く配列
     public float MovementSpeed = 0.3f;
     public float ClimbingSpeed = 0.2f;
     public float MouseSensitivity = 5.0f;
@@ -14,25 +15,31 @@ public class controller : MonoBehaviour
     public GameObject Cam;
 
     // action varible
+    // アクシオン配列
     public GameObject Left;
     public GameObject Right;
     public Vector3 ClimbTargetPos;
 
     // climbing variable
+    //　クライミング配列
     bool TouchingDestinationY;
     public LayerMask ClimbAbleLayer;
-    float t;
     float MaxClimbX;
     float MinClimbX;
     float MaxClimbY;
     float MinClimbY;
     float ClimbZ;
     bool ReachTop;
+    public float ClimbHeight = 0.3f;
+    
 
     // pull variable
+    //引く配列
     GameObject PullTargetTemp;
     bool PullPressed;
-
+       
+    // character state
+    // プレイヤーの状態
     public enum State
     {
         Idle = 0,
@@ -53,6 +60,33 @@ public class controller : MonoBehaviour
         //Cursor.visible = false;
     }
 
+    // force change angel when facing
+    //壁とか引くもの前にちゃんと向かうために強制的にプレイヤーの角度を変更します。
+    public void CheckFaceAngle()
+    {
+        if (this.transform.rotation.y > -38 && this.transform.rotation.y < 38)
+        {
+            transform.eulerAngles = new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z);
+        }
+
+        if (this.transform.rotation.y > 48 && this.transform.rotation.y < 128)
+        {
+            transform.eulerAngles = new Vector3(this.transform.rotation.x, 90, this.transform.rotation.z);
+        }
+
+        if (this.transform.rotation.y > 142 && this.transform.rotation.y < 218)
+        {
+            transform.eulerAngles = new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z);
+        }
+
+        if (this.transform.rotation.y > 228 && this.transform.rotation.y < 308)
+        {
+            transform.eulerAngles = new Vector3(this.transform.rotation.x, 270, this.transform.rotation.z);
+        }
+    }
+
+    // check if foot touch ground
+    // ちゃんと床に触れるか確認
     public void CheckGround()
     {
         float distToGround = this.gameObject.GetComponent<Collider>().bounds.extents.y;
@@ -65,7 +99,8 @@ public class controller : MonoBehaviour
             isGrounded = false;
         }
     }
-
+    //test function
+    //テスト関数
     public void Teleport(GameObject climbTarget)
     {
         Vector3 temp = transform.position;
@@ -90,6 +125,8 @@ public class controller : MonoBehaviour
         else TouchingDestinationY = false;
     }
 
+    // climbing function
+    // クライミング関数
     IEnumerator Climbing(Vector3 NewPosY)
     {
         float TestSpeed = 0.5f;
@@ -135,7 +172,7 @@ public class controller : MonoBehaviour
     }
 
     // pull fucntion
-
+    // 引く関数
     public void Pull(GameObject PullTarget)
     {
         PullTargetTemp= PullTarget;
@@ -151,7 +188,8 @@ public class controller : MonoBehaviour
 
         if (PState == State.Idle)
         {
-            //reset camera            
+            //reset camera      
+            //カメラリセットします。
             Cam.GetComponent<MainCamera>().Pulling = false;
             Cam.GetComponent<MainCamera>().Climbing = false;
             Cam.GetComponent<MainCamera>().PullBag = false;
@@ -245,7 +283,7 @@ public class controller : MonoBehaviour
         }
 
         // starting climbing process
-        Vector3 CurrPost = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z); ;
+        Vector3 CurrPost = new Vector3(transform.position.x, transform.position.y + ClimbHeight, transform.position.z); ;
         if (ReachTop == true)
         {
             Debug.Log("calling coroutine");
@@ -269,6 +307,7 @@ public class controller : MonoBehaviour
         }
 
         // climbing Mode
+        //プレイヤーの状態はclimbhighになったら
         if (PState == State.ClimbHigh && Input.GetKey(KeyCode.W))
         {
             transform.position += transform.up * ClimbingSpeed * Time.deltaTime;
@@ -287,27 +326,32 @@ public class controller : MonoBehaviour
         }
 
         //jump + ground check
+        //スパイスキー押すとgroundcheckとジャンプ作業
         CheckGround();
-        if (isGrounded && Input.GetButtonDown("Jump") && PState == State.Idle || PState == State.Move)
+        if (isGrounded && Input.GetButtonDown("Jump") && (PState == State.Idle || PState == State.Move))
         {
             RB.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
 
         // climb
+        //Rボタン押すとくらいんクライミング作業
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("called");
+            CheckFaceAngle();
+            //Debug.Log("called");
             if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect))
             {
-                Debug.Log("execute");
+                //Debug.Log("execute");
                 Climb(Right.GetComponent<HandAction>().ClimbTargetHand);
             }
             //Teleport(Right.GetComponent<HandAction>().ClimbTargetHand);
         }
 
         //pull
+        //Eボタン押すと引く作業
         if (Input.GetKeyDown(KeyCode.E))
         {
+            CheckFaceAngle();
             PullPressed = !PullPressed;
             if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect) && PullPressed == true)
             {
