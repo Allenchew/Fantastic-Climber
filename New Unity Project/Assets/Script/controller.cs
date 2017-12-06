@@ -29,6 +29,10 @@ public class controller : MonoBehaviour
     float ClimbZ;
     bool ReachTop;
 
+    // pull variable
+    GameObject PullTargetTemp;
+    bool PullPressed;
+
     public enum State
     {
         Idle = 0,
@@ -36,6 +40,7 @@ public class controller : MonoBehaviour
         ClimbLow,
         ClimbHigh,
         Death,
+        pull,
     }
 
     public State PState = State.Idle;
@@ -87,9 +92,8 @@ public class controller : MonoBehaviour
 
     IEnumerator Climbing(Vector3 NewPosY)
     {
-        ReachTopYCheck();
         float TestSpeed = 0.5f;
-        Debug.Log(NewPosY);
+        //Debug.Log(NewPosY);
         while (Vector3.Distance(transform.position, NewPosY) > 0.05f)
         {
             transform.position = Vector3.MoveTowards(transform.position, NewPosY, TestSpeed * Time.deltaTime);
@@ -102,10 +106,14 @@ public class controller : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, newPoZ, TestSpeed * Time.deltaTime);
             yield return null;
         }
+        CheckGround();
+        if (isGrounded == true)
+        {
+            PState = State.Idle;
+        }
         PState = State.Idle;
         ReachTop = false;
     }
-
 
 
     public void Climb(GameObject climbTarget)
@@ -117,13 +125,22 @@ public class controller : MonoBehaviour
             Vector3 tempTar = new Vector3(transform.position.x, CTHeight, transform.position.z);
             PState = State.ClimbLow;
             Debug.Log("ShortClimb");
-            StartCoroutine(Climbing(tempTar));
+            ReachTop = true;
         }
         else if (CTHeight >= 0.1 && PState == State.Idle)
         {
             PState = State.ClimbHigh;
             Debug.Log("LongClimb");
         }
+    }
+
+    // pull fucntion
+
+    public void Pull(GameObject PullTarget)
+    {
+        PullTargetTemp= PullTarget;
+        PState = State.pull;
+        //Debug.Log(this.GetComponent<Rigidbody>().name);
     }
 
 
@@ -134,6 +151,12 @@ public class controller : MonoBehaviour
 
         if (PState == State.Idle)
         {
+            //reset camera            
+            Cam.GetComponent<MainCamera>().Pulling = false;
+            Cam.GetComponent<MainCamera>().Climbing = false;
+            Cam.GetComponent<MainCamera>().PullBag = false;
+            Cam.GetComponent<MainCamera>().Onbag = false;
+
             if (Input.GetKey(KeyCode.W))
             {
                 transform.position += transform.forward * MovementSpeed * Time.deltaTime;
@@ -199,8 +222,8 @@ public class controller : MonoBehaviour
             {
                 Debug.Log("no Rigidbody");
             }
-
         }
+
         // state climblow
         else if (PState == State.ClimbLow)
         {
@@ -230,6 +253,21 @@ public class controller : MonoBehaviour
             PState = State.ClimbLow;
             ReachTop = false;
         }
+
+        if (PState == State.pull && Input.GetKey(KeyCode.W))
+        {
+            Cam.GetComponent<MainCamera>().Pulling = true;
+            transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+            PullTargetTemp.transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+
+        }
+        if (PState == State.pull && Input.GetKey(KeyCode.S))
+        {
+            Cam.GetComponent<MainCamera>().Pulling = true;
+            transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+            PullTargetTemp.transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+        }
+
         // climbing Mode
         if (PState == State.ClimbHigh && Input.GetKey(KeyCode.W))
         {
@@ -258,10 +296,31 @@ public class controller : MonoBehaviour
         // climb
         if (Input.GetKeyDown(KeyCode.R))
         {
+            Debug.Log("called");
             if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect))
-                //Debug.Log("execute");
+            {
+                Debug.Log("execute");
                 Climb(Right.GetComponent<HandAction>().ClimbTargetHand);
+            }
             //Teleport(Right.GetComponent<HandAction>().ClimbTargetHand);
+        }
+
+        //pull
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            PullPressed = !PullPressed;
+            if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect) && PullPressed == true)
+            {
+                //Debug.Log("pull");
+                GameObject ClimbTarget = Right.GetComponent<HandAction>().ClimbTargetHand;
+                //Debug.Log(ClimbTarget.name);
+                Pull(ClimbTarget);
+            } else if (PullPressed == false)
+            {
+                PState = State.Idle;
+                PullTargetTemp = null;
+
+            }
         }
     }
 

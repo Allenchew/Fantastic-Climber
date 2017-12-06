@@ -20,6 +20,7 @@ public class HandAction : MonoBehaviour
         float HandOutDist = this.gameObject.GetComponent<Collider>().bounds.extents.x;
         if (Physics.Raycast(transform.position, transform.forward, out hit,HandOutDist + 0.1f, GrabAbleLayer))
         {
+
             HitDistance = hit.distance;
             ClimbTargetHand = hit.transform.gameObject;
             //Debug.Log("detected");
@@ -33,7 +34,6 @@ public class HandAction : MonoBehaviour
             }
         }
     }
-
     
     //void OnTriggerEnter(Collider other)
     //{
