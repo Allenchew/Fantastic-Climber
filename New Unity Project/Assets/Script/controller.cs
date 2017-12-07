@@ -190,28 +190,30 @@ public class controller : MonoBehaviour
     void Update()
     {
         // controller input
-        if (Input.GetAxis("Horizontal") == 1)
+        Debug.Log("joystickX ="+Input.GetAxis("JoystickX"));
+        Debug.Log("Horizontal =" + Input.GetAxis("Horizontal"));
+        if (Input.GetAxis("JoystickX") >= 0.8f)
         {
             JoyRight = true;
         }
-        if (Input.GetAxis("Horizontal") == -1)
+        if (Input.GetAxis("JoystickX") <= -0.8f)
         {
             JoyLeft = true;
         }
-        if (Input.GetAxis("Horizontal") == 0)
+        if (Input.GetAxis("JoystickX") >= -0.5f && Input.GetAxis("JoystickX") <= 0.5f)
         {
             JoyRight = false;
             JoyLeft = false;
         }
-        if (Input.GetAxis("Vertical") == 1)
+        if (Input.GetAxis("JoystickY") <= -0.8f)
         {
             JoyUp = true;
         }
-        if (Input.GetAxis("Vertical") == -1)
+        if (Input.GetAxis("JoystickY") >= 0.8f)
         {
             JoyDown = true;
         }
-        if (Input.GetAxis("Vertical") == 0)
+        if (Input.GetAxis("JoystickY") >= -0.5f && Input.GetAxis("JoystickY") <= 0.5f)
         {
             JoyUp = false;
             JoyDown = false;
