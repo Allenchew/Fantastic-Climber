@@ -14,6 +14,12 @@ public class controller : MonoBehaviour
     public Rigidbody RB;
     public GameObject Cam;
 
+    //JoyStick
+    bool JoyLeft;
+    bool JoyRight;
+    bool JoyUp;
+    bool JoyDown;
+
     // action varible
     // アクシオン配列
     public GameObject Left;
@@ -31,7 +37,6 @@ public class controller : MonoBehaviour
     float ClimbZ;
     bool ReachTop;
     public float ClimbHeight = 0.3f;
-    
 
     // pull variable
     //引く配列
@@ -184,8 +189,37 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //characater movement
+        // controller input
+        Debug.Log("joystickX ="+Input.GetAxis("JoystickX"));
+        Debug.Log("Horizontal =" + Input.GetAxis("Horizontal"));
+        if (Input.GetAxis("JoystickX") >= 0.8f)
+        {
+            JoyRight = true;
+        }
+        if (Input.GetAxis("JoystickX") <= -0.8f)
+        {
+            JoyLeft = true;
+        }
+        if (Input.GetAxis("JoystickX") >= -0.5f && Input.GetAxis("JoystickX") <= 0.5f)
+        {
+            JoyRight = false;
+            JoyLeft = false;
+        }
+        if (Input.GetAxis("JoystickY") <= -0.8f)
+        {
+            JoyUp = true;
+        }
+        if (Input.GetAxis("JoystickY") >= 0.8f)
+        {
+            JoyDown = true;
+        }
+        if (Input.GetAxis("JoystickY") >= -0.5f && Input.GetAxis("JoystickY") <= 0.5f)
+        {
+            JoyUp = false;
+            JoyDown = false;
+        }
 
+        //characater movement
         if (PState == State.Idle)
         {
             //reset camera      
@@ -195,24 +229,26 @@ public class controller : MonoBehaviour
             Cam.GetComponent<MainCamera>().PullBag = false;
             Cam.GetComponent<MainCamera>().Onbag = false;
 
-            if (Input.GetKey(KeyCode.W))
+            
+
+            if (Input.GetKey(KeyCode.W) || JoyUp == true)
             {
                 transform.position += transform.forward * MovementSpeed * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
             }
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) || JoyDown == true)
             {
                 transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || JoyLeft == true)
             {
                 transform.position -= transform.right * MovementSpeed * Time.deltaTime;
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || JoyRight == true)
             {
                 transform.position += transform.right * MovementSpeed * Time.deltaTime;
             }
@@ -292,14 +328,14 @@ public class controller : MonoBehaviour
             ReachTop = false;
         }
 
-        if (PState == State.pull && Input.GetKey(KeyCode.W))
+        if (PState == State.pull && (Input.GetKey(KeyCode.W) || JoyUp == true))
         {
             Cam.GetComponent<MainCamera>().Pulling = true;
             transform.position += transform.forward * MovementSpeed * Time.deltaTime;
             PullTargetTemp.transform.position += transform.forward * MovementSpeed * Time.deltaTime;
 
         }
-        if (PState == State.pull && Input.GetKey(KeyCode.S))
+        if (PState == State.pull && (Input.GetKey(KeyCode.S) || JoyDown == true))
         {
             Cam.GetComponent<MainCamera>().Pulling = true;
             transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
@@ -308,19 +344,19 @@ public class controller : MonoBehaviour
 
         // climbing Mode
         //プレイヤーの状態はclimbhighになったら
-        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.W))
+        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.W) || JoyUp == true))
         {
             transform.position += transform.up * ClimbingSpeed * Time.deltaTime;
         }
-        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.S))
+        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.S) || JoyDown == true))
         {
             transform.position -= transform.up * ClimbingSpeed * Time.deltaTime;
         }
-        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.A))
+        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.A) || JoyLeft == true))
         {
             transform.position -= transform.right * ClimbingSpeed * Time.deltaTime;
         }
-        if (PState == State.ClimbHigh && Input.GetKey(KeyCode.D))
+        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.D) || JoyDown == true))
         {
             transform.position += transform.right * ClimbingSpeed * Time.deltaTime;
         }
@@ -335,7 +371,7 @@ public class controller : MonoBehaviour
 
         // climb
         //Rボタン押すとくらいんクライミング作業
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             CheckFaceAngle();
             //Debug.Log("called");
@@ -349,7 +385,7 @@ public class controller : MonoBehaviour
 
         //pull
         //Eボタン押すと引く作業
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             CheckFaceAngle();
             PullPressed = !PullPressed;
