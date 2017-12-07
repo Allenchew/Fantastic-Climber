@@ -11,11 +11,15 @@ public class HandAction : MonoBehaviour
     public bool RightDetect = false;
     public GameObject ClimbTargetHand;
     public float HitDistance;
-
+    public static bool Lhand;
+    public static bool Rhand;
     void ClimbableCheck()
     {
+        
         LeftDetect = false;
         RightDetect = false;
+        Lhand = false;
+        Rhand = false;
         RaycastHit hit;
         float HandOutDist = this.gameObject.GetComponent<Collider>().bounds.extents.x;
         if (Physics.Raycast(transform.position, transform.forward, out hit,HandOutDist + 0.1f, GrabAbleLayer))
@@ -27,10 +31,12 @@ public class HandAction : MonoBehaviour
             if (this.gameObject.name == "Left")
             {
                 LeftDetect = true;
+                Lhand = true;
             }
             else if (this.gameObject.name == "Right")
             {
                 RightDetect = true;
+                Rhand = true;
             }
         }
     }

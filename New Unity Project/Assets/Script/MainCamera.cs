@@ -42,9 +42,9 @@ public class MainCamera : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        CurrentX += Input.GetAxis("Mouse X");
+        CurrentX += Input.GetAxis("Camera X");//Input.GetAxis("Mouse X");
         float InvY = inverseY ? -1 : 1;
-        CurrentY += InvY*Input.GetAxis("Mouse Y");
+        CurrentY += InvY * Input.GetAxis("Camera Y");//Input.GetAxis("Mouse Y");
 
         CurrentY = Mathf.Clamp(CurrentY, -30, 85);
 
@@ -85,11 +85,11 @@ public class MainCamera : MonoBehaviour {
             {
                 if (AdjDistance < 0.07f)
                 {
-                    iTween.FadeTo(Target,0.5f,0.5f);
+                   // iTween.FadeTo(Target,0.5f,0.5f);
                 }
                 else
                 {
-                   iTween.FadeTo(Target, 1, 1);
+                  // iTween.FadeTo(Target, 1, 1);
                 }
                 Vector3 B = Quaternion.Euler(CurrentY * SensitivityY, CurrentX * SensitivityX, 0) * new Vector3(0, 0, -AdjDistance);
                 B += lookAt.position;
@@ -97,7 +97,7 @@ public class MainCamera : MonoBehaviour {
             }
             else
             {
-                iTween.FadeTo(Target, 1, 1);
+               // iTween.FadeTo(Target, 1, 1);
                 SmoothedPosB = Vector3.Lerp(transform.position, destination, smoothness);
             }
         }

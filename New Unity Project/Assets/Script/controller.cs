@@ -10,6 +10,8 @@ public class controller : MonoBehaviour
     public float ClimbingSpeed = 0.2f;
     public float MouseSensitivity = 5.0f;
     public float jumpSpeed = 0.5f;
+    public static bool pulling = false;
+   
     bool isGrounded = true;
     public Rigidbody RB;
     public GameObject Cam;
@@ -190,8 +192,6 @@ public class controller : MonoBehaviour
     void Update()
     {
         // controller input
-        Debug.Log("joystickX ="+Input.GetAxis("JoystickX"));
-        Debug.Log("Horizontal =" + Input.GetAxis("Horizontal"));
         if (Input.GetAxis("JoystickX") >= 0.8f)
         {
             JoyRight = true;
@@ -388,16 +388,19 @@ public class controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             CheckFaceAngle();
+            
             PullPressed = !PullPressed;
             if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect) && PullPressed == true)
             {
                 //Debug.Log("pull");
+                pulling = true;
                 GameObject ClimbTarget = Right.GetComponent<HandAction>().ClimbTargetHand;
                 //Debug.Log(ClimbTarget.name);
                 Pull(ClimbTarget);
             } else if (PullPressed == false)
             {
                 PState = State.Idle;
+                pulling = false;
                 PullTargetTemp = null;
 
             }
