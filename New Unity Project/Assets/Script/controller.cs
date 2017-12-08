@@ -159,6 +159,11 @@ public class controller : MonoBehaviour
         ReachTop = false;
     }
 
+    IEnumerator Pulling(Vector3 NewPosY)
+    {
+            
+    }
+
 
     public void Climb(GameObject climbTarget)
     {
