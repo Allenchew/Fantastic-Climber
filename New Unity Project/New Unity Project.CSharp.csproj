@@ -126,6 +126,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Script\Bag.cs" />
     <Compile Include="Assets\Script\HandAction.cs" />
     <Compile Include="Assets\Script\MainCamera.cs" />
     <Compile Include="Assets\Script\UI.cs" />
