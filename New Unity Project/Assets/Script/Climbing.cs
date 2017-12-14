@@ -5,11 +5,14 @@ using UnityEngine;
 public class Climbing : MonoBehaviour {
     public LayerMask Rope;
     public LayerMask RopeEnd;
+    public LayerMask Detection;
     public Vector3 hitpos;
     public bool Trigg = false;
     public Rigidbody rb;
 
     private bool EndClimb = false;
+    private bool HeadAlert = false;
+    private bool climbAnim = false;
     private Vector3 nextParent;
 	// Use this for initialization
 	void Start () {
@@ -25,13 +28,24 @@ public class Climbing : MonoBehaviour {
         RaycastHit FindParent;
         RaycastHit CurrentParent;
         RaycastHit PastParent;
-            //transform.rotation = FindParent.transform.rotation;
-       if (Input.GetKeyDown(KeyCode.Z))
+        RaycastHit HeadDetect;
+        //transform.rotation = FindParent.transform.rotation;
+        Debug.DrawRay(transform.position, (transform.up * 0.1f),Color.blue);
+        if (Physics.Raycast(transform.position, (transform.up), out HeadDetect, 0.1f,Detection))
+        {
+            HeadAlert = true;
+            Debug.Log("detected");
+        }else
+        {
+            HeadAlert = false;
+        }
+       if (Input.GetKeyDown(KeyCode.Z) && !climbAnim && !HeadAlert)
             {
-            if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, Rope) && Trigg)
+            if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, Rope) && Trigg )
             {
-                    transform.position = FindParent.transform.position - (hitpos- transform.position);
-                
+                var nextpos = FindParent.transform.position - (hitpos - transform.position);
+                //transform.position = Vector3.Slerp(transform.position, nextpos, 0.125f);//FindParent.transform.position - (hitpos- transform.position);
+                StartCoroutine(SmoothMov(nextpos));
             }
             else if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1,RopeEnd) && Trigg)
             {
@@ -74,11 +88,12 @@ public class Climbing : MonoBehaviour {
         }
         if (Physics.Raycast(transform.position, (transform.forward) * 0.05f - new Vector3(0, 0.05f, 0), out PastParent, 1, Rope) && !EndClimb)
         {
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.X) && !climbAnim)
             {
                 if (Trigg)
                 {
-                    transform.position = PastParent.transform.position -(hitpos-transform.position );
+                    var nextpos = PastParent.transform.position -(hitpos-transform.position );
+                    StartCoroutine(SmoothMov(nextpos));
                 }
             }
         }
@@ -101,5 +116,16 @@ public class Climbing : MonoBehaviour {
             transform.position -= new Vector3(0, 0, 0.001f);
         }
         rb.isKinematic = false;
+    }
+    IEnumerator SmoothMov(Vector3 Dest)
+    {
+        climbAnim = true;
+        for(int i = 0; i < 10; i++)
+        {
+            transform.position = Vector3.Lerp(transform.position, Dest, 0.1f * i);
+            yield return new WaitForSeconds(0.01f);
+        }
+        climbAnim = false;
+        StopCoroutine("SmoothMov");
     }
 }
