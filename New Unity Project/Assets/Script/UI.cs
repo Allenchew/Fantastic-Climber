@@ -36,7 +36,7 @@ public class UI : MonoBehaviour {
             {
                 BB.SetActive(true);
             }
-            Debug.Log("set");
+
         }else
         {
             BB.SetActive(false);
