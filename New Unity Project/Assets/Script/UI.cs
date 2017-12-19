@@ -15,8 +15,6 @@ public class UI : MonoBehaviour {
     public LayerMask GrabAbleLayer;
 
     private static bool Drag;
-    private static bool LDragging;
-    private static bool RDragging;
     void Start () {
         BB.SetActive(false);
     }
@@ -24,9 +22,7 @@ public class UI : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         RaycastHit hit;
-
-        LDragging = HandAction.Lhand;
-        RDragging = HandAction.Rhand;
+        
         Drag = controller.pulling;
         BA.transform.LookAt(Mcam.transform);
         BB.transform.LookAt(Mcam.transform);
@@ -42,13 +38,5 @@ public class UI : MonoBehaviour {
             BB.SetActive(false);
             BA.SetActive(false);
         }
-      /*  if (LDragging && RDragging)
-        {
-            
-        }
-        else if(BA.activeSelf == true && !(LDragging && RDragging))
-        {
-          
-        }*/
     }
 }
