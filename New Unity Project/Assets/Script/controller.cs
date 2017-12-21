@@ -11,7 +11,7 @@ public class controller : MonoBehaviour
     public float MouseSensitivity = 5.0f;
     public float jumpSpeed = 0.5f;
     public static bool pulling = false;
-   
+
     bool isGrounded = true;
     public Rigidbody RB;
     public GameObject Cam;
@@ -26,25 +26,37 @@ public class controller : MonoBehaviour
     // アクシオン配列
     public GameObject Left;
     public GameObject Right;
-    public Vector3 ClimbTargetPos;
+    private Vector3 ClimbTargetPos;
 
     // climbing variable
     //　クライミング配列
     bool TouchingDestinationY;
-    public LayerMask ClimbAbleLayer;
     float MaxClimbX;
     float MinClimbX;
     float MaxClimbY;
     float MinClimbY;
     float ClimbZ;
     bool ReachTop;
-    public float ClimbHeight = 0.3f;
+    public float ClimbHeight = 0.2f;
+
+    // handaction
+    private Vector3 GrabDirection;
+    private bool LeftDetect = false;
+    private bool RightDetect = false;
+    public GameObject frontCheckTarget;
+    private float HitDistance;
+    private bool isHit;
 
     // pull variable
     //引く配列
     GameObject PullTargetTemp;
-    bool PullPressed;
-       
+
+    // pickup Variable
+    public GameObject leg;
+    bool isGrabbed;
+    public GameObject grabTemp;
+    bool isGrabPressed;
+
     // character state
     // プレイヤーの状態
     public enum State
@@ -62,14 +74,53 @@ public class controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Rigidbody RB = this.gameObject.GetComponent<Rigidbody>();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
 
+    //climb grab check
+
+    void FrontCheck(GameObject fromObject)
+    {
+        isHit = false;
+        frontCheckTarget = null;
+        RaycastHit hit;
+        float handOutPos = fromObject.GetComponent<Collider>().bounds.extents.x;
+        if (Physics.Raycast(fromObject.transform.position, fromObject.transform.forward, out hit, handOutPos + 0.05f)) {
+            if (hit.distance < 0.5f)
+            {
+                frontCheckTarget = hit.transform.gameObject;
+            } else
+            {
+                Debug.Log("hit nothing");
+            }
+            isHit = true;
+        }
+
+        if (fromObject.name == "leg")
+        {
+            Vector3 legRayBtm = new Vector3(leg.transform.position.x, leg.GetComponent<Collider>().bounds.min.y, leg.transform.position.z);
+            float legOutPos = leg.GetComponent<Collider>().bounds.extents.x;
+            
+            if (Physics.Raycast(legRayBtm, leg.transform.forward, out hit, legOutPos + 0.08f, 1 << LayerMask.NameToLayer("GrabAble")))
+            {                
+                if (hit.distance < 1)
+                {
+                    frontCheckTarget = hit.transform.gameObject;
+                    Debug.Log(frontCheckTarget.gameObject.name);
+                } else
+                {
+                    Debug.Log("hit nothing");
+                }
+                isHit = true;
+            }
+        }
+                
+    }
+
     // force change angel when facing
     //壁とか引くもの前にちゃんと向かうために強制的にプレイヤーの角度を変更します。
-    public void CheckFaceAngle()
+    void CheckFaceAngle()
     {
         if (this.transform.rotation.y > -38 && this.transform.rotation.y < 38)
         {
@@ -94,7 +145,7 @@ public class controller : MonoBehaviour
 
     // check if foot touch ground
     // ちゃんと床に触れるか確認
-    public void CheckGround()
+    void CheckGround()
     {
         float distToGround = this.gameObject.GetComponent<Collider>().bounds.extents.y;
         if (Physics.Raycast(transform.position, -Vector3.up, distToGround + 1 / 10))
@@ -106,42 +157,15 @@ public class controller : MonoBehaviour
             isGrounded = false;
         }
     }
-    //test function
-    //テスト関数
-    public void Teleport(GameObject climbTarget)
-    {
-        Vector3 temp = transform.position;
-        temp.y = climbTarget.gameObject.transform.position.y + 0.1f;
-        //climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
-        transform.position = (transform.forward * 0.2f) + temp;
-        Debug.Log(transform.position);
-    }
-
-    void ReachTopYCheck()
-    {
-        //Debug.Log("called");
-        RaycastHit hit;
-        float LegDistY = this.gameObject.GetComponent<Collider>().bounds.min.y;
-        Vector3 LegPosition = new Vector3(this.gameObject.transform.position.x, LegDistY, this.gameObject.transform.position.z);
-        //Debug.DrawLine(LegPosition, transform.forward * 100, Color.red);
-        if (Physics.Raycast(LegPosition, transform.forward, out hit, 0.1f, ClimbAbleLayer))
-        {
-            //Debug.Log("hitsomething on leg");
-            TouchingDestinationY = true;
-        }
-        else TouchingDestinationY = false;
-    }
 
     // climbing function
     // クライミング関数
     IEnumerator Climbing(Vector3 NewPosY)
     {
         float TestSpeed = 0.5f;
-        //Debug.Log(NewPosY);
         while (Vector3.Distance(transform.position, NewPosY) > 0.05f)
         {
             transform.position = Vector3.MoveTowards(transform.position, NewPosY, TestSpeed * Time.deltaTime);
-            // transform.position = transform.up * TestSpeed;
             yield return null;
         }
         Vector3 newPoZ = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.2f);
@@ -159,19 +183,28 @@ public class controller : MonoBehaviour
         ReachTop = false;
     }
 
-    IEnumerator Pulling(Vector3 NewPosY)
+    IEnumerator GrabItem(GameObject grabObject)
     {
-            
+        grabTemp = null;
+        isGrabbed = false;
+        while (Vector3.Distance(grabObject.transform.position, Right.transform.position) > 0.05f)
+        {
+            grabObject.GetComponent<Rigidbody>().useGravity = false;
+            grabObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            grabObject.transform.position = Vector3.MoveTowards(grabObject.transform.position, Right.transform.position, 0.5f * Time.deltaTime);
+            yield return null;
+        }
+        grabObject.transform.position = Right.transform.position;
+        isGrabbed = true;
+        grabTemp = grabObject;
     }
 
 
-    public void Climb(GameObject climbTarget)
+    void Climb(GameObject climbTarget)
     {
         float CTHeight = climbTarget.gameObject.GetComponent<Collider>().bounds.extents.y;
-        //Debug.Log(CTHeight);
         if (CTHeight < 0.2 && PState == State.Idle)
         {
-            Vector3 tempTar = new Vector3(transform.position.x, CTHeight, transform.position.z);
             PState = State.ClimbLow;
             Debug.Log("ShortClimb");
             ReachTop = true;
@@ -185,11 +218,10 @@ public class controller : MonoBehaviour
 
     // pull fucntion
     // 引く関数
-    public void Pull(GameObject PullTarget)
+    void Pull(GameObject PullTarget)
     {
-        PullTargetTemp= PullTarget;
+        PullTargetTemp = PullTarget;
         PState = State.pull;
-        //Debug.Log(this.GetComponent<Rigidbody>().name);
     }
 
 
@@ -234,7 +266,6 @@ public class controller : MonoBehaviour
             Cam.GetComponent<MainCamera>().PullBag = false;
             Cam.GetComponent<MainCamera>().Onbag = false;
 
-            
 
             if (Input.GetKey(KeyCode.W) || JoyUp == true)
             {
@@ -261,34 +292,25 @@ public class controller : MonoBehaviour
         // if state is climbing high
         if (PState == State.ClimbHigh)
         {
-            MaxClimbX = Right.GetComponent<HandAction>().ClimbTargetHand.gameObject.GetComponent<Collider>().bounds.size.x;
-            MinClimbX = Right.GetComponent<HandAction>().ClimbTargetHand.gameObject.GetComponent<Collider>().bounds.min.x;
-            MaxClimbY = Right.GetComponent<HandAction>().ClimbTargetHand.gameObject.GetComponent<Collider>().bounds.max.y;
-            MinClimbY = Right.GetComponent<HandAction>().ClimbTargetHand.gameObject.GetComponent<Collider>().bounds.min.y;
+            MaxClimbX = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.size.x;
+            MinClimbX = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.min.x;
+            MaxClimbY = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.max.y;
+            MinClimbY = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.min.y;
             ClimbZ = transform.position.z;
             if (transform.position.x > MaxClimbX)
             {
-                Debug.Log(MaxClimbX);
-                Debug.Log("max Right");
                 transform.position = new Vector3(MaxClimbX, transform.position.y, ClimbZ);
             }
             if (transform.position.x < MinClimbX)
             {
-                Debug.Log(MinClimbX);
-                Debug.Log("max left");
                 transform.position = new Vector3(MinClimbX, transform.position.y, ClimbZ);
             }
             if (transform.position.y > MaxClimbY - 0.05)
             {
-                Debug.Log(MaxClimbY);
-                Debug.Log("reach top");
                 ReachTop = true;
-                //transform.position = new Vector3(transform.position.x, MaxClimbY, ClimbZ);
             }
             if (transform.position.y < MinClimbY)
             {
-                Debug.Log(MinClimbY);
-                Debug.Log("reach btm");
                 transform.position = new Vector3(transform.position.x, MinClimbY, ClimbZ);
             }
             Cam.GetComponent<MainCamera>().Climbing = true;
@@ -327,13 +349,12 @@ public class controller : MonoBehaviour
         Vector3 CurrPost = new Vector3(transform.position.x, transform.position.y + ClimbHeight, transform.position.z); ;
         if (ReachTop == true)
         {
-            Debug.Log("calling coroutine");
             StartCoroutine(Climbing(CurrPost));
             PState = State.ClimbLow;
             ReachTop = false;
         }
 
-        if (PState == State.pull && (Input.GetKey(KeyCode.W) || JoyUp == true))
+        if (PState == State.pull && (Input.GetKeyDown(KeyCode.W) || JoyUp == true))
         {
             Cam.GetComponent<MainCamera>().Pulling = true;
             transform.position += transform.forward * MovementSpeed * Time.deltaTime;
@@ -379,13 +400,10 @@ public class controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             CheckFaceAngle();
-            //Debug.Log("called");
-            if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect))
-            {
-                //Debug.Log("execute");
-                Climb(Right.GetComponent<HandAction>().ClimbTargetHand);
+            FrontCheck(Left);
+            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 | frontCheckTarget.layer == 13)) {
+                Climb(frontCheckTarget);
             }
-            //Teleport(Right.GetComponent<HandAction>().ClimbTargetHand);
         }
 
         //pull
@@ -393,26 +411,52 @@ public class controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             CheckFaceAngle();
-            
-            PullPressed = !PullPressed;
-            if ((Left.GetComponent<HandAction>().LeftDetect) && (Right.GetComponent<HandAction>().RightDetect) && PullPressed == true)
+            FrontCheck(Left);
+            if (isHit && PullTargetTemp == null && (frontCheckTarget.layer == 12 | frontCheckTarget.layer == 13))
             {
-                //Debug.Log("pull");
+                Debug.Log("entered");
                 pulling = true;
-                GameObject ClimbTarget = Right.GetComponent<HandAction>().ClimbTargetHand;
-                //Debug.Log(ClimbTarget.name);
-                Pull(ClimbTarget);
-            } else if (PullPressed == false)
+                Pull(frontCheckTarget);
+            } else
             {
                 PState = State.Idle;
                 pulling = false;
                 PullTargetTemp = null;
-
             }
         }
+        // grab item
+        // Q 押すとアイテム拾う作業
+        if (Input.GetKeyDown(KeyCode.Q))
+        {            
+            FrontCheck(leg);
+            if (frontCheckTarget == null)
+            {
+                Debug.Log("touch nothing");
+            }
+            else if (frontCheckTarget.layer == 14 && grabTemp == null )
+            {
+                Debug.Log("touch pen");
+                isGrabPressed = !isGrabPressed;
+                StartCoroutine(GrabItem(frontCheckTarget));
+                isGrabPressed = false;
+            }
+            if (isGrabPressed == false && grabTemp != null)
+            {
+                isGrabbed = false;
+                Debug.Log("drop");
+                grabTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                grabTemp.transform.eulerAngles = new Vector3(0, 90, 13.6f);
+                grabTemp.transform.position = new Vector3(transform.position.x, 0.75f, -0.96f); 
+                grabTemp.GetComponent<Rigidbody>().useGravity = true;
+                grabTemp = null;
+            }
+        }
+        if (isGrabbed == true)
+        {
+            grabTemp.transform.rotation = transform.rotation;
+            grabTemp.transform.position = new Vector3(Right.transform.position.x, Right.transform.position.y + 0.01f, Right.transform.position.z);
+        }
     }
-
-
 }
 
 
