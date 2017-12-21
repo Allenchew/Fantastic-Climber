@@ -11,7 +11,10 @@ public class Climbing : MonoBehaviour {
     public bool Trigg = false;
     public Rigidbody rb;
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> Movement2
     private bool EndClimb = true;
     private bool HeadAlert = false;
     private bool climbAnim = false;
@@ -33,6 +36,7 @@ public class Climbing : MonoBehaviour {
         RaycastHit HeadDetect;
         //transform.rotation = FindParent.transform.rotation;
         Debug.DrawRay(transform.position, (transform.up * 0.1f),Color.blue);
+<<<<<<< HEAD
         if (Physics.Raycast(transform.position, (transform.forward) * 0.05f, out CurrentParent, 0.05f, Rope))
         {
             hitpos = CurrentParent.transform.position;
@@ -95,6 +99,37 @@ public class Climbing : MonoBehaviour {
                 }
             }
             if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, RopeEnd))
+=======
+        if (Physics.Raycast(transform.position, (transform.up), out HeadDetect, 0.1f,Detection))
+        {
+            HeadAlert = true;
+        }else
+        {
+            HeadAlert = false;
+        }
+        if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, Rope) && Trigg)
+        {
+            if (Input.GetKeyDown(KeyCode.Z) && !climbAnim && !HeadAlert)
+            {
+                if (FindParent.transform.tag == "TopRope")
+                {
+                    Debug.Log("Top");
+                    var nextpos = FindParent.transform.position + new Vector3(0, 0, 0.05f);
+                    var nextRot = new Quaternion(0, 180, 0, 0);
+                    StartCoroutine(SmoothMov(nextpos));
+                    StartCoroutine(TopRp(nextRot));
+                }
+                else if (FindParent.transform.tag != "TopRope")
+                {
+                    Debug.Log("Norm");
+                    var nextpos = FindParent.transform.position - (hitpos - transform.position);
+                    StartCoroutine(SmoothMov(nextpos));
+                }
+                //transform.position = Vector3.Slerp(transform.position, nextpos, 0.125f);//FindParent.transform.position - (hitpos- transform.position);
+            }
+        }
+         if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, RopeEnd) && Trigg)
+>>>>>>> Movement2
             {
                 if (Input.GetKeyDown(KeyCode.Z) && !climbAnim && !HeadAlert)
                 {
@@ -104,6 +139,7 @@ public class Climbing : MonoBehaviour {
                     Trigg = false;
                 }
             }
+<<<<<<< HEAD
             if (Physics.Raycast(transform.position, (transform.forward) * 0.05f - new Vector3(0, 0.05f, 0), out PastParent, 1, Rope) && !EndClimb)
             {
                 if (Input.GetKeyDown(KeyCode.X) && !climbAnim && Trigg)
@@ -111,6 +147,33 @@ public class Climbing : MonoBehaviour {
                     var Prepos = PastParent.transform.position - (hitpos - transform.position);
                     StartCoroutine(SmoothMov(Prepos));
 
+=======
+        if (Physics.Raycast(transform.position, (transform.forward) * 0.05f - new Vector3(0, 0.05f, 0), out PastParent, 1, Rope) && !EndClimb)
+            {
+            if (Input.GetKeyDown(KeyCode.X) && !climbAnim && Trigg)
+            {
+                    var Prepos = PastParent.transform.position - (hitpos - transform.position);
+                    StartCoroutine(SmoothMov(Prepos));
+                
+            }
+        }
+        if (Physics.Raycast(transform.position, (transform.forward) * 0.05f, out CurrentParent, 0.05f, Rope))
+        {
+            hitpos = CurrentParent.transform.position;
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                EndClimb = false;
+                if (Trigg == false)
+                {
+                    Trigg = true;
+                    rb.isKinematic = true;
+                    transform.position = CurrentParent.transform.position - new Vector3(0, 0, 0.05f);
+                    transform.rotation = new Quaternion(0, 0, 0, 0);
+                } else if (Trigg == true)
+                {
+                    Trigg = false;
+                    rb.isKinematic = false;
+>>>>>>> Movement2
                 }
             }
         }
@@ -124,9 +187,26 @@ public class Climbing : MonoBehaviour {
                 EndClimb = false;
                 Trigg = true;
             }
+<<<<<<< HEAD
         }
         
         
+=======
+            }
+        
+        if (Trigg)
+        {
+           
+            if (Input.GetKey(KeyCode.C))
+            {
+                transform.RotateAround(hitpos, Vector3.up, 90 * Time.deltaTime);
+            }
+            else if (Input.GetKey(KeyCode.V))
+            {
+                transform.RotateAround(hitpos, Vector3.up, -90 * Time.deltaTime);
+            }
+        }
+>>>>>>> Movement2
     }
     IEnumerator FinClimb(int BaseNum, int Progression)
     {
