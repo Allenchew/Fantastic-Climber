@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class controller : MonoBehaviour
 {
 
-    public Animator Anim;
+   //   Animator Anim;
     // movement variable
     //　動く配列
     public float MovementSpeed = 0.3f;
@@ -76,7 +77,8 @@ public class controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Anim = GetComponent<Animator>();
+        //Anim = GetComponent<Animator>();
+       // Anim.Stop();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -100,7 +102,7 @@ public class controller : MonoBehaviour
             isHit = true;
         }
 
-        if (fromObject.name == "leg")
+        if (fromObject.name == "Leg")
         {
             Vector3 legRayBtm = new Vector3(leg.transform.position.x, leg.GetComponent<Collider>().bounds.min.y, leg.transform.position.z);
             float legOutPos = leg.GetComponent<Collider>().bounds.extents.x;
@@ -232,6 +234,10 @@ public class controller : MonoBehaviour
     void Update()
     {
         // controller input
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("A");
+        }
         if (Input.GetAxis("JoystickX") >= 0.8f)
         {
             JoyRight = true;
@@ -272,10 +278,14 @@ public class controller : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W) || JoyUp == true)
             {
-
+               // Anim.Play("walk");
+             //.   RB.constraints = RigidbodyConstraints.FreezePositionY;
                 transform.position += transform.forward * MovementSpeed * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-            }
+            } /*else if (Input.GetKeyUp(KeyCode.W) || JoyUp == false)
+            {
+                RB.constraints = RigidbodyConstraints.None;
+            }*/
 
             if (Input.GetKey(KeyCode.S) || JoyDown == true)
             {
@@ -358,8 +368,9 @@ public class controller : MonoBehaviour
             ReachTop = false;
         }
 
-        if (PState == State.pull && (Input.GetKeyDown(KeyCode.W) || JoyUp == true))
+        if (PState == State.pull && (Input.GetKey(KeyCode.W) || JoyUp == true))
         {
+            PullTargetTemp.GetComponent<drawer>().checkDrawer();
             Cam.GetComponent<MainCamera>().Pulling = true;
             transform.position += transform.forward * MovementSpeed * Time.deltaTime;
             PullTargetTemp.transform.position += transform.forward * MovementSpeed * Time.deltaTime;
@@ -367,9 +378,18 @@ public class controller : MonoBehaviour
         }
         if (PState == State.pull && (Input.GetKey(KeyCode.S) || JoyDown == true))
         {
+            PullTargetTemp.GetComponent<drawer>().checkDrawer();
             Cam.GetComponent<MainCamera>().Pulling = true;
-            transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-            PullTargetTemp.transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+            if (PullTargetTemp.GetComponent<drawer>().isReachLimit)
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+                PullTargetTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+            }
+            else
+            {
+                transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+                PullTargetTemp.transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+            }
         }
 
         // climbing Mode
@@ -394,7 +414,7 @@ public class controller : MonoBehaviour
         //jump + ground check
         //スパイスキー押すとgroundcheckとジャンプ作業
         CheckGround();
-        if (isGrounded && Input.GetButtonDown("Jump") && (PState == State.Idle || PState == State.Move))
+        if (isGrounded && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Joystick1Button3)) && (PState == State.Idle || PState == State.Move))
         {
             RB.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
@@ -405,9 +425,9 @@ public class controller : MonoBehaviour
         {
             CheckFaceAngle();
             FrontCheck(Left);
-          /*  if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 | frontCheckTarget.layer == 13)) {
+            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 | frontCheckTarget.layer == 13)) {
                 Climb(frontCheckTarget);
-            }*/
+            }
         }
 
         //pull
@@ -430,7 +450,7 @@ public class controller : MonoBehaviour
         }
         // grab item
         // Q 押すとアイテム拾う作業
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {            
             FrontCheck(leg);
             if (frontCheckTarget == null)
@@ -446,12 +466,18 @@ public class controller : MonoBehaviour
             }
             if (isGrabPressed == false && grabTemp != null)
             {
+                RaycastHit hit;
+                float handOutPos = Right.GetComponent<Collider>().bounds.extents.x;
                 isGrabbed = false;
-                Debug.Log("drop");
-                grabTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                grabTemp.transform.eulerAngles = new Vector3(0, 90, 13.6f);
-                grabTemp.transform.position = new Vector3(transform.position.x, 0.75f, -0.96f); 
                 grabTemp.GetComponent<Rigidbody>().useGravity = true;
+                Debug.Log("drop");
+                if (Physics.Raycast(Right.transform.position, Right.transform.forward, out hit, 0.44f) && hit.transform.name == "BookShelf")
+                {
+                    Debug.Log("drop in front shelf");
+                    grabTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    grabTemp.transform.eulerAngles = new Vector3(0, 90, 18.06f);
+                    grabTemp.transform.position = new Vector3(transform.position.x, 0.73f, -0.96f);
+                }
                 grabTemp = null;
             }
         }

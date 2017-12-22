@@ -42,9 +42,9 @@ public class MainCamera : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        CurrentX += /*Input.GetAxis("Camera X");*/Input.GetAxis("Mouse X");
+        CurrentX += Input.GetAxis("Camera X");/*Input.GetAxis("Mouse X");*/
         float InvY = inverseY ? -1 : 1;
-        CurrentY += InvY * /*Input.GetAxis("Camera Y");/*/Input.GetAxis("Mouse Y");
+        CurrentY += InvY * Input.GetAxis("Camera Y");/*Input.GetAxis("Mouse Y");*/
 
         CurrentY = Mathf.Clamp(CurrentY, -30, 85);
 
@@ -92,7 +92,7 @@ public class MainCamera : MonoBehaviour {
                   // iTween.FadeTo(Target, 1, 1);
                 }
                 Vector3 B = Quaternion.Euler(CurrentY * SensitivityY, CurrentX * SensitivityX, 0) * new Vector3(0, 0, -AdjDistance);
-                B += lookAt.position;
+                B += lookAt.position + new Vector3(0, 0.07f, 0);
                 SmoothedPosB = Vector3.Lerp(transform.position, B, smoothness);
             }
             else
@@ -102,20 +102,20 @@ public class MainCamera : MonoBehaviour {
             }
         }
         CamTransform.position = SmoothedPosB;
-        CamTransform.LookAt(new Vector3(lookAt.position.x, lookAt.position.y + 0.05f, lookAt.position.z));
+        CamTransform.LookAt(new Vector3(lookAt.position.x, lookAt.position.y + 0.07f, lookAt.position.z));
 
     }
     void FixedUpdate()
     {
         CH.UpdateCameraCP(cam.transform.position, cam.transform.rotation, ref CH.adjustedCamCP);
         CH.UpdateCameraCP(destination, cam.transform.rotation, ref CH.desiredCamCP);
-        CH.checkingColliding(lookAt.position);
+        CH.checkingColliding(lookAt.position + new Vector3(0, 0.07f, 0));
         for (int i = 0; i < 5; i++)
         {
-            Debug.DrawLine(lookAt.position, CH.desiredCamCP[i], Color.white);
-            Debug.DrawLine(lookAt.position, CH.adjustedCamCP[i], Color.green);
+            Debug.DrawLine(lookAt.position+new Vector3(0,0.07f,0), CH.desiredCamCP[i], Color.white);
+            Debug.DrawLine(lookAt.position + new Vector3(0, 0.07f, 0), CH.adjustedCamCP[i], Color.green);
         }
-        AdjDistance = CH.GetAdjustedDistance(lookAt.position);
+        AdjDistance = CH.GetAdjustedDistance(lookAt.position + new Vector3(0, 0.07f, 0));
     }
 }
 

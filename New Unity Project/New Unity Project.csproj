@@ -144,6 +144,7 @@
     <Compile Include="Assets\Script\MainCamera.cs" />
     <Compile Include="Assets\Script\UI.cs" />
     <Compile Include="Assets\Script\controller.cs" />
+    <Compile Include="Assets\Script\drawer.cs" />
     <Compile Include="Assets\Script\pencil.cs" />
   </ItemGroup>
   <ItemGroup>
