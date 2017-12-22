@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class controller : MonoBehaviour
 {
+
+    public Animator Anim;
     // movement variable
     //　動く配列
     public float MovementSpeed = 0.3f;
@@ -74,6 +76,7 @@ public class controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Anim = GetComponent<Animator>();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -269,6 +272,7 @@ public class controller : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W) || JoyUp == true)
             {
+
                 transform.position += transform.forward * MovementSpeed * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
             }
@@ -401,9 +405,9 @@ public class controller : MonoBehaviour
         {
             CheckFaceAngle();
             FrontCheck(Left);
-            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 | frontCheckTarget.layer == 13)) {
+          /*  if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 | frontCheckTarget.layer == 13)) {
                 Climb(frontCheckTarget);
-            }
+            }*/
         }
 
         //pull
