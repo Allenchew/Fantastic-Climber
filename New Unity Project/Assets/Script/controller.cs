@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class controller : MonoBehaviour
 {
+
+   //   Animator Anim;
     // movement variable
     //　動く配列
     public float MovementSpeed = 0.3f;
@@ -74,6 +77,8 @@ public class controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //Anim = GetComponent<Animator>();
+        //Anim.Stop();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -97,7 +102,7 @@ public class controller : MonoBehaviour
             isHit = true;
         }
 
-        if (fromObject.name == "leg")
+        if (fromObject.name == "Leg")
         {
             Vector3 legRayBtm = new Vector3(leg.transform.position.x, leg.GetComponent<Collider>().bounds.min.y, leg.transform.position.z);
             float legOutPos = leg.GetComponent<Collider>().bounds.extents.x;
@@ -147,9 +152,13 @@ public class controller : MonoBehaviour
     // ちゃんと床に触れるか確認
     void CheckGround()
     {
+        Vector3 rayStart = leg.transform.position + Vector3.down * this.gameObject.GetComponent<Collider>().bounds.size.y * 0.5f;
+        Debug.DrawRay(rayStart, -Vector3.up, Color.green);
+        RaycastHit hit;
         float distToGround = this.gameObject.GetComponent<Collider>().bounds.extents.y;
-        if (Physics.Raycast(transform.position, -Vector3.up, distToGround + 1 / 10))
+        if (Physics.Raycast(rayStart, -Vector3.up, out hit))
         {
+            Debug.Log(hit.collider.gameObject.name);
             isGrounded = true;
         }
         else
@@ -158,6 +167,7 @@ public class controller : MonoBehaviour
         }
     }
 
+    
     // climbing function
     // クライミング関数
     IEnumerator Climbing(Vector3 NewPosY)
@@ -228,7 +238,75 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch (PState)
+        {
+            case State.Idle:
+                {
+                    Debug.Log("entered");
+                    Cam.GetComponent<MainCamera>().Pulling = false;
+                    Cam.GetComponent<MainCamera>().Climbing = false;
+                    Cam.GetComponent<MainCamera>().PullBag = false;
+                    Cam.GetComponent<MainCamera>().Onbag = false;
+
+                    if (Input.GetKey(KeyCode.W) || JoyUp == true)
+                    {
+                        transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+                        transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+                    }            
+
+                    if (Input.GetKey(KeyCode.S) || JoyDown == true)
+                    {
+                        transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+                        transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+                    }
+
+                    if (Input.GetKey(KeyCode.A) || JoyLeft == true)
+                    {
+                        transform.position -= transform.right * MovementSpeed * Time.deltaTime;
+                    }
+
+                    if (Input.GetKey(KeyCode.D) || JoyRight == true)
+                    {
+                        transform.position += transform.right * MovementSpeed * Time.deltaTime;
+                    }
+
+                    break;
+                }
+            case State.pull:
+                {
+                    if (PState == State.pull && (Input.GetKey(KeyCode.W) || JoyUp == true))
+                    {
+                        PullTargetTemp.GetComponent<drawer>().checkDrawer();
+                        Cam.GetComponent<MainCamera>().Pulling = true;
+                        transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+                        PullTargetTemp.transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+
+                    }
+                    if (PState == State.pull && (Input.GetKey(KeyCode.S) || JoyDown == true))
+                    {
+                        PullTargetTemp.GetComponent<drawer>().checkDrawer();
+                        Cam.GetComponent<MainCamera>().Pulling = true;
+                        if (PullTargetTemp.GetComponent<drawer>().isReachLimit)
+                        {
+                            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+                            PullTargetTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+                        }
+                        else
+                        {
+                            transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+                            PullTargetTemp.transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
+                        }
+                    }
+                    break;
+                }
+
+        }
+
         // controller input
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("A");
+        }
         if (Input.GetAxis("JoystickX") >= 0.8f)
         {
             JoyRight = true;
@@ -256,40 +334,7 @@ public class controller : MonoBehaviour
             JoyDown = false;
         }
 
-        //characater movement
-        if (PState == State.Idle)
-        {
-            //reset camera      
-            //カメラリセットします。
-            Cam.GetComponent<MainCamera>().Pulling = false;
-            Cam.GetComponent<MainCamera>().Climbing = false;
-            Cam.GetComponent<MainCamera>().PullBag = false;
-            Cam.GetComponent<MainCamera>().Onbag = false;
 
-
-            if (Input.GetKey(KeyCode.W) || JoyUp == true)
-            {
-                transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-                transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-            }
-
-            if (Input.GetKey(KeyCode.S) || JoyDown == true)
-            {
-                transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-                transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-            }
-
-            if (Input.GetKey(KeyCode.A) || JoyLeft == true)
-            {
-                transform.position -= transform.right * MovementSpeed * Time.deltaTime;
-            }
-
-            if (Input.GetKey(KeyCode.D) || JoyRight == true)
-            {
-                transform.position += transform.right * MovementSpeed * Time.deltaTime;
-            }
-        }
-        // if state is climbing high
         if (PState == State.ClimbHigh)
         {
             MaxClimbX = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.size.x;
@@ -297,23 +342,29 @@ public class controller : MonoBehaviour
             MaxClimbY = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.max.y;
             MinClimbY = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.min.y;
             ClimbZ = transform.position.z;
+
             if (transform.position.x > MaxClimbX)
             {
                 transform.position = new Vector3(MaxClimbX, transform.position.y, ClimbZ);
             }
+
             if (transform.position.x < MinClimbX)
             {
                 transform.position = new Vector3(MinClimbX, transform.position.y, ClimbZ);
             }
+
             if (transform.position.y > MaxClimbY - 0.05)
             {
                 ReachTop = true;
             }
+
             if (transform.position.y < MinClimbY)
             {
                 transform.position = new Vector3(transform.position.x, MinClimbY, ClimbZ);
             }
+
             Cam.GetComponent<MainCamera>().Climbing = true;
+
             if (RB != null)
             {
                 RB.useGravity = false;
@@ -322,6 +373,23 @@ public class controller : MonoBehaviour
             else
             {
                 Debug.Log("no Rigidbody");
+            }
+
+            if (Input.GetKey(KeyCode.W) || JoyUp == true)
+            {
+                transform.position += transform.up * ClimbingSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.S) || JoyDown == true)
+            {
+                transform.position -= transform.up * ClimbingSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.A) || JoyLeft == true)
+            {
+                transform.position -= transform.right * ClimbingSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.D) || JoyDown == true)
+            {
+                transform.position += transform.right * ClimbingSpeed * Time.deltaTime;
             }
         }
 
@@ -353,44 +421,11 @@ public class controller : MonoBehaviour
             PState = State.ClimbLow;
             ReachTop = false;
         }
-
-        if (PState == State.pull && (Input.GetKeyDown(KeyCode.W) || JoyUp == true))
-        {
-            Cam.GetComponent<MainCamera>().Pulling = true;
-            transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-            PullTargetTemp.transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-
-        }
-        if (PState == State.pull && (Input.GetKey(KeyCode.S) || JoyDown == true))
-        {
-            Cam.GetComponent<MainCamera>().Pulling = true;
-            transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-            PullTargetTemp.transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-        }
-
-        // climbing Mode
-        //プレイヤーの状態はclimbhighになったら
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.W) || JoyUp == true))
-        {
-            transform.position += transform.up * ClimbingSpeed * Time.deltaTime;
-        }
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.S) || JoyDown == true))
-        {
-            transform.position -= transform.up * ClimbingSpeed * Time.deltaTime;
-        }
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.A) || JoyLeft == true))
-        {
-            transform.position -= transform.right * ClimbingSpeed * Time.deltaTime;
-        }
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.D) || JoyDown == true))
-        {
-            transform.position += transform.right * ClimbingSpeed * Time.deltaTime;
-        }
-
+        
         //jump + ground check
         //スパイスキー押すとgroundcheckとジャンプ作業
         CheckGround();
-        if (isGrounded && Input.GetButtonDown("Jump") && (PState == State.Idle || PState == State.Move))
+        if (isGrounded && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Joystick1Button3)) && (PState == State.Idle || PState == State.Move))
         {
             RB.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
         }
@@ -401,7 +436,8 @@ public class controller : MonoBehaviour
         {
             CheckFaceAngle();
             FrontCheck(Left);
-            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 | frontCheckTarget.layer == 13)) {
+
+            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 || frontCheckTarget.layer == 13)) {
                 Climb(frontCheckTarget);
             }
         }
@@ -412,12 +448,14 @@ public class controller : MonoBehaviour
         {
             CheckFaceAngle();
             FrontCheck(Left);
+
             if (isHit && PullTargetTemp == null && (frontCheckTarget.layer == 12 | frontCheckTarget.layer == 13))
             {
                 Debug.Log("entered");
                 pulling = true;
                 Pull(frontCheckTarget);
-            } else
+            }
+            else
             {
                 PState = State.Idle;
                 pulling = false;
@@ -426,9 +464,10 @@ public class controller : MonoBehaviour
         }
         // grab item
         // Q 押すとアイテム拾う作業
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {            
             FrontCheck(leg);
+
             if (frontCheckTarget == null)
             {
                 Debug.Log("touch nothing");
@@ -440,22 +479,32 @@ public class controller : MonoBehaviour
                 StartCoroutine(GrabItem(frontCheckTarget));
                 isGrabPressed = false;
             }
+
             if (isGrabPressed == false && grabTemp != null)
             {
+                RaycastHit hit;
+                float handOutPos = Right.GetComponent<Collider>().bounds.extents.x;
                 isGrabbed = false;
-                Debug.Log("drop");
-                grabTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                grabTemp.transform.eulerAngles = new Vector3(0, 90, 13.6f);
-                grabTemp.transform.position = new Vector3(transform.position.x, 0.75f, -0.96f); 
                 grabTemp.GetComponent<Rigidbody>().useGravity = true;
+                Debug.Log("drop");
+
+                if (Physics.Raycast(Right.transform.position, Right.transform.forward, out hit, 0.44f) && hit.transform.name == "BookShelf")
+                {
+                    Debug.Log("drop in front shelf");
+                    grabTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    grabTemp.transform.eulerAngles = new Vector3(0, 90, 18.06f);
+                    grabTemp.transform.position = new Vector3(transform.position.x, 0.73f, -0.96f);
+                }
                 grabTemp = null;
             }
         }
+
         if (isGrabbed == true)
         {
             grabTemp.transform.rotation = transform.rotation;
             grabTemp.transform.position = new Vector3(Right.transform.position.x, Right.transform.position.y + 0.01f, Right.transform.position.z);
         }
+        Debug.Log(isGrounded);
     }
 }
 
