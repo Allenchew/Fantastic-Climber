@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class controller : MonoBehaviour
 {
 
-   //   Animator Anim;
+    //   Animator Anim;
     // movement variable
     //　動く配列
     public float MovementSpeed = 0.3f;
@@ -78,11 +78,7 @@ public class controller : MonoBehaviour
     void Start()
     {
         //Anim = GetComponent<Animator>();
-<<<<<<< HEAD
-       // Anim.Stop();
-=======
         //Anim.Stop();
->>>>>>> b7cfdf2133e440f5e568b719c59c2cd9952ffde5
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
     }
@@ -95,11 +91,13 @@ public class controller : MonoBehaviour
         frontCheckTarget = null;
         RaycastHit hit;
         float handOutPos = fromObject.GetComponent<Collider>().bounds.extents.x;
-        if (Physics.Raycast(fromObject.transform.position, fromObject.transform.forward, out hit, handOutPos + 0.05f)) {
+        if (Physics.Raycast(fromObject.transform.position, fromObject.transform.forward, out hit, handOutPos + 0.05f))
+        {
             if (hit.distance < 0.5f)
             {
                 frontCheckTarget = hit.transform.gameObject;
-            } else
+            }
+            else
             {
                 Debug.Log("hit nothing");
             }
@@ -110,21 +108,22 @@ public class controller : MonoBehaviour
         {
             Vector3 legRayBtm = new Vector3(leg.transform.position.x, leg.GetComponent<Collider>().bounds.min.y, leg.transform.position.z);
             float legOutPos = leg.GetComponent<Collider>().bounds.extents.x;
-            
+
             if (Physics.Raycast(legRayBtm, leg.transform.forward, out hit, legOutPos + 0.08f, 1 << LayerMask.NameToLayer("GrabAble")))
-            {                
+            {
                 if (hit.distance < 1)
                 {
                     frontCheckTarget = hit.transform.gameObject;
                     Debug.Log(frontCheckTarget.gameObject.name);
-                } else
+                }
+                else
                 {
                     Debug.Log("hit nothing");
                 }
                 isHit = true;
             }
         }
-                
+
     }
 
     // force change angel when facing
@@ -171,7 +170,7 @@ public class controller : MonoBehaviour
         }
     }
 
-    
+
     // climbing function
     // クライミング関数
     IEnumerator Climbing(Vector3 NewPosY)
@@ -256,7 +255,7 @@ public class controller : MonoBehaviour
                     {
                         transform.position += transform.forward * MovementSpeed * Time.deltaTime;
                         transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-                    }            
+                    }
 
                     if (Input.GetKey(KeyCode.S) || JoyDown == true)
                     {
@@ -339,37 +338,6 @@ public class controller : MonoBehaviour
         }
 
 
-<<<<<<< HEAD
-            if (Input.GetKey(KeyCode.W) || JoyUp == true)
-            {
-               // Anim.Play("walk");
-             //.   RB.constraints = RigidbodyConstraints.FreezePositionY;
-                transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-                transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-            } /*else if (Input.GetKeyUp(KeyCode.W) || JoyUp == false)
-            {
-                RB.constraints = RigidbodyConstraints.None;
-            }*/
-
-            if (Input.GetKey(KeyCode.S) || JoyDown == true)
-            {
-                transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-                transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-            }
-
-            if (Input.GetKey(KeyCode.A) || JoyLeft == true)
-            {
-                transform.position -= transform.right * MovementSpeed * Time.deltaTime;
-            }
-
-            if (Input.GetKey(KeyCode.D) || JoyRight == true)
-            {
-                transform.position += transform.right * MovementSpeed * Time.deltaTime;
-            }
-        }
-        // if state is climbing high
-=======
->>>>>>> b7cfdf2133e440f5e568b719c59c2cd9952ffde5
         if (PState == State.ClimbHigh)
         {
             MaxClimbX = frontCheckTarget.gameObject.GetComponent<Collider>().bounds.size.x;
@@ -456,54 +424,7 @@ public class controller : MonoBehaviour
             PState = State.ClimbLow;
             ReachTop = false;
         }
-<<<<<<< HEAD
 
-        if (PState == State.pull && (Input.GetKey(KeyCode.W) || JoyUp == true))
-        {
-            PullTargetTemp.GetComponent<drawer>().checkDrawer();
-            Cam.GetComponent<MainCamera>().Pulling = true;
-            transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-            PullTargetTemp.transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-
-        }
-        if (PState == State.pull && (Input.GetKey(KeyCode.S) || JoyDown == true))
-        {
-            PullTargetTemp.GetComponent<drawer>().checkDrawer();
-            Cam.GetComponent<MainCamera>().Pulling = true;
-            if (PullTargetTemp.GetComponent<drawer>().isReachLimit)
-            {
-                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
-                PullTargetTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
-            }
-            else
-            {
-                transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-                PullTargetTemp.transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-            }
-        }
-
-        // climbing Mode
-        //プレイヤーの状態はclimbhighになったら
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.W) || JoyUp == true))
-        {
-            transform.position += transform.up * ClimbingSpeed * Time.deltaTime;
-        }
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.S) || JoyDown == true))
-        {
-            transform.position -= transform.up * ClimbingSpeed * Time.deltaTime;
-        }
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.A) || JoyLeft == true))
-        {
-            transform.position -= transform.right * ClimbingSpeed * Time.deltaTime;
-        }
-        if (PState == State.ClimbHigh && (Input.GetKey(KeyCode.D) || JoyDown == true))
-        {
-            transform.position += transform.right * ClimbingSpeed * Time.deltaTime;
-        }
-
-=======
-        
->>>>>>> b7cfdf2133e440f5e568b719c59c2cd9952ffde5
         //jump + ground check
         //スパイスキー押すとgroundcheckとジャンプ作業
         CheckGround();
@@ -519,7 +440,8 @@ public class controller : MonoBehaviour
             CheckFaceAngle();
             FrontCheck(Left);
 
-            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 || frontCheckTarget.layer == 13)) {
+            if (isHit && frontCheckTarget != null && (frontCheckTarget.layer == 9 || frontCheckTarget.layer == 13))
+            {
                 Climb(frontCheckTarget);
             }
         }
@@ -547,14 +469,14 @@ public class controller : MonoBehaviour
         // grab item
         // Q 押すとアイテム拾う作業
         if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button2))
-        {            
+        {
             FrontCheck(leg);
 
             if (frontCheckTarget == null)
             {
                 Debug.Log("touch nothing");
             }
-            else if (frontCheckTarget.layer == 14 && grabTemp == null )
+            else if (frontCheckTarget.layer == 14 && grabTemp == null)
             {
                 Debug.Log("touch pen");
                 isGrabPressed = !isGrabPressed;
@@ -569,10 +491,7 @@ public class controller : MonoBehaviour
                 isGrabbed = false;
                 grabTemp.GetComponent<Rigidbody>().useGravity = true;
                 Debug.Log("drop");
-<<<<<<< HEAD
-=======
 
->>>>>>> b7cfdf2133e440f5e568b719c59c2cd9952ffde5
                 if (Physics.Raycast(Right.transform.position, Right.transform.forward, out hit, 0.44f) && hit.transform.name == "BookShelf")
                 {
                     Debug.Log("drop in front shelf");
