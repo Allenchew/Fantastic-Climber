@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class controller : MonoBehaviour
 {
 
-    //   Animator Anim;
+       Animator Anim;
     // movement variable
     //　動く配列
     public float MovementSpeed = 0.3f;
@@ -77,7 +77,8 @@ public class controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //Anim = GetComponent<Animator>();
+        Anim = GetComponent<Animator>();
+        
         //Anim.Stop();
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -155,13 +156,13 @@ public class controller : MonoBehaviour
     // ちゃんと床に触れるか確認
     void CheckGround()
     {
-        Vector3 rayStart = leg.transform.position + Vector3.down * this.gameObject.GetComponent<Collider>().bounds.size.y * 0.5f;
-        Debug.DrawRay(rayStart, -Vector3.up, Color.green);
+        Vector3 rayStart = new Vector3(transform.position.x, (transform.position.y + 0.01f), transform.position.z);
+        Debug.DrawRay(rayStart, -Vector3.up, Color.red);
         RaycastHit hit;
         float distToGround = this.gameObject.GetComponent<Collider>().bounds.extents.y;
-        if (Physics.Raycast(rayStart, -Vector3.up, out hit))
+        if (Physics.Raycast(rayStart, -Vector3.up, out hit, 0.01f))
         {
-            Debug.Log(hit.collider.gameObject.name);
+
             isGrounded = true;
         }
         else
@@ -237,6 +238,21 @@ public class controller : MonoBehaviour
         PState = State.pull;
     }
 
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    float HitDistance;
+    //    List<GameObject> hitObject = new List<GameObject>();
+
+    //    foreach (GameObject HitItem in collision)
+    //    {
+    //        hitObject.Add(HitItem);
+    //    }
+    //    for (var i = 0; i < hitObject.Count; i++)
+    //    {
+    //        HitDistance = Vector3.Distance(transform.position, hitObject[i].transform.position);
+    //    }
+    //}
+
 
     // Update is called once per frame
     void Update()
@@ -245,32 +261,154 @@ public class controller : MonoBehaviour
         {
             case State.Idle:
                 {
-                    Debug.Log("entered");
                     Cam.GetComponent<MainCamera>().Pulling = false;
                     Cam.GetComponent<MainCamera>().Climbing = false;
                     Cam.GetComponent<MainCamera>().PullBag = false;
                     Cam.GetComponent<MainCamera>().Onbag = false;
 
-                    if (Input.GetKey(KeyCode.W) || JoyUp == true)
+                    bool KeyW;
+                    bool KeyS;
+                    bool KeyA;
+                    bool KeyD;
+                    bool keyWA;
+                    bool keyWD;
+                    bool keyAS;
+                    bool keySD;
+                    
+               
+
+                    if (Input.GetKey(KeyCode.W))
                     {
-                        transform.position += transform.forward * MovementSpeed * Time.deltaTime;
+                        KeyW = true;
+                    }
+                    else
+                    {
+                        KeyW = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.S))
+                    {
+                        KeyS = true;
+                    }
+                    else
+                    {
+                        KeyS = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.A))
+                    {
+                        KeyA = true;
+                    }
+                    else
+                    {
+                        KeyA = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        KeyD = true;
+                    }
+                    else
+                    {
+                        KeyD = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+                    {
+                        keyWA = true;
+                        KeyW = false;
+                        KeyA = false;
+                    }
+                    else
+                    {
+                        keyWA = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+                    {
+                        keyWD = true;
+                        KeyW = false;
+                        KeyD = false;
+                    }
+                    else
+                    {
+                        keyWD = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
+                    {
+                        keyAS = true;
+                        KeyA = false;
+                        KeyS = false;
+                    }
+                    else
+                    {
+                        keyAS = false;
+                    }
+
+                    if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
+                    {
+                        keySD = true;
+                        KeyS = false;
+                        KeyD = false;
+                    }
+                    else
+                    {
+                        keySD = false;
+                    }
+
+                    
+
+                    if (KeyW || JoyUp == true)
+                    {
+                        transform.position += Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
                         transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
                     }
 
-                    if (Input.GetKey(KeyCode.S) || JoyDown == true)
+                    if (KeyS || JoyDown == true)
                     {
-                        transform.position -= transform.forward * MovementSpeed * Time.deltaTime;
-                        transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 180, 0);
+                        transform.position -= Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
                     }
 
-                    if (Input.GetKey(KeyCode.A) || JoyLeft == true)
+                    if (KeyA || JoyLeft == true)
                     {
-                        transform.position -= transform.right * MovementSpeed * Time.deltaTime;
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 270, 0);
+                        transform.position -= Camera.main.transform.right * MovementSpeed * Time.deltaTime;
                     }
 
-                    if (Input.GetKey(KeyCode.D) || JoyRight == true)
+                    if (KeyD || JoyRight == true)
                     {
-                        transform.position += transform.right * MovementSpeed * Time.deltaTime;
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 90, 0);
+                        transform.position += Camera.main.transform.right * MovementSpeed * Time.deltaTime;
+                    }
+
+                    if (keyWA)
+                    {
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y - 45, 0);
+                        transform.position += Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                        transform.position -= Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                    }
+
+                    if (keyWD)
+                    {
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 45, 0);
+                        transform.position += Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                        transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                    }
+
+                    if (keyAS)
+                    {
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 225, 0);
+                        transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                        transform.position -= Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                    }
+
+                    if (keySD)
+                    {
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 135, 0);
+                        transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                        transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
                     }
 
                     break;
@@ -452,7 +590,6 @@ public class controller : MonoBehaviour
         {
             CheckFaceAngle();
             FrontCheck(Left);
-
             if (isHit && PullTargetTemp == null && (frontCheckTarget.layer == 12 | frontCheckTarget.layer == 13))
             {
                 Debug.Log("entered");
@@ -508,7 +645,6 @@ public class controller : MonoBehaviour
             grabTemp.transform.rotation = transform.rotation;
             grabTemp.transform.position = new Vector3(Right.transform.position.x, Right.transform.position.y + 0.01f, Right.transform.position.z);
         }
-        Debug.Log(isGrounded);
     }
 }
 
