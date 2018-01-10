@@ -257,6 +257,8 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(Input.GetAxis("JoystickX"));
+       // Debug.Log(Input.GetAxis("JoystickY"));
         switch (PState)
         {
             case State.Idle:
@@ -265,8 +267,20 @@ public class controller : MonoBehaviour
                     Cam.GetComponent<MainCamera>().Climbing = false;
                     Cam.GetComponent<MainCamera>().PullBag = false;
                     Cam.GetComponent<MainCamera>().Onbag = false;
+                    Vector2 dis = new Vector2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY"));
+                    if (Vector2.Distance(dis, new Vector2(0, 0)) > 0.5f)
+                    {
+                        Anim.SetBool("walking",true);
+                        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + Mathf.Atan2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY")) * Mathf.Rad2Deg, 0);
 
-                    bool KeyW;
+                        transform.position += transform.forward * Vector2.Distance(dis, new Vector2(0, 0)) * 0.005f;
+                    }else
+                    {
+                        Anim.SetBool("walking", false);
+                    }
+                  //  transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                  // transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                  /*  bool KeyW;
                     bool KeyS;
                     bool KeyA;
                     bool KeyD;
@@ -274,8 +288,8 @@ public class controller : MonoBehaviour
                     bool keyWD;
                     bool keyAS;
                     bool keySD;
-                    
-               
+
+
 
                     if (Input.GetKey(KeyCode.W))
                     {
@@ -357,7 +371,7 @@ public class controller : MonoBehaviour
                         keySD = false;
                     }
 
-                    
+
 
                     if (KeyW || JoyUp == true)
                     {
@@ -409,7 +423,7 @@ public class controller : MonoBehaviour
                         transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 135, 0);
                         transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
                         transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
-                    }
+                    }*/
 
                     break;
                 }
