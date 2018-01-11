@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: f76abe7a510a1c545935767710655b17
-timeCreated: 1515556407
-licenseType: Pro
+guid: a7890a4454956554ca2fa6910f6b930f
+timeCreated: 1515655234
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -1272,7 +1272,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Take 001
       takeName: Take 001
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
@@ -3632,7 +3632,7 @@ ModelImporter:
     - name: Player_rig:L_thumbC_FK
       parentName: Player_rig:L_thumbB_FK
       position: {x: -0.0013770835, y: -6.661338e-18, z: 7.105427e-17}
-      rotation: {x: 4.9556222e-17, y: -0.000087992245, z: 0.00032839153, w: 0.99999994}
+      rotation: {x: 4.955623e-17, y: -0.000087992245, z: 0.00032839153, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
     - name: Player_rig:L_thumbD_FK
       parentName: Player_rig:L_thumbC_FK
@@ -4159,7 +4159,7 @@ ModelImporter:
     - name: Player_rig:R_thumbD_FK
       parentName: Player_rig:R_thumbC_FK
       position: {x: 0.0027545618, y: -0.00000003025761, z: 0.00000034658444}
-      rotation: {x: 8.934004e-17, y: -0.0016332223, z: 0.006095269, w: 0.9999801}
+      rotation: {x: 8.934173e-17, y: -0.0016332223, z: 0.006095269, w: 0.9999801}
       scale: {x: 1, y: 1, z: 1}
     - name: Player_rig:R_thumb_FKtop
       parentName: Player_rig:R_thumbD_FK
@@ -5774,7 +5774,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3

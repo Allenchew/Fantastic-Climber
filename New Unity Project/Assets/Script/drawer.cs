@@ -28,6 +28,7 @@ public class drawer : MonoBehaviour {
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             isReachLimit = true;
         }
+        
     }
 	
 	// Update is called once per frame
