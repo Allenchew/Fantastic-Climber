@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class controller : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class controller : MonoBehaviour
     public bool isFront;
     private float HitDistance;
     private bool isHit;
+    public float dist;
 
     // pull variable
     //引く配列
@@ -89,6 +91,7 @@ public class controller : MonoBehaviour
 
     public GameObject DistCheck(string CheckObject)
     {
+        Debug.Log("entered");
         GameObject[] GrabObjects;
         GrabObjects = GameObject.FindGameObjectsWithTag(CheckObject);
         GameObject Closest = null;
@@ -274,8 +277,15 @@ public class controller : MonoBehaviour
     {
         PullTargetTemp = PullTarget;
         PState = State.pull;
-    }    
+    }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "EndGame")
+        {
+            SceneManager.LoadScene("EndGame");
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -641,9 +651,7 @@ public class controller : MonoBehaviour
         // Q 押すとアイテム拾う作業
         if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
-
-            GameObject ClosestObject = null;
-            float dist;
+            GameObject ClosestObject = null;            
             ClosestObject = DistCheck("GrabAble");
 
             if (ClosestObject == null)

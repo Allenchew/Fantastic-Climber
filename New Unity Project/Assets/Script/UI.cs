@@ -45,17 +45,24 @@ public class UI : MonoBehaviour {
         CheckFront();
         if (isFront == true)
         {
+            Debug.Log("Entered");
+            Debug.Log(hitObject.tag);
             if (hitObject.tag == "ClimbAble")
             {
-                climb.SetActive(true);
+                pull.SetActive(true);
                 Debug.Log("climbable in front");
+                if (hitObject.GetComponent<drawer>().isReachLimit)
+                {
+                    pull.SetActive(false);
+                    climb.SetActive(true);
+                }
             }
-            else
-            {
-                climb.SetActive(false);
-            }
-            
         }
+        else  {
+            pull.SetActive(false);
+            climb.SetActive(false);
+        }
+
 
         //Drag = controller.pulling;
         //BA.transform.LookAt(Mcam.transform);
