@@ -795,7 +795,713 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: player_rig:CNTRL_grp
+        weight: 0
+      - path: player_rig:CNTRL_grp/player_rig:root_cntrl
+        weight: 0
+      - path: player_rig:GEO_grp
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:ahoge
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:boots_L
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:boots_R
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:chuck1
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:chuck2
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:chuck3
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:chuck4
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:chuck7
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:chuck8
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:clothes2
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:ear_L
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:ear_R
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:eye_L
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:eye_R
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:face
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:haie_back
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair2
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair3
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair4
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair5
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair6
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair7
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair8
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair9
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair10
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair11
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair12
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair13
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair14
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair15
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair16
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair17
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hair18
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hand_L
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:hand_R
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:inner1
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:inner2
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:leg
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:matuge_L
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:matuge_R
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:mayuge_L
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:mayuge_R
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:pants2
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:suspenders
+        weight: 0
+      - path: player_rig:GEO_grp/player_rig:MODEL_grp/player_rig:suspenders_rivet
+        weight: 0
+      - path: player_rig:JNT_grp
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:C_chainA_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:C_chainB_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:C_chainC_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:C_chainD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:C_chainE_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:C_chainF_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainA_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainB_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainC_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainE_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainF_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainG_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainH_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainI_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainJ_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:L_chainK_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainA_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainB_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainC_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainE_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainF_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainG_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainH_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainI_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainJ_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:chain_root/player_rig:R_chainK_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_chuckA1_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_chuckA1_jnt/player_rig:L_chuckA2_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_FK/player_rig:L_knee_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_FK/player_rig:L_knee_FK/player_rig:L_ankle_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_FK/player_rig:L_knee_FK/player_rig:L_ankle_FK/player_rig:L_ankle_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_FK/player_rig:L_knee_FK/player_rig:L_ankle_FK/player_rig:L_toe_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_FK/player_rig:L_knee_FK/player_rig:L_ankle_FK/player_rig:L_toe_FK/player_rig:L_toe_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_IK/player_rig:L_knee_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_IK/player_rig:L_knee_IK/player_rig:L_ankle_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_IK/player_rig:L_knee_IK/player_rig:L_ankle_IK/player_rig:L_ankle_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_IK/player_rig:L_knee_IK/player_rig:L_ankle_IK/player_rig:L_toe_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_IK/player_rig:L_knee_IK/player_rig:L_ankle_IK/player_rig:L_toe_IK/player_rig:L_toe_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_jnt/player_rig:L_knee_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_jnt/player_rig:L_knee_jnt/player_rig:L_ankle_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_jnt/player_rig:L_knee_jnt/player_rig:L_ankle_jnt/player_rig:L_ankle_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_jnt/player_rig:L_knee_jnt/player_rig:L_ankle_jnt/player_rig:L_toe_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:L_thigh_jnt/player_rig:L_knee_jnt/player_rig:L_ankle_jnt/player_rig:L_toe_jnt/player_rig:L_toe_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_FK/player_rig:R_knee_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_FK/player_rig:R_knee_FK/player_rig:R_ankle_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_FK/player_rig:R_knee_FK/player_rig:R_ankle_FK/player_rig:R_ankle_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_FK/player_rig:R_knee_FK/player_rig:R_ankle_FK/player_rig:R_toe_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_FK/player_rig:R_knee_FK/player_rig:R_ankle_FK/player_rig:R_toe_FK/player_rig:R_toe_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_IK/player_rig:R_knee_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_IK/player_rig:R_knee_IK/player_rig:R_ankle_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_IK/player_rig:R_knee_IK/player_rig:R_ankle_IK/player_rig:R_ankle_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_IK/player_rig:R_knee_IK/player_rig:R_ankle_IK/player_rig:R_toe_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_IK/player_rig:R_knee_IK/player_rig:R_ankle_IK/player_rig:R_toe_IK/player_rig:R_toe_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_jnt/player_rig:R_knee_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_jnt/player_rig:R_knee_jnt/player_rig:R_ankle_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_jnt/player_rig:R_knee_jnt/player_rig:R_ankle_jnt/player_rig:R_ankle_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_jnt/player_rig:R_knee_jnt/player_rig:R_ankle_jnt/player_rig:R_toe_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:R_thigh_jnt/player_rig:R_knee_jnt/player_rig:R_ankle_jnt/player_rig:R_toe_jnt/player_rig:R_toe_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:L_chuckB1_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:L_chuckB1_jnt/player_rig:L_chuckB2_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:C_frontchuckA_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:C_frontchuckA_jnt/player_rig:C_frontchuckB_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_hand_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_indexA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_indexA_FK/player_rig:L_indexB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_indexA_FK/player_rig:L_indexB_FK/player_rig:L_indexC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_indexA_FK/player_rig:L_indexB_FK/player_rig:L_indexC_FK/player_rig:L_indexD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_indexA_FK/player_rig:L_indexB_FK/player_rig:L_indexC_FK/player_rig:L_indexD_FK/player_rig:L_index_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_middleA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_middleA_FK/player_rig:L_middleB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_middleA_FK/player_rig:L_middleB_FK/player_rig:L_middleC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_middleA_FK/player_rig:L_middleB_FK/player_rig:L_middleC_FK/player_rig:L_middleD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_middleA_FK/player_rig:L_middleB_FK/player_rig:L_middleC_FK/player_rig:L_middleD_FK/player_rig:L_middle_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_pinkyA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_pinkyA_FK/player_rig:L_pinkyB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_pinkyA_FK/player_rig:L_pinkyB_FK/player_rig:L_pinkyC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_pinkyA_FK/player_rig:L_pinkyB_FK/player_rig:L_pinkyC_FK/player_rig:L_pinkyD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_pinkyA_FK/player_rig:L_pinkyB_FK/player_rig:L_pinkyC_FK/player_rig:L_pinkyD_FK/player_rig:L_pinky_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_ringA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_ringA_FK/player_rig:L_ringB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_ringA_FK/player_rig:L_ringB_FK/player_rig:L_ringC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_ringA_FK/player_rig:L_ringB_FK/player_rig:L_ringC_FK/player_rig:L_ringD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_ringA_FK/player_rig:L_ringB_FK/player_rig:L_ringC_FK/player_rig:L_ringD_FK/player_rig:L_ring_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_thumbA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_thumbA_FK/player_rig:L_thumbB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_thumbA_FK/player_rig:L_thumbB_FK/player_rig:L_thumbC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_thumbA_FK/player_rig:L_thumbB_FK/player_rig:L_thumbC_FK/player_rig:L_thumbD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_FK/player_rig:L_elbow_FK/player_rig:L_wrist_FK/player_rig:L_thumbA_FK/player_rig:L_thumbB_FK/player_rig:L_thumbC_FK/player_rig:L_thumbD_FK/player_rig:L_thumb_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_hand_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_indexA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_indexA_IK/player_rig:L_indexB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_indexA_IK/player_rig:L_indexB_IK/player_rig:L_indexC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_indexA_IK/player_rig:L_indexB_IK/player_rig:L_indexC_IK/player_rig:L_indexD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_indexA_IK/player_rig:L_indexB_IK/player_rig:L_indexC_IK/player_rig:L_indexD_IK/player_rig:L_index_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_middleA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_middleA_IK/player_rig:L_middleB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_middleA_IK/player_rig:L_middleB_IK/player_rig:L_middleC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_middleA_IK/player_rig:L_middleB_IK/player_rig:L_middleC_IK/player_rig:L_middleD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_middleA_IK/player_rig:L_middleB_IK/player_rig:L_middleC_IK/player_rig:L_middleD_IK/player_rig:L_middle_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_pinkyA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_pinkyA_IK/player_rig:L_pinkyB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_pinkyA_IK/player_rig:L_pinkyB_IK/player_rig:L_pinkyC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_pinkyA_IK/player_rig:L_pinkyB_IK/player_rig:L_pinkyC_IK/player_rig:L_pinkyD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_pinkyA_IK/player_rig:L_pinkyB_IK/player_rig:L_pinkyC_IK/player_rig:L_pinkyD_IK/player_rig:L_pinky_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_ringA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_ringA_IK/player_rig:L_ringB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_ringA_IK/player_rig:L_ringB_IK/player_rig:L_ringC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_ringA_IK/player_rig:L_ringB_IK/player_rig:L_ringC_IK/player_rig:L_ringD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_ringA_IK/player_rig:L_ringB_IK/player_rig:L_ringC_IK/player_rig:L_ringD_IK/player_rig:L_ring_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_thumbA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_thumbA_IK/player_rig:L_thumbB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_thumbA_IK/player_rig:L_thumbB_IK/player_rig:L_thumbC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_thumbA_IK/player_rig:L_thumbB_IK/player_rig:L_thumbC_IK/player_rig:L_thumbD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_IK/player_rig:L_elbow_IK/player_rig:L_wrist_IK/player_rig:L_thumbA_IK/player_rig:L_thumbB_IK/player_rig:L_thumbC_IK/player_rig:L_thumbD_IK/player_rig:L_thumb_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_hand_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_indexA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_indexA_jnt/player_rig:L_indexB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_indexA_jnt/player_rig:L_indexB_jnt/player_rig:L_indexC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_indexA_jnt/player_rig:L_indexB_jnt/player_rig:L_indexC_jnt/player_rig:L_indexD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_indexA_jnt/player_rig:L_indexB_jnt/player_rig:L_indexC_jnt/player_rig:L_indexD_jnt/player_rig:L_index_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_middleA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_middleA_jnt/player_rig:L_middleB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_middleA_jnt/player_rig:L_middleB_jnt/player_rig:L_middleC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_middleA_jnt/player_rig:L_middleB_jnt/player_rig:L_middleC_jnt/player_rig:L_middleD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_middleA_jnt/player_rig:L_middleB_jnt/player_rig:L_middleC_jnt/player_rig:L_middleD_jnt/player_rig:L_middle_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_pinkyA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_pinkyA_jnt/player_rig:L_pinkyB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_pinkyA_jnt/player_rig:L_pinkyB_jnt/player_rig:L_pinkyC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_pinkyA_jnt/player_rig:L_pinkyB_jnt/player_rig:L_pinkyC_jnt/player_rig:L_pinkyD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_pinkyA_jnt/player_rig:L_pinkyB_jnt/player_rig:L_pinkyC_jnt/player_rig:L_pinkyD_jnt/player_rig:L_pinky_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_ringA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_ringA_jnt/player_rig:L_ringB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_ringA_jnt/player_rig:L_ringB_jnt/player_rig:L_ringC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_ringA_jnt/player_rig:L_ringB_jnt/player_rig:L_ringC_jnt/player_rig:L_ringD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_ringA_jnt/player_rig:L_ringB_jnt/player_rig:L_ringC_jnt/player_rig:L_ringD_jnt/player_rig:L_ring_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_thumbA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_thumbA_jnt/player_rig:L_thumbB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_thumbA_jnt/player_rig:L_thumbB_jnt/player_rig:L_thumbC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_thumbA_jnt/player_rig:L_thumbB_jnt/player_rig:L_thumbC_jnt/player_rig:L_thumbD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:L_thumbA_jnt/player_rig:L_thumbB_jnt/player_rig:L_thumbC_jnt/player_rig:L_thumbD_jnt/player_rig:L_thumb_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:L_wrist_jnt/player_rig:transform_elbow_twistend_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:transform_L_elbow_twist
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:transform_L_elbow_twist/player_rig:jnt_elbow_twist_A_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:transform_L_elbow_twist/player_rig:jnt_elbow_twist_A_L/player_rig:jnt_elbow_twist_B_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:transform_L_elbow_twist/player_rig:jnt_elbow_twist_A_L/player_rig:jnt_elbow_twist_B_L/player_rig:jnt_elbow_twist_C_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:transform_L_elbow_twist/player_rig:jnt_elbow_twist_A_L/player_rig:jnt_elbow_twist_B_L/player_rig:jnt_elbow_twist_C_L/player_rig:jnt_elbow_twist_D_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:L_elbow_jnt/player_rig:transform_L_elbow_twist/player_rig:transform_elbow_twiststart_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:jnt_sholuder_twist_A_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:jnt_sholuder_twist_A_L/player_rig:jnt_sholuder_twist_B_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:jnt_sholuder_twist_A_L/player_rig:jnt_sholuder_twist_B_L/player_rig:jnt_sholuder_twist_C_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:jnt_sholuder_twist_A_L/player_rig:jnt_sholuder_twist_B_L/player_rig:jnt_sholuder_twist_C_L/player_rig:jnt_sholuder_twist_D_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:L_shoulder_twist_IKhandle
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:L_shoulder_twist_strart
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:L_shoulder_twist_strart/player_rig:L_shoulder_twist_end
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:L_clavicle_jnt/player_rig:L_shoulder_jnt/player_rig:rig_sholuder_twist_L/player_rig:transform_sholuder_twist_L
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:neck_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:neck_jnt/player_rig:head_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:neck_jnt/player_rig:head_jnt/player_rig:hair_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:neck_jnt/player_rig:head_jnt/player_rig:hair_jnt/player_rig:hair_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:neck_jnt/player_rig:head_jnt/player_rig:head_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_hand_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_indexA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_indexA_FK/player_rig:R_indexB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_indexA_FK/player_rig:R_indexB_FK/player_rig:R_indexC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_indexA_FK/player_rig:R_indexB_FK/player_rig:R_indexC_FK/player_rig:R_indexD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_indexA_FK/player_rig:R_indexB_FK/player_rig:R_indexC_FK/player_rig:R_indexD_FK/player_rig:R_index_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_middleA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_middleA_FK/player_rig:R_middleB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_middleA_FK/player_rig:R_middleB_FK/player_rig:R_middleC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_middleA_FK/player_rig:R_middleB_FK/player_rig:R_middleC_FK/player_rig:R_middleD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_middleA_FK/player_rig:R_middleB_FK/player_rig:R_middleC_FK/player_rig:R_middleD_FK/player_rig:R_middle_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_pinkyA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_pinkyA_FK/player_rig:R_pinkyB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_pinkyA_FK/player_rig:R_pinkyB_FK/player_rig:R_pinkyC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_pinkyA_FK/player_rig:R_pinkyB_FK/player_rig:R_pinkyC_FK/player_rig:R_pinkyD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_pinkyA_FK/player_rig:R_pinkyB_FK/player_rig:R_pinkyC_FK/player_rig:R_pinkyD_FK/player_rig:R_pinky_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_ringA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_ringA_FK/player_rig:R_ringB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_ringA_FK/player_rig:R_ringB_FK/player_rig:R_ringC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_ringA_FK/player_rig:R_ringB_FK/player_rig:R_ringC_FK/player_rig:R_ringD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_ringA_FK/player_rig:R_ringB_FK/player_rig:R_ringC_FK/player_rig:R_ringD_FK/player_rig:R_ring_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_thumbA_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_thumbA_FK/player_rig:R_thumbB_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_thumbA_FK/player_rig:R_thumbB_FK/player_rig:R_thumbC_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_thumbA_FK/player_rig:R_thumbB_FK/player_rig:R_thumbC_FK/player_rig:R_thumbD_FK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_FK/player_rig:R_elbow_FK/player_rig:R_wrist_FK/player_rig:R_thumbA_FK/player_rig:R_thumbB_FK/player_rig:R_thumbC_FK/player_rig:R_thumbD_FK/player_rig:R_thumb_FKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_hand_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_indexA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_indexA_IK/player_rig:R_indexB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_indexA_IK/player_rig:R_indexB_IK/player_rig:R_indexC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_indexA_IK/player_rig:R_indexB_IK/player_rig:R_indexC_IK/player_rig:R_indexD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_indexA_IK/player_rig:R_indexB_IK/player_rig:R_indexC_IK/player_rig:R_indexD_IK/player_rig:R_index_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_middleA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_middleA_IK/player_rig:R_middleB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_middleA_IK/player_rig:R_middleB_IK/player_rig:R_middleC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_middleA_IK/player_rig:R_middleB_IK/player_rig:R_middleC_IK/player_rig:R_middleD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_middleA_IK/player_rig:R_middleB_IK/player_rig:R_middleC_IK/player_rig:R_middleD_IK/player_rig:R_middle_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_pinkyA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_pinkyA_IK/player_rig:R_pinkyB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_pinkyA_IK/player_rig:R_pinkyB_IK/player_rig:R_pinkyC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_pinkyA_IK/player_rig:R_pinkyB_IK/player_rig:R_pinkyC_IK/player_rig:R_pinkyD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_pinkyA_IK/player_rig:R_pinkyB_IK/player_rig:R_pinkyC_IK/player_rig:R_pinkyD_IK/player_rig:R_pinky_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_ringA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_ringA_IK/player_rig:R_ringB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_ringA_IK/player_rig:R_ringB_IK/player_rig:R_ringC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_ringA_IK/player_rig:R_ringB_IK/player_rig:R_ringC_IK/player_rig:R_ringD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_ringA_IK/player_rig:R_ringB_IK/player_rig:R_ringC_IK/player_rig:R_ringD_IK/player_rig:R_ring_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_thumbA_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_thumbA_IK/player_rig:R_thumbB_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_thumbA_IK/player_rig:R_thumbB_IK/player_rig:R_thumbC_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_thumbA_IK/player_rig:R_thumbB_IK/player_rig:R_thumbC_IK/player_rig:R_thumbD_IK
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_IK/player_rig:R_elbow_IK/player_rig:R_wrist_IK/player_rig:R_thumbA_IK/player_rig:R_thumbB_IK/player_rig:R_thumbC_IK/player_rig:R_thumbD_IK/player_rig:R_thumb_IKtop
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_hand_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_indexA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_indexA_jnt/player_rig:R_indexB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_indexA_jnt/player_rig:R_indexB_jnt/player_rig:R_indexC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_indexA_jnt/player_rig:R_indexB_jnt/player_rig:R_indexC_jnt/player_rig:R_indexD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_indexA_jnt/player_rig:R_indexB_jnt/player_rig:R_indexC_jnt/player_rig:R_indexD_jnt/player_rig:R_index_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_middleA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_middleA_jnt/player_rig:R_middleB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_middleA_jnt/player_rig:R_middleB_jnt/player_rig:R_middleC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_middleA_jnt/player_rig:R_middleB_jnt/player_rig:R_middleC_jnt/player_rig:R_middleD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_middleA_jnt/player_rig:R_middleB_jnt/player_rig:R_middleC_jnt/player_rig:R_middleD_jnt/player_rig:R_middle_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_pinkyA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_pinkyA_jnt/player_rig:R_pinkyB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_pinkyA_jnt/player_rig:R_pinkyB_jnt/player_rig:R_pinkyC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_pinkyA_jnt/player_rig:R_pinkyB_jnt/player_rig:R_pinkyC_jnt/player_rig:R_pinkyD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_pinkyA_jnt/player_rig:R_pinkyB_jnt/player_rig:R_pinkyC_jnt/player_rig:R_pinkyD_jnt/player_rig:R_pinky_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_ringA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_ringA_jnt/player_rig:R_ringB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_ringA_jnt/player_rig:R_ringB_jnt/player_rig:R_ringC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_ringA_jnt/player_rig:R_ringB_jnt/player_rig:R_ringC_jnt/player_rig:R_ringD_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_ringA_jnt/player_rig:R_ringB_jnt/player_rig:R_ringC_jnt/player_rig:R_ringD_jnt/player_rig:R_ring_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_thumbA_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_thumbA_jnt/player_rig:R_thumbB_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_thumbA_jnt/player_rig:R_thumbB_jnt/player_rig:R_thumbC_jnt
+        weight: 1
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_thumbA_jnt/player_rig:R_thumbB_jnt/player_rig:R_thumbC_jnt/player_rig:R_thumbD_jnt
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:R_thumbA_jnt/player_rig:R_thumbB_jnt/player_rig:R_thumbC_jnt/player_rig:R_thumbD_jnt/player_rig:R_thumb_top
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:R_wrist_jnt/player_rig:transform_elbow_twistend_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:transform_R_elbow_twist
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:transform_R_elbow_twist/player_rig:jnt_elbow_twist_A_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:transform_R_elbow_twist/player_rig:jnt_elbow_twist_A_R/player_rig:jnt_elbow_twist_B_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:transform_R_elbow_twist/player_rig:jnt_elbow_twist_A_R/player_rig:jnt_elbow_twist_B_R/player_rig:jnt_elbow_twist_C_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:transform_R_elbow_twist/player_rig:jnt_elbow_twist_A_R/player_rig:jnt_elbow_twist_B_R/player_rig:jnt_elbow_twist_C_R/player_rig:jnt_elbow_twist_D_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:R_elbow_jnt/player_rig:transform_R_elbow_twist/player_rig:transform_elbow_twiststart_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:jnt_sholuder_twist_A_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:jnt_sholuder_twist_A_R/player_rig:jnt_sholuder_twist_B_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:jnt_sholuder_twist_A_R/player_rig:jnt_sholuder_twist_B_R/player_rig:jnt_sholuder_twist_C_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:jnt_sholuder_twist_A_R/player_rig:jnt_sholuder_twist_B_R/player_rig:jnt_sholuder_twist_C_R/player_rig:jnt_sholuder_twist_D_R
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:R_shoulder_twist_IKhandle
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:R_shoulder_twist_strart
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:R_shoulder_twist_strart/player_rig:R_shoulder_twist_end
+        weight: 0
+      - path: player_rig:JNT_grp/player_rig:root_jnt/player_rig:spineA_jnt/player_rig:spineB_jnt/player_rig:chest_jnt/player_rig:R_clavicle_jnt/player_rig:R_shoulder_jnt/player_rig:rig_sholuder_twist_R/player_rig:transform_sholuder_twist_R
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

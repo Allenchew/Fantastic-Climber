@@ -54,6 +54,7 @@ public class controller : MonoBehaviour
     private bool RightDetect = false;
     public GameObject frontCheckTarget;
     private float HitDistance;
+    public float dist;
     private bool isHit;
 
     // pull variable
@@ -92,6 +93,28 @@ public class controller : MonoBehaviour
 
     //climb grab check
 
+    //climb grab check
+
+    public GameObject DistCheck(string CheckObject)
+    {
+        Debug.Log("entered");
+        GameObject[] GrabObjects;
+        GrabObjects = GameObject.FindGameObjectsWithTag(CheckObject);
+        GameObject Closest = null;
+        float distance = Mathf.Infinity;
+
+        foreach (GameObject GO in GrabObjects)
+        {
+            Vector3 diff = GO.transform.position - transform.position;
+            float curDist = diff.sqrMagnitude;
+            if (curDist < distance)
+            {
+                Closest = GO;
+                distance = curDist;
+            }
+        }
+        return Closest;
+    }
     void FrontCheck(GameObject fromObject)
     {
         isHit = false;
@@ -207,14 +230,17 @@ public class controller : MonoBehaviour
     {
         grabTemp = null;
         isGrabbed = false;
-        while (Vector3.Distance(grabObject.transform.position, Right.transform.position) > 0.05f)
+        yield return new WaitForSeconds(0.5f);
+        while (Vector3.Distance(grabObject.transform.position, Left.transform.position) > 0.05f)
         {
             grabObject.GetComponent<Rigidbody>().useGravity = false;
             grabObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-            grabObject.transform.position = Vector3.MoveTowards(grabObject.transform.position, Right.transform.position, 0.5f * Time.deltaTime);
+            grabObject.transform.position = Vector3.MoveTowards(grabObject.transform.position, Left.transform.position, 0.5f * Time.deltaTime);
+            
             yield return null;
         }
-        grabObject.transform.position = Right.transform.position;
+        grabObject.transform.position = Left.transform.position;
+        
         isGrabbed = true;
         grabTemp = grabObject;
     }
@@ -501,7 +527,7 @@ public class controller : MonoBehaviour
             }
 
             // controller input
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button7))
             {
                 SceneManager.LoadScene("A");
             }
@@ -682,33 +708,38 @@ public class controller : MonoBehaviour
             // Q 押すとアイテム拾う作業
             if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button2))
             {
-                FrontCheck(leg);
+                GameObject ClosestObject = null;
+                ClosestObject = DistCheck("GrabAble");
 
-                if (frontCheckTarget == null)
+                if (ClosestObject == null)
                 {
-                    Debug.Log("touch nothing");
+                    Debug.Log("nothing");
                 }
-                else if (frontCheckTarget.layer == 14 && grabTemp == null)
+                else if (ClosestObject)
                 {
-                    Debug.Log("touch pen");
-                    isGrabPressed = !isGrabPressed;
-                    StartCoroutine(GrabItem(frontCheckTarget));
-                    isGrabPressed = false;
+                    dist = Vector3.Distance(ClosestObject.transform.position, transform.position);
+                    Debug.Log("closet pen " + dist);
+                    if (dist < 0.08 && grabTemp == null)
+                    {
+                        isGrabPressed = !isGrabPressed;
+                        Anim.SetBool("grabPencil", true);
+                        StartCoroutine(GrabItem(ClosestObject));
+                        isGrabPressed = false;
+                    }
                 }
-
                 if (isGrabPressed == false && grabTemp != null)
                 {
                     RaycastHit hit;
                     float handOutPos = Right.GetComponent<Collider>().bounds.extents.x;
                     isGrabbed = false;
+                    Anim.SetBool("grabPencil", false);
                     grabTemp.GetComponent<Rigidbody>().useGravity = true;
                     Debug.Log("drop");
-
-                    if (Physics.Raycast(Right.transform.position, Right.transform.forward, out hit, 0.44f) && hit.transform.name == "BookShelf")
+                    if (Physics.Raycast(Right.transform.position, Right.transform.forward, out hit, 0.5f) && hit.transform.name == "BookShelf")
                     {
                         Debug.Log("drop in front shelf");
                         grabTemp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                        grabTemp.transform.eulerAngles = new Vector3(0, 90, 18.06f);
+                        grabTemp.transform.eulerAngles = new Vector3(0,90, 18.06f);
                         grabTemp.transform.position = new Vector3(transform.position.x, 0.73f, -0.96f);
                     }
                     grabTemp = null;
@@ -717,8 +748,8 @@ public class controller : MonoBehaviour
 
             if (isGrabbed == true)
             {
-                grabTemp.transform.rotation = transform.rotation;
-                grabTemp.transform.position = new Vector3(Right.transform.position.x, Right.transform.position.y + 0.01f, Right.transform.position.z);
+                grabTemp.transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y -90, transform.eulerAngles.z);
+                grabTemp.transform.position = new Vector3(Left.transform.position.x, Left.transform.position.y + 0.01f, Left.transform.position.z);
             }
         }
 
