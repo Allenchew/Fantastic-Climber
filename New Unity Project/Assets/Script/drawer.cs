@@ -18,13 +18,13 @@ public class drawer : MonoBehaviour {
         Debug.DrawRay(transform.position, transform.up);
         if (Physics.Raycast(limit.transform.position, transform.up, out hit, 1f))
         {
-            Debug.Log("hit something");
-            Debug.Log(hit.transform.name);
+            //Debug.Log("hit something");
+            //Debug.Log(hit.transform.name);
             isReachLimit = false;
         }
         else
         {
-            Debug.Log("reach limit");
+            //Debug.Log("reach limit");
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             isReachLimit = true;
         }

@@ -43,8 +43,12 @@ public class MainCamera : MonoBehaviour {
     void Update()
     {
         CurrentX += Input.GetAxis("Camera X");/*Input.GetAxis("Mouse X")*/;
+        CurrentX += Input.GetAxis("Mouse X");
+        CurrentX += Input.GetAxis("Camera X");
+        CurrentX += Input.GetAxis("Mouse X");/*Input.GetAxis("Mouse X")
         float InvY = inverseY ? -1 : 1;
-        CurrentY += InvY * Input.GetAxis("Camera Y");/*Input.GetAxis("Mouse Y")*/;
+        CurrentY += InvY * Input.GetAxis("Camera Y");/*Input.GetAxis("Mouse Y")*/
+        ;
 
         CurrentY = Mathf.Clamp(CurrentY, -30, 85);
 
