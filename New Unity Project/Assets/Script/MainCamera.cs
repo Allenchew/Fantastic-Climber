@@ -14,11 +14,12 @@ public class MainCamera : MonoBehaviour {
     public bool Climbing = false;
     public bool PullBag = false;
     public bool Onbag = false;
+    public bool PlayM = false;
     private Camera cam;
 
     private Vector3 dir;
-    private float Y_max = 50.0f;
-    private float Y_min = -9.0f;
+    public float Y_max = 75.0f;
+    public float Y_min = -15.0f;
     public float X_max = 0.0f;
     public float X_min = -50.0f;
     private float distance = 0.3f;
@@ -42,15 +43,20 @@ public class MainCamera : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        CurrentX += Input.GetAxis("Camera X");/*Input.GetAxis("Mouse X")*/;
-        CurrentX += Input.GetAxis("Mouse X");
-        CurrentX += Input.GetAxis("Camera X");
-        CurrentX += Input.GetAxis("Mouse X");/*Input.GetAxis("Mouse X")
         float InvY = inverseY ? -1 : 1;
-        CurrentY += InvY * Input.GetAxis("Camera Y");/*Input.GetAxis("Mouse Y")*/
-        ;
-
-        CurrentY = Mathf.Clamp(CurrentY, -30, 85);
+        if (PlayM)
+        {
+            CurrentX += Input.GetAxis("Camera X");
+            CurrentY += InvY * Input.GetAxis("Camera Y");
+            CurrentY = Mathf.Clamp(CurrentY, Y_min, Y_max);
+        }
+        else
+        {
+            CurrentX += Input.GetAxis("Mouse X");
+            CurrentY += InvY * Input.GetAxis("Mouse Y");
+            CurrentY = Mathf.Clamp(CurrentY, Y_min, Y_max);
+        }
+        
 
     }
 

@@ -18,7 +18,7 @@ public class controller : MonoBehaviour
     public float MouseSensitivity = 5.0f;
     public float jumpSpeed = 0.5f;
     public static bool pulling = false;
-
+    public bool PlayM = false;
     public GameObject test1;
 
     bool isGrounded = true;
@@ -362,183 +362,189 @@ public class controller : MonoBehaviour
             {
                 case State.Idle:
                     {
-                        Cam.GetComponent<MainCamera>().Pulling = false;
-                        Cam.GetComponent<MainCamera>().Climbing = false;
-                        Cam.GetComponent<MainCamera>().PullBag = false;
-                        Cam.GetComponent<MainCamera>().Onbag = false;
-                        Vector2 dis = new Vector2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY"));
-                        if (Vector2.Distance(dis, new Vector2(0, 0)) > 0.4f)
+
+                        if (PlayM== true)
                         {
-                            if (Vector2.Distance(dis, new Vector2(0, 0)) < 1f)
+                            Cam.GetComponent<MainCamera>().Pulling = false;
+                            Cam.GetComponent<MainCamera>().Climbing = false;
+                            Cam.GetComponent<MainCamera>().PullBag = false;
+                            Cam.GetComponent<MainCamera>().Onbag = false;
+                            Vector2 dis = new Vector2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY"));
+                            if (Vector2.Distance(dis, new Vector2(0, 0)) > 0.4f)
                             {
-                                walkingspd = 0.004f;
-                                Anim.SetBool("walking", true);
-                                Anim.SetBool("running", false);
+                                if (Vector2.Distance(dis, new Vector2(0, 0)) < 1f)
+                                {
+                                    walkingspd = 0.004f;
+                                    Anim.SetBool("walking", true);
+                                    Anim.SetBool("running", false);
+                                }
+                                else
+                                {
+                                    walkingspd = 0.008f;
+                                    Anim.SetBool("running", true);
+                                    Anim.SetBool("walking", false);
+                                }
+
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + Mathf.Atan2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY")) * Mathf.Rad2Deg, 0);
+
+                                transform.position += transform.forward * Vector2.Distance(dis, new Vector2(0, 0)) * walkingspd;
                             }
                             else
                             {
-                                walkingspd = 0.008f;
-                                Anim.SetBool("running", true);
                                 Anim.SetBool("walking", false);
+                                Anim.SetBool("running", false);
                             }
-
-                            transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + Mathf.Atan2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY")) * Mathf.Rad2Deg, 0);
-
-                            transform.position += transform.forward * Vector2.Distance(dis, new Vector2(0, 0)) * walkingspd;
+                            // transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                            // transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
                         }
                         else
                         {
-                            Anim.SetBool("walking", false);
-                            Anim.SetBool("running", false);
+
+                            bool KeyW;
+                            bool KeyS;
+                            bool KeyA;
+                            bool KeyD;
+                            bool keyWA;
+                            bool keyWD;
+                            bool keyAS;
+                            bool keySD;
+
+
+
+                            if (Input.GetKey(KeyCode.W))
+                            {
+                                KeyW = true;
+                            }
+                            else
+                            {
+                                KeyW = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.S))
+                            {
+                                KeyS = true;
+                            }
+                            else
+                            {
+                                KeyS = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.A))
+                            {
+                                KeyA = true;
+                            }
+                            else
+                            {
+                                KeyA = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.D))
+                            {
+                                KeyD = true;
+                            }
+                            else
+                            {
+                                KeyD = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+                            {
+                                keyWA = true;
+                                KeyW = false;
+                                KeyA = false;
+                            }
+                            else
+                            {
+                                keyWA = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+                            {
+                                keyWD = true;
+                                KeyW = false;
+                                KeyD = false;
+                            }
+                            else
+                            {
+                                keyWD = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
+                            {
+                                keyAS = true;
+                                KeyA = false;
+                                KeyS = false;
+                            }
+                            else
+                            {
+                                keyAS = false;
+                            }
+
+                            if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
+                            {
+                                keySD = true;
+                                KeyS = false;
+                                KeyD = false;
+                            }
+                            else
+                            {
+                                keySD = false;
+                            }
+
+
+
+                            if (KeyW || JoyUp == true)
+                            {
+                                transform.position += Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
+                                transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+                            }
+
+                            if (KeyS || JoyDown == true)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 180, 0);
+                                transform.position -= Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
+                            }
+
+                            if (KeyA || JoyLeft == true)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 270, 0);
+                                transform.position -= Camera.main.transform.right * MovementSpeed * Time.deltaTime;
+                            }
+
+                            if (KeyD || JoyRight == true)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 90, 0);
+                                transform.position += Camera.main.transform.right * MovementSpeed * Time.deltaTime;
+                            }
+
+                            if (keyWA)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y - 45, 0);
+                                transform.position += Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                                transform.position -= Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                            }
+
+                            if (keyWD)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 45, 0);
+                                transform.position += Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                                transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                            }
+
+                            if (keyAS)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 225, 0);
+                                transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                                transform.position -= Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                            }
+
+                            if (keySD)
+                            {
+                                transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 135, 0);
+                                transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
+                                transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
+                            }
                         }
-                        // transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
-                        // transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
-
-                          bool KeyW;
-                          bool KeyS;
-                          bool KeyA;
-                          bool KeyD;
-                          bool keyWA;
-                          bool keyWD;
-                          bool keyAS;
-                          bool keySD;
-
-
-
-                          if (Input.GetKey(KeyCode.W))
-                          {
-                              KeyW = true;
-                          }
-                          else
-                          {
-                              KeyW = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.S))
-                          {
-                              KeyS = true;
-                          }
-                          else
-                          {
-                              KeyS = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.A))
-                          {
-                              KeyA = true;
-                          }
-                          else
-                          {
-                              KeyA = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.D))
-                          {
-                              KeyD = true;
-                          }
-                          else
-                          {
-                              KeyD = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-                          {
-                              keyWA = true;
-                              KeyW = false;
-                              KeyA = false;
-                          }
-                          else
-                          {
-                              keyWA = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-                          {
-                              keyWD = true;
-                              KeyW = false;
-                              KeyD = false;
-                          }
-                          else
-                          {
-                              keyWD = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
-                          {
-                              keyAS = true;
-                              KeyA = false;
-                              KeyS = false;
-                          }
-                          else
-                          {
-                              keyAS = false;
-                          }
-
-                          if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
-                          {
-                              keySD = true;
-                              KeyS = false;
-                              KeyD = false;
-                          }
-                          else
-                          {
-                              keySD = false;
-                          }
-
-
-
-                          if (KeyW || JoyUp == true)
-                          {
-                              transform.position += Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
-                              transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
-                          }
-
-                          if (KeyS || JoyDown == true)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 180, 0);
-                              transform.position -= Camera.main.transform.forward * MovementSpeed * Time.deltaTime;
-                          }
-
-                          if (KeyA || JoyLeft == true)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 270, 0);
-                              transform.position -= Camera.main.transform.right * MovementSpeed * Time.deltaTime;
-                          }
-
-                          if (KeyD || JoyRight == true)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 90, 0);
-                              transform.position += Camera.main.transform.right * MovementSpeed * Time.deltaTime;
-                          }
-
-                          if (keyWA)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y - 45, 0);
-                              transform.position += Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
-                              transform.position -= Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
-                          }
-
-                          if (keyWD)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 45, 0);
-                              transform.position += Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
-                              transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
-                          }
-
-                          if (keyAS)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 225, 0);
-                              transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
-                              transform.position -= Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
-                          }
-
-                          if (keySD)
-                          {
-                              transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y + 135, 0);
-                              transform.position -= Camera.main.transform.forward * MovementSpeed / 2 * Time.deltaTime;
-                              transform.position += Camera.main.transform.right * MovementSpeed / 2 * Time.deltaTime;
-                          }
-
                         break;
                     }
                 case State.pull:

@@ -1,0 +1,2964 @@
+fileFormatVersion: 2
+guid: 5fa113286b81f2e448b37294f42b5c2e
+timeCreated: 1516668925
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: player_rig:ahoge
+    100002: player_rig:boots_L
+    100004: player_rig:boots_R
+    100006: player_rig:C_chainA_jnt
+    100008: player_rig:C_chainB_jnt
+    100010: player_rig:C_chainC_jnt
+    100012: player_rig:C_chainD_jnt
+    100014: player_rig:C_chainE_jnt
+    100016: player_rig:C_chainF_jnt
+    100018: player_rig:C_frontchuckA_jnt
+    100020: player_rig:C_frontchuckB_top
+    100022: player_rig:chain_root
+    100024: player_rig:chest_jnt
+    100026: player_rig:chuck1
+    100028: player_rig:chuck2
+    100030: player_rig:chuck3
+    100032: player_rig:chuck4
+    100034: player_rig:chuck7
+    100036: player_rig:chuck8
+    100038: player_rig:clothes2
+    100040: player_rig:CNTRL_grp
+    100042: player_rig:ear_L
+    100044: player_rig:ear_R
+    100046: player_rig:eye_L
+    100048: player_rig:eye_R
+    100050: player_rig:face
+    100052: player_rig:GEO_grp
+    100054: player_rig:haie_back
+    100056: player_rig:hair10
+    100058: player_rig:hair11
+    100060: player_rig:hair12
+    100062: player_rig:hair13
+    100064: player_rig:hair14
+    100066: player_rig:hair15
+    100068: player_rig:hair16
+    100070: player_rig:hair17
+    100072: player_rig:hair18
+    100074: player_rig:hair2
+    100076: player_rig:hair3
+    100078: player_rig:hair4
+    100080: player_rig:hair5
+    100082: player_rig:hair6
+    100084: player_rig:hair7
+    100086: player_rig:hair8
+    100088: player_rig:hair9
+    100090: player_rig:hair_jnt
+    100092: player_rig:hair_top
+    100094: player_rig:hand_L
+    100096: player_rig:hand_R
+    100098: player_rig:head_jnt
+    100100: player_rig:head_top
+    100102: player_rig:inner1
+    100104: player_rig:inner2
+    100106: player_rig:jnt_elbow_twist_A_L
+    100108: player_rig:jnt_elbow_twist_A_R
+    100110: player_rig:jnt_elbow_twist_B_L
+    100112: player_rig:jnt_elbow_twist_B_R
+    100114: player_rig:jnt_elbow_twist_C_L
+    100116: player_rig:jnt_elbow_twist_C_R
+    100118: player_rig:jnt_elbow_twist_D_L
+    100120: player_rig:jnt_elbow_twist_D_R
+    100122: player_rig:JNT_grp
+    100124: player_rig:jnt_sholuder_twist_A_L
+    100126: player_rig:jnt_sholuder_twist_A_R
+    100128: player_rig:jnt_sholuder_twist_B_L
+    100130: player_rig:jnt_sholuder_twist_B_R
+    100132: player_rig:jnt_sholuder_twist_C_L
+    100134: player_rig:jnt_sholuder_twist_C_R
+    100136: player_rig:jnt_sholuder_twist_D_L
+    100138: player_rig:jnt_sholuder_twist_D_R
+    100140: player_rig:L_ankle_FK
+    100142: player_rig:L_ankle_FKtop
+    100144: player_rig:L_ankle_IK
+    100146: player_rig:L_ankle_IKtop
+    100148: player_rig:L_ankle_jnt
+    100150: player_rig:L_ankle_top
+    100152: player_rig:L_chainA_jnt
+    100154: player_rig:L_chainB_jnt
+    100156: player_rig:L_chainC_jnt
+    100158: player_rig:L_chainD_jnt
+    100160: player_rig:L_chainE_jnt
+    100162: player_rig:L_chainF_jnt
+    100164: player_rig:L_chainG_jnt
+    100166: player_rig:L_chainH_jnt
+    100168: player_rig:L_chainI_jnt
+    100170: player_rig:L_chainJ_jnt
+    100172: player_rig:L_chainK_jnt
+    100174: player_rig:L_chuckA1_jnt
+    100176: player_rig:L_chuckA2_top
+    100178: player_rig:L_chuckB1_jnt
+    100180: player_rig:L_chuckB2_top
+    100182: player_rig:L_clavicle_jnt
+    100184: player_rig:L_elbow_FK
+    100186: player_rig:L_elbow_IK
+    100188: player_rig:L_elbow_jnt
+    100190: player_rig:L_hand_FKtop
+    100192: player_rig:L_hand_IKtop
+    100194: player_rig:L_hand_top
+    100196: player_rig:L_index_FKtop
+    100198: player_rig:L_index_IKtop
+    100200: player_rig:L_index_top
+    100202: player_rig:L_indexA_FK
+    100204: player_rig:L_indexA_IK
+    100206: player_rig:L_indexA_jnt
+    100208: player_rig:L_indexB_FK
+    100210: player_rig:L_indexB_IK
+    100212: player_rig:L_indexB_jnt
+    100214: player_rig:L_indexC_FK
+    100216: player_rig:L_indexC_IK
+    100218: player_rig:L_indexC_jnt
+    100220: player_rig:L_indexD_FK
+    100222: player_rig:L_indexD_IK
+    100224: player_rig:L_indexD_jnt
+    100226: player_rig:L_knee_FK
+    100228: player_rig:L_knee_IK
+    100230: player_rig:L_knee_jnt
+    100232: player_rig:L_middle_FKtop
+    100234: player_rig:L_middle_IKtop
+    100236: player_rig:L_middle_top
+    100238: player_rig:L_middleA_FK
+    100240: player_rig:L_middleA_IK
+    100242: player_rig:L_middleA_jnt
+    100244: player_rig:L_middleB_FK
+    100246: player_rig:L_middleB_IK
+    100248: player_rig:L_middleB_jnt
+    100250: player_rig:L_middleC_FK
+    100252: player_rig:L_middleC_IK
+    100254: player_rig:L_middleC_jnt
+    100256: player_rig:L_middleD_FK
+    100258: player_rig:L_middleD_IK
+    100260: player_rig:L_middleD_jnt
+    100262: player_rig:L_pinky_FKtop
+    100264: player_rig:L_pinky_IKtop
+    100266: player_rig:L_pinky_top
+    100268: player_rig:L_pinkyA_FK
+    100270: player_rig:L_pinkyA_IK
+    100272: player_rig:L_pinkyA_jnt
+    100274: player_rig:L_pinkyB_FK
+    100276: player_rig:L_pinkyB_IK
+    100278: player_rig:L_pinkyB_jnt
+    100280: player_rig:L_pinkyC_FK
+    100282: player_rig:L_pinkyC_IK
+    100284: player_rig:L_pinkyC_jnt
+    100286: player_rig:L_pinkyD_FK
+    100288: player_rig:L_pinkyD_IK
+    100290: player_rig:L_pinkyD_jnt
+    100292: player_rig:L_ring_FKtop
+    100294: player_rig:L_ring_IKtop
+    100296: player_rig:L_ring_top
+    100298: player_rig:L_ringA_FK
+    100300: player_rig:L_ringA_IK
+    100302: player_rig:L_ringA_jnt
+    100304: player_rig:L_ringB_FK
+    100306: player_rig:L_ringB_IK
+    100308: player_rig:L_ringB_jnt
+    100310: player_rig:L_ringC_FK
+    100312: player_rig:L_ringC_IK
+    100314: player_rig:L_ringC_jnt
+    100316: player_rig:L_ringD_FK
+    100318: player_rig:L_ringD_IK
+    100320: player_rig:L_ringD_jnt
+    100322: player_rig:L_shoulder_FK
+    100324: player_rig:L_shoulder_IK
+    100326: player_rig:L_shoulder_jnt
+    100328: player_rig:L_shoulder_twist_end
+    100330: player_rig:L_shoulder_twist_IKhandle
+    100332: player_rig:L_shoulder_twist_strart
+    100334: player_rig:L_thigh_FK
+    100336: player_rig:L_thigh_IK
+    100338: player_rig:L_thigh_jnt
+    100340: player_rig:L_thumb_FKtop
+    100342: player_rig:L_thumb_IKtop
+    100344: player_rig:L_thumb_top
+    100346: player_rig:L_thumbA_FK
+    100348: player_rig:L_thumbA_IK
+    100350: player_rig:L_thumbA_jnt
+    100352: player_rig:L_thumbB_FK
+    100354: player_rig:L_thumbB_IK
+    100356: player_rig:L_thumbB_jnt
+    100358: player_rig:L_thumbC_FK
+    100360: player_rig:L_thumbC_IK
+    100362: player_rig:L_thumbC_jnt
+    100364: player_rig:L_thumbD_FK
+    100366: player_rig:L_thumbD_IK
+    100368: player_rig:L_thumbD_jnt
+    100370: player_rig:L_toe_FK
+    100372: player_rig:L_toe_FKtop
+    100374: player_rig:L_toe_IK
+    100376: player_rig:L_toe_IKtop
+    100378: player_rig:L_toe_jnt
+    100380: player_rig:L_toe_top
+    100382: player_rig:L_wrist_FK
+    100384: player_rig:L_wrist_IK
+    100386: player_rig:L_wrist_jnt
+    100388: player_rig:leg
+    100390: player_rig:matuge_L
+    100392: player_rig:matuge_R
+    100394: player_rig:mayuge_L
+    100396: player_rig:mayuge_R
+    100398: player_rig:MODEL_grp
+    100400: player_rig:neck_jnt
+    100402: player_rig:pants2
+    100404: player_rig:R_ankle_FK
+    100406: player_rig:R_ankle_FKtop
+    100408: player_rig:R_ankle_IK
+    100410: player_rig:R_ankle_IKtop
+    100412: player_rig:R_ankle_jnt
+    100414: player_rig:R_ankle_top
+    100416: player_rig:R_chainA_jnt
+    100418: player_rig:R_chainB_jnt
+    100420: player_rig:R_chainC_jnt
+    100422: player_rig:R_chainD_jnt
+    100424: player_rig:R_chainE_jnt
+    100426: player_rig:R_chainF_jnt
+    100428: player_rig:R_chainG_jnt
+    100430: player_rig:R_chainH_jnt
+    100432: player_rig:R_chainI_jnt
+    100434: player_rig:R_chainJ_jnt
+    100436: player_rig:R_chainK_jnt
+    100438: player_rig:R_clavicle_jnt
+    100440: player_rig:R_elbow_FK
+    100442: player_rig:R_elbow_IK
+    100444: player_rig:R_elbow_jnt
+    100446: player_rig:R_hand_FKtop
+    100448: player_rig:R_hand_IKtop
+    100450: player_rig:R_hand_top
+    100452: player_rig:R_index_FKtop
+    100454: player_rig:R_index_IKtop
+    100456: player_rig:R_index_top
+    100458: player_rig:R_indexA_FK
+    100460: player_rig:R_indexA_IK
+    100462: player_rig:R_indexA_jnt
+    100464: player_rig:R_indexB_FK
+    100466: player_rig:R_indexB_IK
+    100468: player_rig:R_indexB_jnt
+    100470: player_rig:R_indexC_FK
+    100472: player_rig:R_indexC_IK
+    100474: player_rig:R_indexC_jnt
+    100476: player_rig:R_indexD_FK
+    100478: player_rig:R_indexD_IK
+    100480: player_rig:R_indexD_jnt
+    100482: player_rig:R_knee_FK
+    100484: player_rig:R_knee_IK
+    100486: player_rig:R_knee_jnt
+    100488: player_rig:R_middle_FKtop
+    100490: player_rig:R_middle_IKtop
+    100492: player_rig:R_middle_top
+    100494: player_rig:R_middleA_FK
+    100496: player_rig:R_middleA_IK
+    100498: player_rig:R_middleA_jnt
+    100500: player_rig:R_middleB_FK
+    100502: player_rig:R_middleB_IK
+    100504: player_rig:R_middleB_jnt
+    100506: player_rig:R_middleC_FK
+    100508: player_rig:R_middleC_IK
+    100510: player_rig:R_middleC_jnt
+    100512: player_rig:R_middleD_FK
+    100514: player_rig:R_middleD_IK
+    100516: player_rig:R_middleD_jnt
+    100518: player_rig:R_pinky_FKtop
+    100520: player_rig:R_pinky_IKtop
+    100522: player_rig:R_pinky_top
+    100524: player_rig:R_pinkyA_FK
+    100526: player_rig:R_pinkyA_IK
+    100528: player_rig:R_pinkyA_jnt
+    100530: player_rig:R_pinkyB_FK
+    100532: player_rig:R_pinkyB_IK
+    100534: player_rig:R_pinkyB_jnt
+    100536: player_rig:R_pinkyC_FK
+    100538: player_rig:R_pinkyC_IK
+    100540: player_rig:R_pinkyC_jnt
+    100542: player_rig:R_pinkyD_FK
+    100544: player_rig:R_pinkyD_IK
+    100546: player_rig:R_pinkyD_jnt
+    100548: player_rig:R_ring_FKtop
+    100550: player_rig:R_ring_IKtop
+    100552: player_rig:R_ring_top
+    100554: player_rig:R_ringA_FK
+    100556: player_rig:R_ringA_IK
+    100558: player_rig:R_ringA_jnt
+    100560: player_rig:R_ringB_FK
+    100562: player_rig:R_ringB_IK
+    100564: player_rig:R_ringB_jnt
+    100566: player_rig:R_ringC_FK
+    100568: player_rig:R_ringC_IK
+    100570: player_rig:R_ringC_jnt
+    100572: player_rig:R_ringD_FK
+    100574: player_rig:R_ringD_IK
+    100576: player_rig:R_ringD_jnt
+    100578: player_rig:R_shoulder_FK
+    100580: player_rig:R_shoulder_IK
+    100582: player_rig:R_shoulder_jnt
+    100584: player_rig:R_shoulder_twist_end
+    100586: player_rig:R_shoulder_twist_IKhandle
+    100588: player_rig:R_shoulder_twist_strart
+    100590: player_rig:R_thigh_FK
+    100592: player_rig:R_thigh_IK
+    100594: player_rig:R_thigh_jnt
+    100596: player_rig:R_thumb_FKtop
+    100598: player_rig:R_thumb_IKtop
+    100600: player_rig:R_thumb_top
+    100602: player_rig:R_thumbA_FK
+    100604: player_rig:R_thumbA_IK
+    100606: player_rig:R_thumbA_jnt
+    100608: player_rig:R_thumbB_FK
+    100610: player_rig:R_thumbB_IK
+    100612: player_rig:R_thumbB_jnt
+    100614: player_rig:R_thumbC_FK
+    100616: player_rig:R_thumbC_IK
+    100618: player_rig:R_thumbC_jnt
+    100620: player_rig:R_thumbD_FK
+    100622: player_rig:R_thumbD_IK
+    100624: player_rig:R_thumbD_jnt
+    100626: player_rig:R_toe_FK
+    100628: player_rig:R_toe_FKtop
+    100630: player_rig:R_toe_IK
+    100632: player_rig:R_toe_IKtop
+    100634: player_rig:R_toe_jnt
+    100636: player_rig:R_toe_top
+    100638: player_rig:R_wrist_FK
+    100640: player_rig:R_wrist_IK
+    100642: player_rig:R_wrist_jnt
+    100644: player_rig:rig_sholuder_twist_L
+    100646: player_rig:rig_sholuder_twist_R
+    100648: player_rig:root_cntrl
+    100650: player_rig:root_jnt
+    100652: player_rig:spineA_jnt
+    100654: player_rig:spineB_jnt
+    100656: player_rig:suspenders
+    100658: player_rig:suspenders_rivet
+    100660: player_rig:transform_elbow_twistend_L
+    100662: player_rig:transform_elbow_twistend_R
+    100664: player_rig:transform_elbow_twiststart_L
+    100666: player_rig:transform_elbow_twiststart_R
+    100668: player_rig:transform_L_elbow_twist
+    100670: player_rig:transform_R_elbow_twist
+    100672: player_rig:transform_sholuder_twist_L
+    100674: player_rig:transform_sholuder_twist_R
+    100676: //RootNode
+    400000: player_rig:ahoge
+    400002: player_rig:boots_L
+    400004: player_rig:boots_R
+    400006: player_rig:C_chainA_jnt
+    400008: player_rig:C_chainB_jnt
+    400010: player_rig:C_chainC_jnt
+    400012: player_rig:C_chainD_jnt
+    400014: player_rig:C_chainE_jnt
+    400016: player_rig:C_chainF_jnt
+    400018: player_rig:C_frontchuckA_jnt
+    400020: player_rig:C_frontchuckB_top
+    400022: player_rig:chain_root
+    400024: player_rig:chest_jnt
+    400026: player_rig:chuck1
+    400028: player_rig:chuck2
+    400030: player_rig:chuck3
+    400032: player_rig:chuck4
+    400034: player_rig:chuck7
+    400036: player_rig:chuck8
+    400038: player_rig:clothes2
+    400040: player_rig:CNTRL_grp
+    400042: player_rig:ear_L
+    400044: player_rig:ear_R
+    400046: player_rig:eye_L
+    400048: player_rig:eye_R
+    400050: player_rig:face
+    400052: player_rig:GEO_grp
+    400054: player_rig:haie_back
+    400056: player_rig:hair10
+    400058: player_rig:hair11
+    400060: player_rig:hair12
+    400062: player_rig:hair13
+    400064: player_rig:hair14
+    400066: player_rig:hair15
+    400068: player_rig:hair16
+    400070: player_rig:hair17
+    400072: player_rig:hair18
+    400074: player_rig:hair2
+    400076: player_rig:hair3
+    400078: player_rig:hair4
+    400080: player_rig:hair5
+    400082: player_rig:hair6
+    400084: player_rig:hair7
+    400086: player_rig:hair8
+    400088: player_rig:hair9
+    400090: player_rig:hair_jnt
+    400092: player_rig:hair_top
+    400094: player_rig:hand_L
+    400096: player_rig:hand_R
+    400098: player_rig:head_jnt
+    400100: player_rig:head_top
+    400102: player_rig:inner1
+    400104: player_rig:inner2
+    400106: player_rig:jnt_elbow_twist_A_L
+    400108: player_rig:jnt_elbow_twist_A_R
+    400110: player_rig:jnt_elbow_twist_B_L
+    400112: player_rig:jnt_elbow_twist_B_R
+    400114: player_rig:jnt_elbow_twist_C_L
+    400116: player_rig:jnt_elbow_twist_C_R
+    400118: player_rig:jnt_elbow_twist_D_L
+    400120: player_rig:jnt_elbow_twist_D_R
+    400122: player_rig:JNT_grp
+    400124: player_rig:jnt_sholuder_twist_A_L
+    400126: player_rig:jnt_sholuder_twist_A_R
+    400128: player_rig:jnt_sholuder_twist_B_L
+    400130: player_rig:jnt_sholuder_twist_B_R
+    400132: player_rig:jnt_sholuder_twist_C_L
+    400134: player_rig:jnt_sholuder_twist_C_R
+    400136: player_rig:jnt_sholuder_twist_D_L
+    400138: player_rig:jnt_sholuder_twist_D_R
+    400140: player_rig:L_ankle_FK
+    400142: player_rig:L_ankle_FKtop
+    400144: player_rig:L_ankle_IK
+    400146: player_rig:L_ankle_IKtop
+    400148: player_rig:L_ankle_jnt
+    400150: player_rig:L_ankle_top
+    400152: player_rig:L_chainA_jnt
+    400154: player_rig:L_chainB_jnt
+    400156: player_rig:L_chainC_jnt
+    400158: player_rig:L_chainD_jnt
+    400160: player_rig:L_chainE_jnt
+    400162: player_rig:L_chainF_jnt
+    400164: player_rig:L_chainG_jnt
+    400166: player_rig:L_chainH_jnt
+    400168: player_rig:L_chainI_jnt
+    400170: player_rig:L_chainJ_jnt
+    400172: player_rig:L_chainK_jnt
+    400174: player_rig:L_chuckA1_jnt
+    400176: player_rig:L_chuckA2_top
+    400178: player_rig:L_chuckB1_jnt
+    400180: player_rig:L_chuckB2_top
+    400182: player_rig:L_clavicle_jnt
+    400184: player_rig:L_elbow_FK
+    400186: player_rig:L_elbow_IK
+    400188: player_rig:L_elbow_jnt
+    400190: player_rig:L_hand_FKtop
+    400192: player_rig:L_hand_IKtop
+    400194: player_rig:L_hand_top
+    400196: player_rig:L_index_FKtop
+    400198: player_rig:L_index_IKtop
+    400200: player_rig:L_index_top
+    400202: player_rig:L_indexA_FK
+    400204: player_rig:L_indexA_IK
+    400206: player_rig:L_indexA_jnt
+    400208: player_rig:L_indexB_FK
+    400210: player_rig:L_indexB_IK
+    400212: player_rig:L_indexB_jnt
+    400214: player_rig:L_indexC_FK
+    400216: player_rig:L_indexC_IK
+    400218: player_rig:L_indexC_jnt
+    400220: player_rig:L_indexD_FK
+    400222: player_rig:L_indexD_IK
+    400224: player_rig:L_indexD_jnt
+    400226: player_rig:L_knee_FK
+    400228: player_rig:L_knee_IK
+    400230: player_rig:L_knee_jnt
+    400232: player_rig:L_middle_FKtop
+    400234: player_rig:L_middle_IKtop
+    400236: player_rig:L_middle_top
+    400238: player_rig:L_middleA_FK
+    400240: player_rig:L_middleA_IK
+    400242: player_rig:L_middleA_jnt
+    400244: player_rig:L_middleB_FK
+    400246: player_rig:L_middleB_IK
+    400248: player_rig:L_middleB_jnt
+    400250: player_rig:L_middleC_FK
+    400252: player_rig:L_middleC_IK
+    400254: player_rig:L_middleC_jnt
+    400256: player_rig:L_middleD_FK
+    400258: player_rig:L_middleD_IK
+    400260: player_rig:L_middleD_jnt
+    400262: player_rig:L_pinky_FKtop
+    400264: player_rig:L_pinky_IKtop
+    400266: player_rig:L_pinky_top
+    400268: player_rig:L_pinkyA_FK
+    400270: player_rig:L_pinkyA_IK
+    400272: player_rig:L_pinkyA_jnt
+    400274: player_rig:L_pinkyB_FK
+    400276: player_rig:L_pinkyB_IK
+    400278: player_rig:L_pinkyB_jnt
+    400280: player_rig:L_pinkyC_FK
+    400282: player_rig:L_pinkyC_IK
+    400284: player_rig:L_pinkyC_jnt
+    400286: player_rig:L_pinkyD_FK
+    400288: player_rig:L_pinkyD_IK
+    400290: player_rig:L_pinkyD_jnt
+    400292: player_rig:L_ring_FKtop
+    400294: player_rig:L_ring_IKtop
+    400296: player_rig:L_ring_top
+    400298: player_rig:L_ringA_FK
+    400300: player_rig:L_ringA_IK
+    400302: player_rig:L_ringA_jnt
+    400304: player_rig:L_ringB_FK
+    400306: player_rig:L_ringB_IK
+    400308: player_rig:L_ringB_jnt
+    400310: player_rig:L_ringC_FK
+    400312: player_rig:L_ringC_IK
+    400314: player_rig:L_ringC_jnt
+    400316: player_rig:L_ringD_FK
+    400318: player_rig:L_ringD_IK
+    400320: player_rig:L_ringD_jnt
+    400322: player_rig:L_shoulder_FK
+    400324: player_rig:L_shoulder_IK
+    400326: player_rig:L_shoulder_jnt
+    400328: player_rig:L_shoulder_twist_end
+    400330: player_rig:L_shoulder_twist_IKhandle
+    400332: player_rig:L_shoulder_twist_strart
+    400334: player_rig:L_thigh_FK
+    400336: player_rig:L_thigh_IK
+    400338: player_rig:L_thigh_jnt
+    400340: player_rig:L_thumb_FKtop
+    400342: player_rig:L_thumb_IKtop
+    400344: player_rig:L_thumb_top
+    400346: player_rig:L_thumbA_FK
+    400348: player_rig:L_thumbA_IK
+    400350: player_rig:L_thumbA_jnt
+    400352: player_rig:L_thumbB_FK
+    400354: player_rig:L_thumbB_IK
+    400356: player_rig:L_thumbB_jnt
+    400358: player_rig:L_thumbC_FK
+    400360: player_rig:L_thumbC_IK
+    400362: player_rig:L_thumbC_jnt
+    400364: player_rig:L_thumbD_FK
+    400366: player_rig:L_thumbD_IK
+    400368: player_rig:L_thumbD_jnt
+    400370: player_rig:L_toe_FK
+    400372: player_rig:L_toe_FKtop
+    400374: player_rig:L_toe_IK
+    400376: player_rig:L_toe_IKtop
+    400378: player_rig:L_toe_jnt
+    400380: player_rig:L_toe_top
+    400382: player_rig:L_wrist_FK
+    400384: player_rig:L_wrist_IK
+    400386: player_rig:L_wrist_jnt
+    400388: player_rig:leg
+    400390: player_rig:matuge_L
+    400392: player_rig:matuge_R
+    400394: player_rig:mayuge_L
+    400396: player_rig:mayuge_R
+    400398: player_rig:MODEL_grp
+    400400: player_rig:neck_jnt
+    400402: player_rig:pants2
+    400404: player_rig:R_ankle_FK
+    400406: player_rig:R_ankle_FKtop
+    400408: player_rig:R_ankle_IK
+    400410: player_rig:R_ankle_IKtop
+    400412: player_rig:R_ankle_jnt
+    400414: player_rig:R_ankle_top
+    400416: player_rig:R_chainA_jnt
+    400418: player_rig:R_chainB_jnt
+    400420: player_rig:R_chainC_jnt
+    400422: player_rig:R_chainD_jnt
+    400424: player_rig:R_chainE_jnt
+    400426: player_rig:R_chainF_jnt
+    400428: player_rig:R_chainG_jnt
+    400430: player_rig:R_chainH_jnt
+    400432: player_rig:R_chainI_jnt
+    400434: player_rig:R_chainJ_jnt
+    400436: player_rig:R_chainK_jnt
+    400438: player_rig:R_clavicle_jnt
+    400440: player_rig:R_elbow_FK
+    400442: player_rig:R_elbow_IK
+    400444: player_rig:R_elbow_jnt
+    400446: player_rig:R_hand_FKtop
+    400448: player_rig:R_hand_IKtop
+    400450: player_rig:R_hand_top
+    400452: player_rig:R_index_FKtop
+    400454: player_rig:R_index_IKtop
+    400456: player_rig:R_index_top
+    400458: player_rig:R_indexA_FK
+    400460: player_rig:R_indexA_IK
+    400462: player_rig:R_indexA_jnt
+    400464: player_rig:R_indexB_FK
+    400466: player_rig:R_indexB_IK
+    400468: player_rig:R_indexB_jnt
+    400470: player_rig:R_indexC_FK
+    400472: player_rig:R_indexC_IK
+    400474: player_rig:R_indexC_jnt
+    400476: player_rig:R_indexD_FK
+    400478: player_rig:R_indexD_IK
+    400480: player_rig:R_indexD_jnt
+    400482: player_rig:R_knee_FK
+    400484: player_rig:R_knee_IK
+    400486: player_rig:R_knee_jnt
+    400488: player_rig:R_middle_FKtop
+    400490: player_rig:R_middle_IKtop
+    400492: player_rig:R_middle_top
+    400494: player_rig:R_middleA_FK
+    400496: player_rig:R_middleA_IK
+    400498: player_rig:R_middleA_jnt
+    400500: player_rig:R_middleB_FK
+    400502: player_rig:R_middleB_IK
+    400504: player_rig:R_middleB_jnt
+    400506: player_rig:R_middleC_FK
+    400508: player_rig:R_middleC_IK
+    400510: player_rig:R_middleC_jnt
+    400512: player_rig:R_middleD_FK
+    400514: player_rig:R_middleD_IK
+    400516: player_rig:R_middleD_jnt
+    400518: player_rig:R_pinky_FKtop
+    400520: player_rig:R_pinky_IKtop
+    400522: player_rig:R_pinky_top
+    400524: player_rig:R_pinkyA_FK
+    400526: player_rig:R_pinkyA_IK
+    400528: player_rig:R_pinkyA_jnt
+    400530: player_rig:R_pinkyB_FK
+    400532: player_rig:R_pinkyB_IK
+    400534: player_rig:R_pinkyB_jnt
+    400536: player_rig:R_pinkyC_FK
+    400538: player_rig:R_pinkyC_IK
+    400540: player_rig:R_pinkyC_jnt
+    400542: player_rig:R_pinkyD_FK
+    400544: player_rig:R_pinkyD_IK
+    400546: player_rig:R_pinkyD_jnt
+    400548: player_rig:R_ring_FKtop
+    400550: player_rig:R_ring_IKtop
+    400552: player_rig:R_ring_top
+    400554: player_rig:R_ringA_FK
+    400556: player_rig:R_ringA_IK
+    400558: player_rig:R_ringA_jnt
+    400560: player_rig:R_ringB_FK
+    400562: player_rig:R_ringB_IK
+    400564: player_rig:R_ringB_jnt
+    400566: player_rig:R_ringC_FK
+    400568: player_rig:R_ringC_IK
+    400570: player_rig:R_ringC_jnt
+    400572: player_rig:R_ringD_FK
+    400574: player_rig:R_ringD_IK
+    400576: player_rig:R_ringD_jnt
+    400578: player_rig:R_shoulder_FK
+    400580: player_rig:R_shoulder_IK
+    400582: player_rig:R_shoulder_jnt
+    400584: player_rig:R_shoulder_twist_end
+    400586: player_rig:R_shoulder_twist_IKhandle
+    400588: player_rig:R_shoulder_twist_strart
+    400590: player_rig:R_thigh_FK
+    400592: player_rig:R_thigh_IK
+    400594: player_rig:R_thigh_jnt
+    400596: player_rig:R_thumb_FKtop
+    400598: player_rig:R_thumb_IKtop
+    400600: player_rig:R_thumb_top
+    400602: player_rig:R_thumbA_FK
+    400604: player_rig:R_thumbA_IK
+    400606: player_rig:R_thumbA_jnt
+    400608: player_rig:R_thumbB_FK
+    400610: player_rig:R_thumbB_IK
+    400612: player_rig:R_thumbB_jnt
+    400614: player_rig:R_thumbC_FK
+    400616: player_rig:R_thumbC_IK
+    400618: player_rig:R_thumbC_jnt
+    400620: player_rig:R_thumbD_FK
+    400622: player_rig:R_thumbD_IK
+    400624: player_rig:R_thumbD_jnt
+    400626: player_rig:R_toe_FK
+    400628: player_rig:R_toe_FKtop
+    400630: player_rig:R_toe_IK
+    400632: player_rig:R_toe_IKtop
+    400634: player_rig:R_toe_jnt
+    400636: player_rig:R_toe_top
+    400638: player_rig:R_wrist_FK
+    400640: player_rig:R_wrist_IK
+    400642: player_rig:R_wrist_jnt
+    400644: player_rig:rig_sholuder_twist_L
+    400646: player_rig:rig_sholuder_twist_R
+    400648: player_rig:root_cntrl
+    400650: player_rig:root_jnt
+    400652: player_rig:spineA_jnt
+    400654: player_rig:spineB_jnt
+    400656: player_rig:suspenders
+    400658: player_rig:suspenders_rivet
+    400660: player_rig:transform_elbow_twistend_L
+    400662: player_rig:transform_elbow_twistend_R
+    400664: player_rig:transform_elbow_twiststart_L
+    400666: player_rig:transform_elbow_twiststart_R
+    400668: player_rig:transform_L_elbow_twist
+    400670: player_rig:transform_R_elbow_twist
+    400672: player_rig:transform_sholuder_twist_L
+    400674: player_rig:transform_sholuder_twist_R
+    400676: //RootNode
+    4300000: player_rig:hair2
+    4300002: player_rig:hair3
+    4300004: player_rig:hair4
+    4300006: player_rig:hair5
+    4300008: player_rig:hair6
+    4300010: player_rig:hair7
+    4300012: player_rig:hair8
+    4300014: player_rig:hair9
+    4300016: player_rig:hair10
+    4300018: player_rig:hair11
+    4300020: player_rig:hair12
+    4300022: player_rig:hair13
+    4300024: player_rig:hair14
+    4300026: player_rig:pants2
+    4300028: player_rig:inner1
+    4300030: player_rig:matuge_L
+    4300032: player_rig:mayuge_L
+    4300034: player_rig:mayuge_R
+    4300036: player_rig:face
+    4300038: player_rig:hair15
+    4300040: player_rig:hair16
+    4300042: player_rig:hair17
+    4300044: player_rig:haie_back
+    4300046: player_rig:ear_L
+    4300048: player_rig:chuck1
+    4300050: player_rig:chuck2
+    4300052: player_rig:chuck3
+    4300054: player_rig:chuck4
+    4300056: player_rig:clothes2
+    4300058: player_rig:hand_L
+    4300060: player_rig:ahoge
+    4300062: player_rig:eye_R
+    4300064: player_rig:suspenders
+    4300066: player_rig:inner2
+    4300068: player_rig:leg
+    4300070: player_rig:matuge_R
+    4300072: player_rig:eye_L
+    4300074: player_rig:ear_R
+    4300076: player_rig:boots_L
+    4300078: player_rig:hand_R
+    4300080: player_rig:chuck7
+    4300082: player_rig:chuck8
+    4300084: player_rig:boots_R
+    4300086: player_rig:hair18
+    4300088: player_rig:suspenders_rivet
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: player_rig:ahoge
+    13700002: player_rig:boots_L
+    13700004: player_rig:boots_R
+    13700006: player_rig:chuck1
+    13700008: player_rig:chuck2
+    13700010: player_rig:chuck3
+    13700012: player_rig:chuck4
+    13700014: player_rig:chuck7
+    13700016: player_rig:chuck8
+    13700018: player_rig:clothes2
+    13700020: player_rig:ear_L
+    13700022: player_rig:ear_R
+    13700024: player_rig:eye_L
+    13700026: player_rig:eye_R
+    13700028: player_rig:face
+    13700030: player_rig:haie_back
+    13700032: player_rig:hair10
+    13700034: player_rig:hair11
+    13700036: player_rig:hair12
+    13700038: player_rig:hair13
+    13700040: player_rig:hair14
+    13700042: player_rig:hair15
+    13700044: player_rig:hair16
+    13700046: player_rig:hair17
+    13700048: player_rig:hair18
+    13700050: player_rig:hair2
+    13700052: player_rig:hair3
+    13700054: player_rig:hair4
+    13700056: player_rig:hair5
+    13700058: player_rig:hair6
+    13700060: player_rig:hair7
+    13700062: player_rig:hair8
+    13700064: player_rig:hair9
+    13700066: player_rig:hand_L
+    13700068: player_rig:hand_R
+    13700070: player_rig:inner1
+    13700072: player_rig:inner2
+    13700074: player_rig:leg
+    13700076: player_rig:matuge_L
+    13700078: player_rig:matuge_R
+    13700080: player_rig:mayuge_L
+    13700082: player_rig:mayuge_R
+    13700084: player_rig:pants2
+    13700086: player_rig:suspenders
+    13700088: player_rig:suspenders_rivet
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: player_rig:root_jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_thigh_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_thigh_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_knee_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_knee_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_ankle_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_ankle_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:spineA_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:spineB_jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:neck_jnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:head_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_clavicle_jnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_clavicle_jnt
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_shoulder_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_shoulder_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_elbow_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_elbow_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_wrist_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_wrist_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_toe_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_toe_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:hair_jnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_thumbA_jnt
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_thumbB_jnt
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_thumbC_jnt
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_indexA_jnt
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_indexB_jnt
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_indexC_jnt
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_middleA_jnt
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_middleB_jnt
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_middleC_jnt
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_ringA_jnt
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_ringB_jnt
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_ringC_jnt
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_pinkyA_jnt
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_pinkyB_jnt
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:L_pinkyC_jnt
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_thumbA_jnt
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_thumbB_jnt
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_thumbC_jnt
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_indexA_jnt
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_indexB_jnt
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_indexC_jnt
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_middleA_jnt
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_middleB_jnt
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_middleC_jnt
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_ringB_jnt
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_ringC_jnt
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_ringD_jnt
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_pinkyA_jnt
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_pinkyB_jnt
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: player_rig:R_pinkyC_jnt
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Player_ropestart(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:CNTRL_grp
+      parentName: Player_ropestart(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:root_cntrl
+      parentName: player_rig:CNTRL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:GEO_grp
+      parentName: Player_ropestart(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:MODEL_grp
+      parentName: player_rig:GEO_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:ahoge
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:boots_L
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:boots_R
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:chuck1
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:chuck2
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:chuck3
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:chuck4
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:chuck7
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:chuck8
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:clothes2
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:ear_L
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:ear_R
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:eye_L
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:eye_R
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:face
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:haie_back
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair2
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair3
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair4
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair5
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair6
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair7
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair8
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair9
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair10
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair11
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair12
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair13
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair14
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair15
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair16
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair17
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair18
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hand_L
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hand_R
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:inner1
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:inner2
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:leg
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:matuge_L
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:matuge_R
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:mayuge_L
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:mayuge_R
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:pants2
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:suspenders
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:suspenders_rivet
+      parentName: player_rig:MODEL_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:JNT_grp
+      parentName: Player_ropestart(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:root_jnt
+      parentName: player_rig:JNT_grp
+      position: {x: -1.5444582e-17, y: 0.072563946, z: 0}
+      rotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.000042, y: 1.000042, z: 1}
+    - name: player_rig:chain_root
+      parentName: player_rig:root_jnt
+      position: {x: 0.011539561, y: 1.3286225e-17, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_chainA_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.012069245, y: 0.017235573, z: 0.0024335366}
+      rotation: {x: 0.0000000029103826, y: -1.8189902e-10, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: player_rig:L_chainB_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.012613069, y: 0.011604475, z: 0.0031994574}
+      rotation: {x: 0.0000000029103835, y: -1.8189902e-10, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: player_rig:L_chainC_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.013554809, y: 0.006127248, z: 0.0034970124}
+      rotation: {x: 0.000000005820767, y: 3.6379805e-10, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: player_rig:L_chainD_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.014036857, y: 0.000912223, z: 0.0036452156}
+      rotation: {x: -0.000000002910383, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: player_rig:L_chainE_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.014942961, y: -0.0028094968, z: 0.003382351}
+      rotation: {x: 0.000000002910383, y: -1.8189902e-10, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000001}
+    - name: player_rig:L_chainF_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.015408329, y: -0.006235082, z: 0.0019429476}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: player_rig:L_chainG_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.014795217, y: -0.0084073935, z: 0.0006385294}
+      rotation: {x: 0.0000000029103826, y: 3.6379794e-10, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: player_rig:L_chainH_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.013720559, y: -0.009565589, z: -0.0009227792}
+      rotation: {x: 0.000000005820767, y: -0.000000004365575, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: player_rig:L_chainI_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.012403209, y: -0.00948746, z: -0.0036502688}
+      rotation: {x: -0.0000000014551912, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000004}
+    - name: player_rig:L_chainJ_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.009647255, y: -0.008989289, z: -0.005453583}
+      rotation: {x: 0.0000000058207656, y: -0.000000011641532, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000002}
+    - name: player_rig:L_chainK_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.005405489, y: -0.0068907845, z: -0.006270561}
+      rotation: {x: -0.0000000014551915, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000001}
+    - name: player_rig:C_chainE_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.000033200777, y: -0.0046419003, z: -0.007054125}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: player_rig:C_chainD_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.0000062106096, y: -0.00037340476, z: -0.008266493}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: player_rig:C_chainC_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.00000005439323, y: 0.0025520008, z: -0.009444599}
+      rotation: {x: -1.110223e-14, y: 1.084202e-17, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: player_rig:C_chainB_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.00000009945468, y: 0.010200011, z: -0.010261382}
+      rotation: {x: -6.938894e-16, y: 4.237811e-20, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: player_rig:C_chainA_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.0000001205277, y: 0.016900236, z: -0.008739125}
+      rotation: {x: 2.7755576e-15, y: 6.7773213e-19, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: player_rig:R_chainA_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.012139142, y: 0.017231992, z: 0.0015992252}
+      rotation: {x: 0.000000005820767, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000006}
+    - name: player_rig:R_chainB_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.012626635, y: 0.011785445, z: 0.0030809066}
+      rotation: {x: -0.000000011641532, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.9999998, z: 1.0000007}
+    - name: player_rig:R_chainC_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.013488968, y: 0.006557627, z: 0.00439238}
+      rotation: {x: -0.000000011641532, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.9999992, z: 1.0000017}
+    - name: player_rig:R_chainD_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.013888112, y: 0.0014687654, z: 0.0055629076}
+      rotation: {x: -0.0000000116415295, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.99999946, z: 1.0000012}
+    - name: player_rig:R_chainE_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.0147333, y: -0.00224662, z: 0.0060350234}
+      rotation: {x: -0.000000011641532, y: 2.664535e-15, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.99999934, z: 1.0000012}
+    - name: player_rig:R_chainF_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.0151362, y: -0.0058956086, z: 0.005296247}
+      rotation: {x: -0, y: -1.3877788e-15, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.99999934, z: 1.0000012}
+    - name: player_rig:R_chainG_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.014481502, y: -0.008271329, z: 0.004445671}
+      rotation: {x: -0.000000011641534, y: -4.884981e-15, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.99999946, z: 1.0000012}
+    - name: player_rig:R_chainH_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.013677994, y: -0.009555272, z: 0.0022317013}
+      rotation: {x: 0.000000005820766, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000007}
+    - name: player_rig:R_chainI_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.012179484, y: -0.009903875, z: -0.00037957463}
+      rotation: {x: -0.000000005820767, y: 0.000000023283064, z: -0, w: 1}
+      scale: {x: 0.9999996, y: 1.0000004, z: 1.0000013}
+    - name: player_rig:R_chainJ_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.009486299, y: -0.009452221, z: -0.0030801906}
+      rotation: {x: -0, y: -0.000000011641534, z: -0, w: 1}
+      scale: {x: 0.99999934, y: 1.0000002, z: 1.0000017}
+    - name: player_rig:R_chainK_jnt
+      parentName: player_rig:chain_root
+      position: {x: 0.0053319577, y: -0.007196737, z: -0.0049763406}
+      rotation: {x: 0.000000005820767, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999946, y: 1.0000002, z: 1.0000013}
+    - name: player_rig:C_chainF_jnt
+      parentName: player_rig:chain_root
+      position: {x: -0.000051737818, y: 0.014083041, z: -0.010022318}
+      rotation: {x: -0, y: -6.7762636e-19, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: player_rig:L_thigh_FK
+      parentName: player_rig:root_jnt
+      position: {x: 0.0005881948, y: -0.008626874, z: 0.0013573627}
+      rotation: {x: -0.043027412, y: 2.634669e-18, z: 0.9990739, w: 6.117564e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_knee_FK
+      parentName: player_rig:L_thigh_FK
+      position: {x: -0.029976351, y: 4.440892e-18, z: -5.2180482e-17}
+      rotation: {x: 0, y: -0.10851935, z: -0, w: 0.9940944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ankle_FK
+      parentName: player_rig:L_knee_FK
+      position: {x: -0.031653643, y: -2.2204459e-17, z: -1.9428903e-18}
+      rotation: {x: 0, y: 0.090601474, z: -0, w: 0.9958872}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ankle_FKtop
+      parentName: player_rig:L_ankle_FK
+      position: {x: -0.01, y: -1.5543122e-17, z: 1.2143064e-18}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_toe_FK
+      parentName: player_rig:L_ankle_FK
+      position: {x: -0.00901462, y: -0.0003004693, z: 0.007495971}
+      rotation: {x: 0, y: 0.68918604, z: -0, w: 0.7245845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_toe_FKtop
+      parentName: player_rig:L_toe_FK
+      position: {x: -0.01, y: -4.440892e-18, z: 4.1633362e-19}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thigh_IK
+      parentName: player_rig:root_jnt
+      position: {x: 0.0005881948, y: -0.008626874, z: 0.0013573627}
+      rotation: {x: -0.090075746, y: 0.0033850998, z: 0.9958993, w: 0.0077077937}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_knee_IK
+      parentName: player_rig:L_thigh_IK
+      position: {x: -0.029976351, y: 4.440892e-18, z: -5.2180482e-17}
+      rotation: {x: 8.5773235e-16, y: -0.25247878, z: 3.4057494e-14, w: 0.9676025}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ankle_IK
+      parentName: player_rig:L_knee_IK
+      position: {x: -0.031653643, y: -2.2204459e-17, z: -1.9428903e-18}
+      rotation: {x: -0.22177565, y: 0.18224914, z: 0.050446257, w: 0.9565856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ankle_IKtop
+      parentName: player_rig:L_ankle_IK
+      position: {x: -0.01, y: -1.5543122e-17, z: 1.2143064e-18}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_toe_IK
+      parentName: player_rig:L_ankle_IK
+      position: {x: -0.00901462, y: -0.0003004693, z: 0.007495971}
+      rotation: {x: -0.0000000061366268, y: 0.68918604, z: 0.0000000058368315, w: 0.7245845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_toe_IKtop
+      parentName: player_rig:L_toe_IK
+      position: {x: -0.01, y: -4.440892e-18, z: 4.1633362e-19}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thigh_FK
+      parentName: player_rig:root_jnt
+      position: {x: 0.0005881984, y: 0.00862687, z: 0.00135736}
+      rotation: {x: 0.9990739, y: 2.634669e-18, z: 0.043027412, w: -6.117564e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_knee_FK
+      parentName: player_rig:R_thigh_FK
+      position: {x: 0.029976394, y: 1.5543122e-17, z: 0.0000000039829096}
+      rotation: {x: 0, y: -0.10851935, z: -0, w: 0.9940944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ankle_FK
+      parentName: player_rig:R_knee_FK
+      position: {x: 0.0316536, y: 3.1086245e-17, z: 0.0000000022464568}
+      rotation: {x: 0, y: 0.090601474, z: -0, w: 0.9958872}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ankle_FKtop
+      parentName: player_rig:R_ankle_FK
+      position: {x: 0.009999995, y: 6.661338e-18, z: -3.3072858e-10}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_toe_FK
+      parentName: player_rig:R_ankle_FK
+      position: {x: 0.009014617, y: 0.00030046998, z: -0.0074959677}
+      rotation: {x: 0, y: 0.68918604, z: -0, w: 0.7245845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_toe_FKtop
+      parentName: player_rig:R_toe_FK
+      position: {x: 0.009999979, y: -1.8873792e-17, z: 1.7902346e-17}
+      rotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thigh_IK
+      parentName: player_rig:root_jnt
+      position: {x: 0.0005881984, y: 0.00862687, z: 0.00135736}
+      rotation: {x: 0.98216504, y: 0.0000000034967125, z: 0.18802075, w: -6.6939304e-10}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_knee_IK
+      parentName: player_rig:R_thigh_IK
+      position: {x: 0.029976394, y: 1.5543122e-17, z: 0.0000000039829096}
+      rotation: {x: 4.8712657e-15, y: -0.22359306, z: 6.859817e-13, w: 0.97468257}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ankle_IK
+      parentName: player_rig:R_knee_IK
+      position: {x: 0.0316536, y: 3.1086245e-17, z: 0.0000000022464568}
+      rotation: {x: -0.10824076, y: 0.060981344, z: 0.0066532604, w: 0.9922303}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ankle_IKtop
+      parentName: player_rig:R_ankle_IK
+      position: {x: 0.009999995, y: 6.661338e-18, z: -3.3072858e-10}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_toe_IK
+      parentName: player_rig:R_ankle_IK
+      position: {x: 0.009014617, y: 0.00030046998, z: -0.0074959677}
+      rotation: {x: -0.000000003975348, y: 0.68918604, z: 0.0000000037811385, w: 0.7245845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_toe_IKtop
+      parentName: player_rig:R_toe_IK
+      position: {x: 0.009999979, y: -1.8873792e-17, z: 1.7902346e-17}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_chuckA1_jnt
+      parentName: player_rig:root_jnt
+      position: {x: -0.0051764743, y: -0.0073876563, z: 0.010872378}
+      rotation: {x: -0, y: 0.46947157, z: 0.88294756, w: -0.000000029802319}
+      scale: {x: 1.0000001, y: 1.000001, z: 1.0000002}
+    - name: player_rig:L_chuckA2_top
+      parentName: player_rig:L_chuckA1_jnt
+      position: {x: -0.0025, y: 0, z: 6.5052126e-20}
+      rotation: {x: -0.19721405, y: -0.19721405, z: -0.67904836, w: 0.67904836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:spineA_jnt
+      parentName: player_rig:root_jnt
+      position: {x: -0.0114081735, y: 2.220446e-18, z: 0}
+      rotation: {x: -0, y: -0.000000005820766, z: -0, w: 1}
+      scale: {x: 1.000021, y: 1.000021, z: 1}
+    - name: player_rig:L_chuckB1_jnt
+      parentName: player_rig:spineA_jnt
+      position: {x: -0.0023047389, y: -0.006360685, z: 0.008690621}
+      rotation: {x: 0.0000000051394315, y: 0.46947157, z: 0.88294756, w: -0.000000032535002}
+      scale: {x: 1.0000006, y: 1.0000014, z: 1.0000005}
+    - name: player_rig:L_chuckB2_top
+      parentName: player_rig:L_chuckB1_jnt
+      position: {x: -0.0025, y: -2.220446e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:spineB_jnt
+      parentName: player_rig:spineA_jnt
+      position: {x: -0.007332409, y: 2.220446e-18, z: 0}
+      rotation: {x: -0, y: 0.000000011641532, z: -0, w: 1}
+      scale: {x: 1.0000262, y: 1.0000263, z: 1}
+    - name: player_rig:chest_jnt
+      parentName: player_rig:spineB_jnt
+      position: {x: -0.012114309, y: 2.220446e-18, z: 0}
+      rotation: {x: 8.881783e-16, y: -0.000000011641531, z: 5.169878e-24, w: 1}
+      scale: {x: 1.000021, y: 1.0000209, z: 1}
+    - name: player_rig:C_frontchuckA_jnt
+      parentName: player_rig:chest_jnt
+      position: {x: 0.00061846006, y: -0.00000001377705, z: 0.011175643}
+      rotation: {x: 0.000000005820765, y: 4.0927345e-10, z: 1, w: -2.3822795e-18}
+      scale: {x: 1.0000015, y: 1.0000018, z: 1.0000002}
+    - name: player_rig:C_frontchuckB_top
+      parentName: player_rig:C_frontchuckA_jnt
+      position: {x: -0.005, y: -4.4373424e-33, z: 0}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:neck_jnt
+      parentName: player_rig:chest_jnt
+      position: {x: -0.005617015, y: 2.220446e-18, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000262, y: 1.0000261, z: 1}
+    - name: player_rig:head_jnt
+      parentName: player_rig:neck_jnt
+      position: {x: -0.016598318, y: 2.220446e-18, z: 0}
+      rotation: {x: -8.881783e-16, y: 0.0000000057298157, z: 8.0779344e-26, w: 1}
+      scale: {x: 1.0000211, y: 1.0000211, z: 1.0000001}
+    - name: player_rig:head_top
+      parentName: player_rig:head_jnt
+      position: {x: -0.022983989, y: 2.220446e-18, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:hair_jnt
+      parentName: player_rig:head_jnt
+      position: {x: -0.02309041, y: 0.00078484043, z: -0.003410606}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1}
+    - name: player_rig:hair_top
+      parentName: player_rig:hair_jnt
+      position: {x: -0.01, y: 2.359224e-18, z: -5.551115e-19}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_clavicle_jnt
+      parentName: player_rig:chest_jnt
+      position: {x: -0.0042840685, y: -0.006238035, z: 0}
+      rotation: {x: -0.0000000048426934, y: -0.000000003838064, z: 0.78975457, w: 0.6134229}
+      scale: {x: 0.99998724, y: 0.99998724, z: 1}
+    - name: player_rig:L_shoulder_FK
+      parentName: player_rig:L_clavicle_jnt
+      position: {x: -0.0061235223, y: 3.5527136e-17, z: 0}
+      rotation: {x: -0.028464573, y: -0.031991087, z: 0.4379363, w: 0.8979856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_elbow_FK
+      parentName: player_rig:L_shoulder_FK
+      position: {x: -0.019668592, y: -3.5527136e-17, z: -8.3266725e-19}
+      rotation: {x: 0, y: 0.23648372, z: -0, w: 0.97163546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_wrist_FK
+      parentName: player_rig:L_elbow_FK
+      position: {x: -0.019140584, y: 0, z: 8.881784e-18}
+      rotation: {x: -0.00021370071, y: -0.044004276, z: 0.0048516006, w: 0.99901956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_hand_FKtop
+      parentName: player_rig:L_wrist_FK
+      position: {x: -0.020894308, y: 3.5527136e-17, z: -4.0471234e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexA_FK
+      parentName: player_rig:L_wrist_FK
+      position: {x: -0.0017986154, y: -0.00021714676, z: 0.00038025927}
+      rotation: {x: -0.0007265452, y: 0.10646154, z: 0.006785541, w: 0.99429345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexB_FK
+      parentName: player_rig:L_indexA_FK
+      position: {x: -0.0041865893, y: 1.7763626e-17, z: 0.00013110353}
+      rotation: {x: 0, y: -0.106464006, z: -0, w: 0.9943166}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexC_FK
+      parentName: player_rig:L_indexB_FK
+      position: {x: -0.0036538893, y: -1.7763568e-17, z: -8.3266725e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexD_FK
+      parentName: player_rig:L_indexC_FK
+      position: {x: -0.0014454202, y: 0, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_index_FKtop
+      parentName: player_rig:L_indexD_FK
+      position: {x: -0.01, y: 0, z: -2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleA_FK
+      parentName: player_rig:L_wrist_FK
+      position: {x: -0.0018036165, y: -0.00021721503, z: -0.00025384463}
+      rotation: {x: 0, y: 0, z: 0.0068243267, w: 0.99997675}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleB_FK
+      parentName: player_rig:L_middleA_FK
+      position: {x: -0.004303954, y: 2.48684e-16, z: 9.367698e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleC_FK
+      parentName: player_rig:L_middleB_FK
+      position: {x: -0.0036353816, y: -1.7763567e-16, z: -6.591949e-19}
+      rotation: {x: 0, y: -0.020183653, z: -0, w: 0.9997963}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleD_FK
+      parentName: player_rig:L_middleC_FK
+      position: {x: -0.0017662529, y: -7.105427e-17, z: -2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middle_FKtop
+      parentName: player_rig:L_middleD_FK
+      position: {x: -0.01, y: 0, z: -2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyA_FK
+      parentName: player_rig:L_wrist_FK
+      position: {x: -0.0015065271, y: -0.00021315987, z: -0.0017499471}
+      rotation: {x: 0.0008590187, y: -0.12587304, z: 0.0067700455, w: 0.9920229}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyB_FK
+      parentName: player_rig:L_pinkyA_FK
+      position: {x: -0.004865004, y: 6.4748224e-17, z: -0.0000011753867}
+      rotation: {x: 0, y: 0.009651796, z: -0, w: 0.99995345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyC_FK
+      parentName: player_rig:L_pinkyB_FK
+      position: {x: -0.0024045128, y: -3.5527136e-17, z: -0.000015830008}
+      rotation: {x: 0, y: 0.062864095, z: -0, w: 0.9980221}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyD_FK
+      parentName: player_rig:L_pinkyC_FK
+      position: {x: -0.00091550715, y: -1.0658141e-16, z: 0}
+      rotation: {x: 0, y: -0.04682015, z: -0, w: 0.99890333}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinky_FKtop
+      parentName: player_rig:L_pinkyD_FK
+      position: {x: -0.01, y: -5.3290704e-17, z: -6.661338e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringA_FK
+      parentName: player_rig:L_wrist_FK
+      position: {x: -0.0018135093, y: -0.00021735007, z: -0.000771314}
+      rotation: {x: 0.0005137512, y: -0.075280584, z: 0.0068049603, w: 0.9971391}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringB_FK
+      parentName: player_rig:L_ringA_FK
+      position: {x: -0.0047345757, y: 2.1671473e-15, z: -0.000025847074}
+      rotation: {x: 0, y: 0.009821997, z: -0, w: 0.9999518}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringC_FK
+      parentName: player_rig:L_ringB_FK
+      position: {x: -0.003514302, y: -2.2382096e-15, z: 0.0000033788656}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringD_FK
+      parentName: player_rig:L_ringC_FK
+      position: {x: -0.0014142853, y: -3.7303492e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ring_FKtop
+      parentName: player_rig:L_ringD_FK
+      position: {x: -0.01, y: 1.9539925e-16, z: -1.11022296e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbA_FK
+      parentName: player_rig:L_wrist_FK
+      position: {x: -0.0010661918, y: -0.00053770625, z: 0.0014281289}
+      rotation: {x: 0.61522734, y: 0.3038526, z: 0.0729453, w: 0.72377336}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbB_FK
+      parentName: player_rig:L_thumbA_FK
+      position: {x: -0.003520621, y: -2.220446e-18, z: -1.7763568e-17}
+      rotation: {x: 0.034497324, y: -0.229832, z: 0.11864847, w: 0.96535474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbC_FK
+      parentName: player_rig:L_thumbB_FK
+      position: {x: -0.0013770835, y: -6.661338e-18, z: 7.105427e-17}
+      rotation: {x: 4.955623e-17, y: -0.000087992245, z: 0.00032839153, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbD_FK
+      parentName: player_rig:L_thumbC_FK
+      position: {x: -0.0027546128, y: -3.6637358e-17, z: -7.105427e-17}
+      rotation: {x: 3.2149607e-16, y: -0.0016332224, z: 0.006095269, w: 0.9999801}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumb_FKtop
+      parentName: player_rig:L_thumbD_FK
+      position: {x: -0.01, y: -1.4432899e-17, z: 3.5527136e-17}
+      rotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_shoulder_IK
+      parentName: player_rig:L_clavicle_jnt
+      position: {x: -0.0061235223, y: 3.5527136e-17, z: 0}
+      rotation: {x: -0.091798976, y: -0.024268625, z: -0.15731205, w: 0.9829735}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_elbow_IK
+      parentName: player_rig:L_shoulder_IK
+      position: {x: -0.019668592, y: -3.5527136e-17, z: -8.3266725e-19}
+      rotation: {x: -2.4382502e-16, y: 0.00000018049393, z: -1.3895138e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_wrist_IK
+      parentName: player_rig:L_elbow_IK
+      position: {x: -0.019140584, y: 0, z: 8.881784e-18}
+      rotation: {x: -0.008204986, y: 0.032110084, z: 0.029964576, w: 0.9990014}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_hand_IKtop
+      parentName: player_rig:L_wrist_IK
+      position: {x: -0.020894308, y: 3.5527136e-17, z: -4.0471234e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexA_IK
+      parentName: player_rig:L_wrist_IK
+      position: {x: -0.0017986154, y: -0.00021714676, z: 0.00038025927}
+      rotation: {x: -0.0007265451, y: 0.10646153, z: 0.006785541, w: 0.99429345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexB_IK
+      parentName: player_rig:L_indexA_IK
+      position: {x: -0.0041865893, y: 1.7763626e-17, z: 0.00013110353}
+      rotation: {x: 0, y: -0.106464006, z: -0, w: 0.9943166}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexC_IK
+      parentName: player_rig:L_indexB_IK
+      position: {x: -0.0036538893, y: -1.7763568e-17, z: -8.3266725e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexD_IK
+      parentName: player_rig:L_indexC_IK
+      position: {x: -0.0014454202, y: 0, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_index_IKtop
+      parentName: player_rig:L_indexD_IK
+      position: {x: -0.01, y: 0, z: -2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleA_IK
+      parentName: player_rig:L_wrist_IK
+      position: {x: -0.0018036165, y: -0.00021721503, z: -0.00025384463}
+      rotation: {x: 0, y: 0, z: 0.0068243262, w: 0.99997675}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleB_IK
+      parentName: player_rig:L_middleA_IK
+      position: {x: -0.004303954, y: 2.48684e-16, z: 9.367698e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleC_IK
+      parentName: player_rig:L_middleB_IK
+      position: {x: -0.0036353816, y: -1.7763567e-16, z: -6.591949e-19}
+      rotation: {x: 0, y: -0.02018365, z: -0, w: 0.9997963}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleD_IK
+      parentName: player_rig:L_middleC_IK
+      position: {x: -0.0017662529, y: -7.105427e-17, z: -2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middle_IKtop
+      parentName: player_rig:L_middleD_IK
+      position: {x: -0.01, y: 0, z: -2.7755575e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyA_IK
+      parentName: player_rig:L_wrist_IK
+      position: {x: -0.0015065271, y: -0.00021315987, z: -0.0017499471}
+      rotation: {x: 0.0008590187, y: -0.12587304, z: 0.006770045, w: 0.9920229}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyB_IK
+      parentName: player_rig:L_pinkyA_IK
+      position: {x: -0.004865004, y: 6.4748224e-17, z: -0.0000011753867}
+      rotation: {x: 0, y: 0.009651796, z: -0, w: 0.99995345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyC_IK
+      parentName: player_rig:L_pinkyB_IK
+      position: {x: -0.0024045128, y: -3.5527136e-17, z: -0.000015830008}
+      rotation: {x: 0, y: 0.062864095, z: -0, w: 0.9980221}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyD_IK
+      parentName: player_rig:L_pinkyC_IK
+      position: {x: -0.00091550715, y: -1.0658141e-16, z: 0}
+      rotation: {x: 0, y: -0.04682015, z: -0, w: 0.99890333}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinky_IKtop
+      parentName: player_rig:L_pinkyD_IK
+      position: {x: -0.01, y: -5.3290704e-17, z: -6.661338e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringA_IK
+      parentName: player_rig:L_wrist_IK
+      position: {x: -0.0018135093, y: -0.00021735007, z: -0.000771314}
+      rotation: {x: 0.0005137511, y: -0.075280584, z: 0.0068049603, w: 0.9971391}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringB_IK
+      parentName: player_rig:L_ringA_IK
+      position: {x: -0.0047345757, y: 2.1671473e-15, z: -0.000025847074}
+      rotation: {x: 0, y: 0.009821997, z: -0, w: 0.9999518}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringC_IK
+      parentName: player_rig:L_ringB_IK
+      position: {x: -0.003514302, y: -2.2382096e-15, z: 0.0000033788656}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringD_IK
+      parentName: player_rig:L_ringC_IK
+      position: {x: -0.0014142853, y: -3.7303492e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ring_IKtop
+      parentName: player_rig:L_ringD_IK
+      position: {x: -0.01, y: 1.9539925e-16, z: -1.11022296e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbA_IK
+      parentName: player_rig:L_wrist_IK
+      position: {x: -0.0010661918, y: -0.00053770625, z: 0.0014281289}
+      rotation: {x: 0.61522734, y: 0.3038526, z: 0.072945304, w: 0.72377336}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbB_IK
+      parentName: player_rig:L_thumbA_IK
+      position: {x: -0.003520621, y: -2.220446e-18, z: -1.7763568e-17}
+      rotation: {x: 0.034497324, y: -0.22983201, z: 0.11864848, w: 0.96535474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbC_IK
+      parentName: player_rig:L_thumbB_IK
+      position: {x: -0.0013770835, y: -6.661338e-18, z: 7.105427e-17}
+      rotation: {x: -4.0489173e-16, y: -0.000087992245, z: 0.00032839156, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbD_IK
+      parentName: player_rig:L_thumbC_IK
+      position: {x: -0.0027546128, y: -3.6637358e-17, z: -7.105427e-17}
+      rotation: {x: 9.114325e-14, y: -0.0016332226, z: 0.006095269, w: 0.9999801}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumb_IKtop
+      parentName: player_rig:L_thumbD_IK
+      position: {x: -0.01, y: -1.4432899e-17, z: 3.5527136e-17}
+      rotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_shoulder_jnt
+      parentName: player_rig:L_clavicle_jnt
+      position: {x: -0.0061235223, y: 3.5527136e-17, z: 0}
+      rotation: {x: -0.0054774717, y: -0.03957564, z: -0.13538125, w: 0.9899878}
+      scale: {x: 0.9999931, y: 0.999998, z: 1.0000073}
+    - name: player_rig:rig_sholuder_twist_L
+      parentName: player_rig:L_shoulder_jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_shoulder_twist_IKhandle
+      parentName: player_rig:rig_sholuder_twist_L
+      position: {x: -0.019668592, y: -2.6645352e-17, z: 0}
+      rotation: {x: -2.0595865e-18, y: -3.8785172e-36, z: 1.8831534e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_shoulder_twist_strart
+      parentName: player_rig:rig_sholuder_twist_L
+      position: {x: -0, y: 1.7763568e-17, z: 0}
+      rotation: {x: -2.220446e-16, y: -2.0053823e-31, z: -1.253364e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_shoulder_twist_end
+      parentName: player_rig:L_shoulder_twist_strart
+      position: {x: -0.019668592, y: -1.7763568e-17, z: -1.110223e-18}
+      rotation: {x: 0, y: 0.23648372, z: -0, w: 0.97163546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:transform_sholuder_twist_L
+      parentName: player_rig:rig_sholuder_twist_L
+      position: {x: -0, y: -8.881784e-18, z: 2.220446e-18}
+      rotation: {x: 3.469447e-18, y: 6.938894e-18, z: -1.1113072e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:jnt_sholuder_twist_A_L
+      parentName: player_rig:rig_sholuder_twist_L
+      position: {x: -0, y: 1.7763568e-17, z: 0}
+      rotation: {x: 0.0005001696, y: 0.042818334, z: 0.011669666, w: 0.9990146}
+      scale: {x: 0.99997497, y: 1.0000021, z: 1.000035}
+    - name: player_rig:jnt_sholuder_twist_B_L
+      parentName: player_rig:jnt_sholuder_twist_A_L
+      position: {x: -0.00491715, y: 0, z: -1.2325951e-34}
+      rotation: {x: -0, y: -0, z: 2.6557245e-10, w: 1}
+      scale: {x: 0.99999803, y: 1.0000044, z: 1.0000008}
+    - name: player_rig:jnt_sholuder_twist_C_L
+      parentName: player_rig:jnt_sholuder_twist_B_L
+      position: {x: -0.00491715, y: 0, z: -1.2325951e-34}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000037, z: 1.0000008}
+    - name: player_rig:jnt_sholuder_twist_D_L
+      parentName: player_rig:jnt_sholuder_twist_C_L
+      position: {x: -0.00491715, y: 0, z: -1.2325951e-34}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000012, y: 1.0000043, z: 1.0000008}
+    - name: player_rig:L_elbow_jnt
+      parentName: player_rig:L_shoulder_jnt
+      position: {x: -0.019668592, y: -3.5527136e-17, z: -8.3266725e-19}
+      rotation: {x: 0.00013583012, y: 0.08004119, z: 0.0015601082, w: 0.99679035}
+      scale: {x: 0.9999391, y: 1.0000025, z: 1.000062}
+    - name: player_rig:transform_L_elbow_twist
+      parentName: player_rig:L_elbow_jnt
+      position: {x: -8.881784e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:transform_elbow_twiststart_L
+      parentName: player_rig:transform_L_elbow_twist
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:jnt_elbow_twist_A_L
+      parentName: player_rig:transform_L_elbow_twist
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 4.4408916e-16, y: -0.0000000074505797, z: 3.88578e-16, w: 1}
+      scale: {x: 0.9999978, y: 1.0000036, z: 1.000001}
+    - name: player_rig:jnt_elbow_twist_B_L
+      parentName: player_rig:jnt_elbow_twist_A_L
+      position: {x: -0.00478515, y: 0, z: -1.2325951e-34}
+      rotation: {x: -0, y: -0, z: -1.7462298e-10, w: 1}
+      scale: {x: 0.99999774, y: 1, z: 0.9999991}
+    - name: player_rig:jnt_elbow_twist_C_L
+      parentName: player_rig:jnt_elbow_twist_B_L
+      position: {x: -0.00478515, y: 0, z: -1.2325951e-34}
+      rotation: {x: -0, y: -0, z: -1.7462298e-10, w: 1}
+      scale: {x: 0.99999636, y: 1, z: 0.99999994}
+    - name: player_rig:jnt_elbow_twist_D_L
+      parentName: player_rig:jnt_elbow_twist_C_L
+      position: {x: -0.00478515, y: 0, z: -1.2325951e-34}
+      rotation: {x: -0, y: -0, z: -1.7462298e-10, w: 1}
+      scale: {x: 0.9999989, y: 1, z: 0.99999994}
+    - name: player_rig:L_wrist_jnt
+      parentName: player_rig:L_elbow_jnt
+      position: {x: -0.019140584, y: 0, z: 8.881784e-18}
+      rotation: {x: -0.00021369137, y: -0.04400427, z: 0.004851585, w: 0.9990196}
+      scale: {x: 0.9999741, y: 1.0000026, z: 1.0000255}
+    - name: player_rig:L_hand_top
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0.020894308, y: 3.5527136e-17, z: -4.0471234e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:transform_elbow_twistend_L
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0002137007, y: 0.044004273, z: -0.0048516006, w: 0.99901956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_ringA_jnt
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0.0018135093, y: -0.00021735007, z: -0.000771314}
+      rotation: {x: 0.00050574506, y: -0.074106775, z: 0.0068056104, w: 0.997227}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1.0000006}
+    - name: player_rig:L_ringB_jnt
+      parentName: player_rig:L_ringA_jnt
+      position: {x: -0.0047223833, y: 1.2902447e-17, z: 1.1874383e-18}
+      rotation: {x: -0.000000002983002, y: -0.000000007450581, z: -0.0000000037005052,
+        w: 1}
+      scale: {x: 1.0000005, y: 0.9999998, z: 1.0000001}
+    - name: player_rig:L_ringC_jnt
+      parentName: player_rig:L_ringB_jnt
+      position: {x: -0.003066141, y: -1.0275001e-34, z: -1.110223e-18}
+      rotation: {x: 0.000000004540841, y: 0.012658615, z: -0.0000000063028955, w: 0.9999199}
+      scale: {x: 1, y: 0.99999994, z: 0.9999997}
+    - name: player_rig:L_ringD_jnt
+      parentName: player_rig:L_ringC_jnt
+      position: {x: -0.0015021977, y: -1.7763568e-17, z: 2.1942765e-18}
+      rotation: {x: -0.0000000016965891, y: -0.000000007450581, z: -0.000000004274623,
+        w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: player_rig:L_ring_top
+      parentName: player_rig:L_ringD_jnt
+      position: {x: -0.01, y: 1.7763568e-17, z: 1.110223e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thumbA_jnt
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0.0010661918, y: -0.00053770625, z: 0.0014281289}
+      rotation: {x: 0.58030826, y: 0.29282126, z: -0.07792911, w: 0.7559267}
+      scale: {x: 1.0000733, y: 0.9999546, z: 1.0000476}
+    - name: player_rig:L_thumbB_jnt
+      parentName: player_rig:L_thumbA_jnt
+      position: {x: -0.003520621, y: -1.5823705e-17, z: -8.4455616e-19}
+      rotation: {x: 0.03570207, y: -0.026922176, z: 0.013909022, w: 0.99890304}
+      scale: {x: 1.0005506, y: 1.0000157, z: 0.9994317}
+    - name: player_rig:L_thumbC_jnt
+      parentName: player_rig:L_thumbB_jnt
+      position: {x: -0.0013770835, y: 2.845126e-18, z: -8.702613e-19}
+      rotation: {x: -0.000000052154054, y: -0.00008803604, z: 0.0003284094, w: 1}
+      scale: {x: 1.0000014, y: 1.0000093, z: 1.0000169}
+    - name: player_rig:L_thumbD_jnt
+      parentName: player_rig:L_thumbC_jnt
+      position: {x: -0.0027546128, y: 2.4308995e-17, z: -8.332106e-17}
+      rotation: {x: 0.000000026323821, y: -0.0016331992, z: 0.0060952967, w: 0.99998015}
+      scale: {x: 1.0000082, y: 1.0000222, z: 1.000013}
+    - name: player_rig:L_thumb_top
+      parentName: player_rig:L_thumbD_jnt
+      position: {x: -0.01, y: 1.7167078e-17, z: -2.456653e-17}
+      rotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_indexA_jnt
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0.0017986154, y: -0.00021714676, z: 0.00038025927}
+      rotation: {x: 0.003975535, y: 0.0052451324, z: 0.039456494, w: 0.9991997}
+      scale: {x: 1.0000603, y: 1.0000023, z: 0.99993175}
+    - name: player_rig:L_indexB_jnt
+      parentName: player_rig:L_indexA_jnt
+      position: {x: -0.0041886414, y: -2.5685325e-19, z: 1.6826817e-18}
+      rotation: {x: -0.00000066263556, y: -0.037488703, z: 0.00000083626884, w: 0.9992971}
+      scale: {x: 1.0000298, y: 1.0000025, z: 0.9999766}
+    - name: player_rig:L_indexC_jnt
+      parentName: player_rig:L_indexB_jnt
+      position: {x: -0.0036538893, y: -1.7763568e-17, z: 4.7292116e-18}
+      rotation: {x: -0.0000000028291338, y: -0.0000000074505797, z: -0.0000000010690884,
+        w: 1}
+      scale: {x: 0.99999505, y: 1.0000029, z: 1.0000015}
+    - name: player_rig:L_indexD_jnt
+      parentName: player_rig:L_indexC_jnt
+      position: {x: -0.0014454202, y: 1.9801623e-33, z: 5.551115e-19}
+      rotation: {x: 0.000000005947924, y: -0.0000000074505797, z: 2.0088646e-10, w: 1}
+      scale: {x: 1.0000014, y: 1.0000025, z: 1.0000015}
+    - name: player_rig:L_index_top
+      parentName: player_rig:L_indexD_jnt
+      position: {x: -0.01, y: 1.369956e-32, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_middleA_jnt
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0.0018036165, y: -0.00021721503, z: -0.00025384463}
+      rotation: {x: 0.000023695064, y: -0.0035119264, z: 0.009469129, w: 0.999949}
+      scale: {x: 1.0000006, y: 1.0000026, z: 1.0000018}
+    - name: player_rig:L_middleB_jnt
+      parentName: player_rig:L_middleA_jnt
+      position: {x: -0.004303954, y: -6.768899e-17, z: -1.7950942e-19}
+      rotation: {x: 0.0000000013969512, y: -9.094946e-12, z: 1.1800455e-15, w: 1}
+      scale: {x: 0.9999954, y: 1.0000045, z: 1.0000011}
+    - name: player_rig:L_middleC_jnt
+      parentName: player_rig:L_middleB_jnt
+      position: {x: -0.0036353816, y: -1.9539925e-16, z: -6.2432573e-19}
+      rotation: {x: 0.000000009662798, y: -0.020183658, z: 0.00000004752652, w: 0.9997963}
+      scale: {x: 0.99999267, y: 1.000003, z: 1.0000147}
+    - name: player_rig:L_middleD_jnt
+      parentName: player_rig:L_middleC_jnt
+      position: {x: -0.0017662529, y: -1.9395928e-17, z: -4.065496e-19}
+      rotation: {x: -0.00000001204653, y: 0.0000000018626449, z: 2.4319474e-10, w: 1}
+      scale: {x: 1.0000043, y: 1.000002, z: 1.0000015}
+    - name: player_rig:L_middle_top
+      parentName: player_rig:L_middleD_jnt
+      position: {x: -0.01, y: -3.5527136e-17, z: -2.7752396e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_pinkyA_jnt
+      parentName: player_rig:L_wrist_jnt
+      position: {x: -0.0015065271, y: -0.00021315987, z: -0.0017499471}
+      rotation: {x: 0.000859394, y: -0.12601967, z: 0.00677004, w: 0.9920043}
+      scale: {x: 0.99994135, y: 1.0000026, z: 1.0000752}
+    - name: player_rig:L_pinkyB_jnt
+      parentName: player_rig:L_pinkyA_jnt
+      position: {x: -0.004865004, y: -1.7763568e-17, z: -4.440892e-18}
+      rotation: {x: 0.000000018917488, y: 0.029687103, z: 0.000000032450767, w: 0.9995593}
+      scale: {x: 1.0000381, y: 1.0000029, z: 0.99996847}
+    - name: player_rig:L_pinkyC_jnt
+      parentName: player_rig:L_pinkyB_jnt
+      position: {x: -0.002404565, y: -8.8817837e-17, z: 6.6053035e-18}
+      rotation: {x: -0.000000005238546, y: 0.024836995, z: 0.000000005695404, w: 0.9996915}
+      scale: {x: 1.0000232, y: 1.0000015, z: 0.9999861}
+    - name: player_rig:L_pinkyD_jnt
+      parentName: player_rig:L_pinkyC_jnt
+      position: {x: -0.00091550715, y: -5.3290704e-17, z: 1.3721631e-18}
+      rotation: {x: -0.0000000029262468, y: -0.04682016, z: -0.000000023209708, w: 0.99890333}
+      scale: {x: 0.9999732, y: 1.0000038, z: 1.0000136}
+    - name: player_rig:L_pinky_top
+      parentName: player_rig:L_pinkyD_jnt
+      position: {x: -0.01, y: -3.5527136e-17, z: -3.8857806e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_clavicle_jnt
+      parentName: player_rig:chest_jnt
+      position: {x: -0.00428371, y: 0.0062380303, z: 0}
+      rotation: {x: 0.78975457, y: 0.6134229, z: -0.0000000010263848, w: 0.0000000010263882}
+      scale: {x: 0.9999899, y: 0.9999854, z: 0.99997985}
+    - name: player_rig:R_shoulder_FK
+      parentName: player_rig:R_clavicle_jnt
+      position: {x: 0.006123539, y: -0.000000118222374, z: 1.4478065e-23}
+      rotation: {x: -0.029626723, y: -0.030917935, z: 0.47080415, w: 0.8811979}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_elbow_FK
+      parentName: player_rig:R_shoulder_FK
+      position: {x: 0.019668583, y: -0.00000024101107, z: -0.0000000025321016}
+      rotation: {x: 0, y: 0.28803822, z: -0, w: 0.9576189}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_wrist_FK
+      parentName: player_rig:R_elbow_FK
+      position: {x: 0.019140523, y: 0.0000003773585, z: -0.000000002349849}
+      rotation: {x: -0.00021370071, y: -0.044004276, z: 0.0048516006, w: 0.99901956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_hand_FKtop
+      parentName: player_rig:R_wrist_FK
+      position: {x: 0.020894358, y: -0.00000082689814, z: 7.324121e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexA_FK
+      parentName: player_rig:R_wrist_FK
+      position: {x: 0.0017986117, y: 0.00021656822, z: -0.000380259}
+      rotation: {x: -0.0007265452, y: 0.10646154, z: 0.006785541, w: 0.99429345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexB_FK
+      parentName: player_rig:R_indexA_FK
+      position: {x: 0.0041866624, y: 1.0658141e-16, z: -0.00013109152}
+      rotation: {x: 0, y: -0.106464006, z: -0, w: 0.9943166}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexC_FK
+      parentName: player_rig:R_indexB_FK
+      position: {x: 0.0036539, y: -4.6185276e-16, z: 2.4980017e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexD_FK
+      parentName: player_rig:R_indexC_FK
+      position: {x: 0.0014454, y: -1.7763567e-16, z: 8.3266725e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_index_FKtop
+      parentName: player_rig:R_indexD_FK
+      position: {x: 0.01, y: -1.2612133e-15, z: 6.661338e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleA_FK
+      parentName: player_rig:R_wrist_FK
+      position: {x: 0.0018036112, y: 0.00021663647, z: 0.000253845}
+      rotation: {x: 0.000000012904485, y: 8.8066464e-11, z: 0.0068243267, w: 0.99997675}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleB_FK
+      parentName: player_rig:R_middleA_FK
+      position: {x: 0.004304, y: 1.7763568e-17, z: 3.4833247e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleC_FK
+      parentName: player_rig:R_middleB_FK
+      position: {x: 0.0036353997, y: 3.5527136e-17, z: 2.94903e-17}
+      rotation: {x: 0.000000022328077, y: -0.020183653, z: 4.50754e-10, w: 0.9997963}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleD_FK
+      parentName: player_rig:R_middleC_FK
+      position: {x: 0.0017662391, y: 3.3419845e-12, z: 2.1473302e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middle_FKtop
+      parentName: player_rig:R_middleD_FK
+      position: {x: 0.009999948, y: 1.8921646e-11, z: 0.000000002305984}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyA_FK
+      parentName: player_rig:R_wrist_FK
+      position: {x: 0.001506539, y: 0.00021258154, z: 0.00174995}
+      rotation: {x: 0.0008590187, y: -0.12587304, z: 0.0067700455, w: 0.9920229}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyB_FK
+      parentName: player_rig:R_pinkyA_FK
+      position: {x: 0.004865061, y: 0, z: 0.0000011601078}
+      rotation: {x: 0, y: 0.009651796, z: -0, w: 0.99995345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyC_FK
+      parentName: player_rig:R_pinkyB_FK
+      position: {x: 0.0024044965, y: 3.5527136e-17, z: 0.000015830703}
+      rotation: {x: 0, y: 0.062864095, z: -0, w: 0.9980221}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyD_FK
+      parentName: player_rig:R_pinkyC_FK
+      position: {x: 0.00091546593, y: 8.8817837e-17, z: 0.000000002973847}
+      rotation: {x: 0, y: -0.04682015, z: -0, w: 0.99890333}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinky_FKtop
+      parentName: player_rig:R_pinkyD_FK
+      position: {x: 0.009999989, y: 3.1974422e-16, z: 0.000000004945559}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringA_FK
+      parentName: player_rig:R_wrist_FK
+      position: {x: 0.0018135103, y: 0.00021677159, z: 0.00077131396}
+      rotation: {x: 0.0005137512, y: -0.075280584, z: 0.0068049603, w: 0.9971391}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringB_FK
+      parentName: player_rig:R_ringA_FK
+      position: {x: 0.004734646, y: 3.5527136e-17, z: 0.000025841468}
+      rotation: {x: 0, y: 0.009821997, z: -0, w: 0.9999518}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringC_FK
+      parentName: player_rig:R_ringB_FK
+      position: {x: 0.0035142978, y: 0, z: -0.000003385678}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringD_FK
+      parentName: player_rig:R_ringC_FK
+      position: {x: 0.00141423, y: 1.7763568e-17, z: 0.0000000071304327}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ring_FKtop
+      parentName: player_rig:R_ringD_FK
+      position: {x: 0.010000064, y: 1.0658141e-16, z: -0.000000008708777}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbA_FK
+      parentName: player_rig:R_wrist_FK
+      position: {x: 0.0010662619, y: 0.00053760275, z: -0.00142813}
+      rotation: {x: 0.61522734, y: 0.3038526, z: 0.0729453, w: 0.72377336}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbB_FK
+      parentName: player_rig:R_thumbA_FK
+      position: {x: 0.0035204971, y: -0.00000005988552, z: 0.00000015426825}
+      rotation: {x: 0.034497324, y: -0.229832, z: 0.11864847, w: 0.96535474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbC_FK
+      parentName: player_rig:R_thumbB_FK
+      position: {x: 0.0013771366, y: 0.00000002160589, z: -0.00000018234748}
+      rotation: {x: 0.00000000745058, y: -0.000087992245, z: 0.00032839153, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbD_FK
+      parentName: player_rig:R_thumbC_FK
+      position: {x: 0.0027545618, y: -0.00000003025761, z: 0.00000034658444}
+      rotation: {x: 8.934173e-17, y: -0.0016332223, z: 0.006095269, w: 0.9999801}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumb_FKtop
+      parentName: player_rig:R_thumbD_FK
+      position: {x: 0.010000017, y: 0.000000026283416, z: -0.0000003158427}
+      rotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_shoulder_IK
+      parentName: player_rig:R_clavicle_jnt
+      position: {x: 0.006123539, y: -0.000000118222374, z: 1.4478065e-23}
+      rotation: {x: -0.09382141, y: -0.023943631, z: -0.15735407, w: 0.9827838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_elbow_IK
+      parentName: player_rig:R_shoulder_IK
+      position: {x: 0.019668583, y: -0.00000024101107, z: -0.0000000025321016}
+      rotation: {x: 0.000014429814, y: 0.000000105321384, z: -0.000015767278, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_wrist_IK
+      parentName: player_rig:R_elbow_IK
+      position: {x: 0.019140523, y: 0.0000003773585, z: -0.000000002349849}
+      rotation: {x: -0.006156531, y: 0.032048393, z: 0.03002927, w: 0.99901617}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_hand_IKtop
+      parentName: player_rig:R_wrist_IK
+      position: {x: 0.020894358, y: -0.00000082689814, z: 7.324121e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexA_IK
+      parentName: player_rig:R_wrist_IK
+      position: {x: 0.0017986117, y: 0.00021656822, z: -0.000380259}
+      rotation: {x: -0.0007265451, y: 0.10646153, z: 0.006785541, w: 0.99429345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexB_IK
+      parentName: player_rig:R_indexA_IK
+      position: {x: 0.0041866624, y: 1.0658141e-16, z: -0.00013109152}
+      rotation: {x: 0, y: -0.106464006, z: -0, w: 0.9943166}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexC_IK
+      parentName: player_rig:R_indexB_IK
+      position: {x: 0.0036539, y: -4.6185276e-16, z: 2.4980017e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexD_IK
+      parentName: player_rig:R_indexC_IK
+      position: {x: 0.0014454, y: -1.7763567e-16, z: 8.3266725e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_index_IKtop
+      parentName: player_rig:R_indexD_IK
+      position: {x: 0.01, y: -1.2612133e-15, z: 6.661338e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleA_IK
+      parentName: player_rig:R_wrist_IK
+      position: {x: 0.0018036112, y: 0.00021663647, z: 0.000253845}
+      rotation: {x: 0.000000012904485, y: 8.8066464e-11, z: 0.0068243262, w: 0.99997675}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleB_IK
+      parentName: player_rig:R_middleA_IK
+      position: {x: 0.004304, y: 1.7763568e-17, z: 3.4833247e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleC_IK
+      parentName: player_rig:R_middleB_IK
+      position: {x: 0.0036353997, y: 3.5527136e-17, z: 2.94903e-17}
+      rotation: {x: 0.000000022328077, y: -0.02018365, z: 4.5075393e-10, w: 0.9997963}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleD_IK
+      parentName: player_rig:R_middleC_IK
+      position: {x: 0.0017662391, y: 3.3419845e-12, z: 2.1473302e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middle_IKtop
+      parentName: player_rig:R_middleD_IK
+      position: {x: 0.009999948, y: 1.8921646e-11, z: 0.000000002305984}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyA_IK
+      parentName: player_rig:R_wrist_IK
+      position: {x: 0.001506539, y: 0.00021258154, z: 0.00174995}
+      rotation: {x: 0.0008590187, y: -0.12587304, z: 0.006770045, w: 0.9920229}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyB_IK
+      parentName: player_rig:R_pinkyA_IK
+      position: {x: 0.004865061, y: 0, z: 0.0000011601078}
+      rotation: {x: 0, y: 0.009651796, z: -0, w: 0.99995345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyC_IK
+      parentName: player_rig:R_pinkyB_IK
+      position: {x: 0.0024044965, y: 3.5527136e-17, z: 0.000015830703}
+      rotation: {x: 0, y: 0.062864095, z: -0, w: 0.9980221}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyD_IK
+      parentName: player_rig:R_pinkyC_IK
+      position: {x: 0.00091546593, y: 8.8817837e-17, z: 0.000000002973847}
+      rotation: {x: 0, y: -0.04682015, z: -0, w: 0.99890333}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinky_IKtop
+      parentName: player_rig:R_pinkyD_IK
+      position: {x: 0.009999989, y: 3.1974422e-16, z: 0.000000004945559}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringA_IK
+      parentName: player_rig:R_wrist_IK
+      position: {x: 0.0018135103, y: 0.00021677159, z: 0.00077131396}
+      rotation: {x: 0.0005137511, y: -0.075280584, z: 0.0068049603, w: 0.9971391}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringB_IK
+      parentName: player_rig:R_ringA_IK
+      position: {x: 0.004734646, y: 3.5527136e-17, z: 0.000025841468}
+      rotation: {x: 0, y: 0.009821997, z: -0, w: 0.9999518}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringC_IK
+      parentName: player_rig:R_ringB_IK
+      position: {x: 0.0035142978, y: 0, z: -0.000003385678}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringD_IK
+      parentName: player_rig:R_ringC_IK
+      position: {x: 0.00141423, y: 1.7763568e-17, z: 0.0000000071304327}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ring_IKtop
+      parentName: player_rig:R_ringD_IK
+      position: {x: 0.010000064, y: 1.0658141e-16, z: -0.000000008708777}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbA_IK
+      parentName: player_rig:R_wrist_IK
+      position: {x: 0.0010662619, y: 0.00053760275, z: -0.00142813}
+      rotation: {x: 0.61522734, y: 0.3038526, z: 0.072945304, w: 0.72377336}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbB_IK
+      parentName: player_rig:R_thumbA_IK
+      position: {x: 0.0035204971, y: -0.00000005988552, z: 0.00000015426825}
+      rotation: {x: 0.034497324, y: -0.22983201, z: 0.11864848, w: 0.96535474}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbC_IK
+      parentName: player_rig:R_thumbB_IK
+      position: {x: 0.0013771366, y: 0.00000002160589, z: -0.00000018234748}
+      rotation: {x: 0.0000000074505815, y: -0.00008799224, z: 0.00032839156, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbD_IK
+      parentName: player_rig:R_thumbC_IK
+      position: {x: 0.0027545618, y: -0.00000003025761, z: 0.00000034658444}
+      rotation: {x: 3.1442261e-13, y: -0.0016332223, z: 0.006095269, w: 0.9999801}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumb_IKtop
+      parentName: player_rig:R_thumbD_IK
+      position: {x: 0.010000017, y: 0.000000026283416, z: -0.0000003158427}
+      rotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_shoulder_jnt
+      parentName: player_rig:R_clavicle_jnt
+      position: {x: 0.006123539, y: -0.000000118222374, z: 1.4478065e-23}
+      rotation: {x: -0.0054773837, y: -0.039575066, z: -0.13538074, w: 0.98998785}
+      scale: {x: 1.0000067, y: 1.0000384, z: 1.0000226}
+    - name: player_rig:rig_sholuder_twist_R
+      parentName: player_rig:R_shoulder_jnt
+      position: {x: 2.220446e-18, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_shoulder_twist_IKhandle
+      parentName: player_rig:rig_sholuder_twist_R
+      position: {x: 0.019668583, y: -0.00000024101107, z: -0.0000000025321016}
+      rotation: {x: 2.161787e-18, y: 3.4897205e-36, z: 1.614276e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_shoulder_twist_strart
+      parentName: player_rig:rig_sholuder_twist_R
+      position: {x: -2.220446e-18, y: 1.7763568e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_shoulder_twist_end
+      parentName: player_rig:R_shoulder_twist_strart
+      position: {x: 0.019668583, y: -0.00000024101107, z: -0.0000000025321016}
+      rotation: {x: 0, y: 0.28803822, z: -0, w: 0.9576189}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:transform_sholuder_twist_R
+      parentName: player_rig:rig_sholuder_twist_R
+      position: {x: -2.220446e-18, y: 1.7763568e-17, z: 0}
+      rotation: {x: 0, y: -1.3986208e-17, z: -2.7755576e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:jnt_sholuder_twist_A_R
+      parentName: player_rig:rig_sholuder_twist_R
+      position: {x: -2.220446e-18, y: 1.7763568e-17, z: 0}
+      rotation: {x: 0.00050016853, y: 0.04281833, z: 0.011669717, w: 0.9990146}
+      scale: {x: 1.0000343, y: 0.99999034, z: 0.9999595}
+    - name: player_rig:jnt_sholuder_twist_B_R
+      parentName: player_rig:jnt_sholuder_twist_A_R
+      position: {x: 0.0049171, y: -3.5527136e-17, z: -1.2282888e-18}
+      rotation: {x: -0, y: -0, z: 3.1286618e-10, w: 1}
+      scale: {x: 1.0000018, y: 1.0000013, z: 1.0000017}
+    - name: player_rig:jnt_sholuder_twist_C_R
+      parentName: player_rig:jnt_sholuder_twist_B_R
+      position: {x: 0.0049171997, y: 0, z: -1.2283207e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000015, y: 1.0000033, z: 1.0000032}
+    - name: player_rig:jnt_sholuder_twist_D_R
+      parentName: player_rig:jnt_sholuder_twist_C_R
+      position: {x: 0.0049171, y: 0, z: -1.2282868e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000031, y: 1.0000033, z: 1.0000035}
+    - name: player_rig:R_elbow_jnt
+      parentName: player_rig:R_shoulder_jnt
+      position: {x: 0.019668583, y: -0.00000024101107, z: -0.0000000025321016}
+      rotation: {x: 0.00013579565, y: 0.08004365, z: 0.0015580349, w: 0.9967901}
+      scale: {x: 0.99992603, y: 0.9999904, z: 1.000103}
+    - name: player_rig:transform_R_elbow_twist
+      parentName: player_rig:R_elbow_jnt
+      position: {x: 1.7763568e-17, y: 0, z: 0}
+      rotation: {x: 0, y: -5.551115e-17, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:transform_elbow_twiststart_R
+      parentName: player_rig:transform_R_elbow_twist
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.1407768e-12, y: 0.000000061384135, z: 0.000001130934, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:jnt_elbow_twist_A_R
+      parentName: player_rig:transform_R_elbow_twist
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: 5.551115e-17, z: -0, w: 1}
+      scale: {x: 1.0000712, y: 0.99998116, z: 0.9999281}
+    - name: player_rig:jnt_elbow_twist_B_R
+      parentName: player_rig:jnt_elbow_twist_A_R
+      position: {x: 0.00478513, y: -3.5527136e-17, z: -1.2282888e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.999999, y: 1.0000013, z: 1.0000194}
+    - name: player_rig:jnt_elbow_twist_C_R
+      parentName: player_rig:jnt_elbow_twist_B_R
+      position: {x: 0.00478513, y: 0, z: -1.2283207e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999875, y: 1.0000006, z: 1.0000198}
+    - name: player_rig:jnt_elbow_twist_D_R
+      parentName: player_rig:jnt_elbow_twist_C_R
+      position: {x: 0.00478513, y: 0, z: -1.2282868e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999991, y: 1.0000057, z: 1.0000224}
+    - name: player_rig:R_wrist_jnt
+      parentName: player_rig:R_elbow_jnt
+      position: {x: 0.019140523, y: 0.0000003773585, z: -0.000000002349849}
+      rotation: {x: -0.00021369901, y: -0.044004284, z: 0.0048516025, w: 0.99901956}
+      scale: {x: 1.0000982, y: 1.0000271, z: 0.9999326}
+    - name: player_rig:R_hand_top
+      parentName: player_rig:R_wrist_jnt
+      position: {x: 0.020894358, y: -0.00000082689814, z: 7.32412e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringA_jnt
+      parentName: player_rig:R_wrist_jnt
+      position: {x: 0.0018135103, y: 0.00021677159, z: 0.00077131396}
+      rotation: {x: 0.0004617909, y: -0.06768412, z: 0.006808575, w: 0.99768347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_ringB_jnt
+      parentName: player_rig:R_ringA_jnt
+      position: {x: 0.00472, y: -3.5527136e-17, z: -5.5511148e-18}
+      rotation: {x: 0.00000012517557, y: -0.0064389706, z: 0.00000010376607, w: 0.9999793}
+      scale: {x: 1.0000012, y: 0.99999964, z: 1.0000004}
+    - name: player_rig:R_ringC_jnt
+      parentName: player_rig:R_ringB_jnt
+      position: {x: 0.00307, y: -1.7763568e-17, z: -3.330669e-18}
+      rotation: {x: 0.000000009900645, y: 0.000000029802319, z: 0.0000000143574885,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000015}
+    - name: player_rig:R_ringD_jnt
+      parentName: player_rig:R_ringC_jnt
+      position: {x: 0.0015, y: -1.7763568e-17, z: -4.440892e-18}
+      rotation: {x: 0.0000000012077662, y: -0.00000002235174, z: -0.000000015829672,
+        w: 1}
+      scale: {x: 1.0000005, y: 1.0000012, z: 1.000002}
+    - name: player_rig:R_ring_top
+      parentName: player_rig:R_ringD_jnt
+      position: {x: 0.01, y: -7.105427e-17, z: -8.881784e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:transform_elbow_twistend_R
+      parentName: player_rig:R_wrist_jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0002137007, y: 0.044004273, z: -0.0048516006, w: 0.99901956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thumbA_jnt
+      parentName: player_rig:R_wrist_jnt
+      position: {x: 0.0010662619, y: 0.00053760275, z: -0.00142813}
+      rotation: {x: -0.5803006, y: -0.2928057, z: 0.07802935, w: -0.7559282}
+      scale: {x: 1.0000162, y: 0.99998844, z: 1.0000305}
+    - name: player_rig:R_thumbB_jnt
+      parentName: player_rig:R_thumbA_jnt
+      position: {x: 0.0035204971, y: -0.00000005988552, z: 0.00000015426825}
+      rotation: {x: 0.035684228, y: -0.027012765, z: 0.013906136, w: 0.9989012}
+      scale: {x: 0.99998784, y: 1.0003397, z: 0.9997284}
+    - name: player_rig:R_thumbC_jnt
+      parentName: player_rig:R_thumbB_jnt
+      position: {x: 0.0013771366, y: 0.00000002160589, z: -0.00000018234748}
+      rotation: {x: -0.000000059604645, y: -0.00008800626, z: 0.00032836944, w: 1}
+      scale: {x: 0.9999982, y: 1.0000225, z: 1.0000098}
+    - name: player_rig:R_thumbD_jnt
+      parentName: player_rig:R_thumbC_jnt
+      position: {x: 0.0027545618, y: -0.000000030257606, z: 0.00000034658444}
+      rotation: {x: 0.000000007569432, y: -0.001633229, z: 0.006095277, w: 0.9999801}
+      scale: {x: 0.9999929, y: 1.000026, z: 1.0000392}
+    - name: player_rig:R_thumb_top
+      parentName: player_rig:R_thumbD_jnt
+      position: {x: 0.010000017, y: 0.000000026283422, z: -0.0000003158427}
+      rotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_indexA_jnt
+      parentName: player_rig:R_wrist_jnt
+      position: {x: 0.0017986117, y: 0.00021656822, z: -0.000380259}
+      rotation: {x: 0.0045777587, y: -0.010344375, z: 0.039285872, w: 0.99916404}
+      scale: {x: 1.0000253, y: 1.0000196, z: 1.0000012}
+    - name: player_rig:R_indexB_jnt
+      parentName: player_rig:R_indexA_jnt
+      position: {x: 0.0041866624, y: 1.0658141e-16, z: -0.00013109152}
+      rotation: {x: -0.00000018766147, y: -0.021855675, z: 0.0000005885958, w: 0.9997612}
+      scale: {x: 0.9998405, y: 0.999996, z: 1.0001442}
+    - name: player_rig:R_indexC_jnt
+      parentName: player_rig:R_indexB_jnt
+      position: {x: 0.0036539, y: -4.6185276e-16, z: 2.4980017e-18}
+      rotation: {x: -0.0000000057388507, y: -0, z: 0.000000007636596, w: 1}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000013}
+    - name: player_rig:R_indexD_jnt
+      parentName: player_rig:R_indexC_jnt
+      position: {x: 0.0014454, y: -1.7763567e-16, z: 8.3266725e-19}
+      rotation: {x: 0.000000011532498, y: -0.0000000074505797, z: 0.000000020776364,
+        w: 1}
+      scale: {x: 1.0000013, y: 1.0000001, z: 1.0000026}
+    - name: player_rig:R_index_top
+      parentName: player_rig:R_indexD_jnt
+      position: {x: 0.01, y: -1.2612133e-15, z: 6.661338e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_middleA_jnt
+      parentName: player_rig:R_wrist_jnt
+      position: {x: 0.0018036112, y: 0.00021663647, z: 0.000253845}
+      rotation: {x: 0.000023318164, y: -0.0034197606, z: 0.009411396, w: 0.9999499}
+      scale: {x: 1.0000029, y: 1.0000253, z: 1.0000217}
+    - name: player_rig:R_middleB_jnt
+      parentName: player_rig:R_middleA_jnt
+      position: {x: 0.004304, y: 3.5527136e-17, z: 3.4833247e-17}
+      rotation: {x: 0.0000000047769375, y: -0.00000003356099, z: -0.0000000027939675,
+        w: 1}
+      scale: {x: 1.0000012, y: 1.0000018, z: 1.0000029}
+    - name: player_rig:R_middleC_jnt
+      parentName: player_rig:R_middleB_jnt
+      position: {x: 0.0036353997, y: 1.7763568e-17, z: 2.9455604e-17}
+      rotation: {x: 0.0000000348058, y: -0.020183645, z: -0.000000018319138, w: 0.9997963}
+      scale: {x: 1.000009, y: 1.0000359, z: 1.0000341}
+    - name: player_rig:R_middleD_jnt
+      parentName: player_rig:R_middleC_jnt
+      position: {x: 0.0017662391, y: 3.3419845e-12, z: 2.1473302e-10}
+      rotation: {x: 0.00000002973907, y: 0.0000000018626449, z: 0.000000072989096,
+        w: 1}
+      scale: {x: 1.000005, y: 1.0000004, z: 0.99999344}
+    - name: player_rig:R_middle_top
+      parentName: player_rig:R_middleD_jnt
+      position: {x: 0.009999948, y: 1.8921646e-11, z: 0.000000002305984}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_pinkyA_jnt
+      parentName: player_rig:R_wrist_jnt
+      position: {x: 0.001506539, y: 0.00021258154, z: 0.00174995}
+      rotation: {x: 0.0008598219, y: -0.1259913, z: 0.0067699514, w: 0.9920079}
+      scale: {x: 0.9999736, y: 1.0000148, z: 1.0000315}
+    - name: player_rig:R_pinkyB_jnt
+      parentName: player_rig:R_pinkyA_jnt
+      position: {x: 0.004865061, y: -1.5987211e-16, z: 1.3322676e-17}
+      rotation: {x: 0.000000004889443, y: 0.032978076, z: 0.0000000045183692, w: 0.99945605}
+      scale: {x: 0.99996156, y: 1.0000427, z: 1.0000821}
+    - name: player_rig:R_pinkyC_jnt
+      parentName: player_rig:R_pinkyB_jnt
+      position: {x: 0.0024044965, y: 3.5527136e-17, z: 0.000015830703}
+      rotation: {x: 5.0292254e-10, y: 0.021548303, z: -0.000000006960014, w: 0.99976784}
+      scale: {x: 0.99997765, y: 1.0000771, z: 1.0000851}
+    - name: player_rig:R_pinkyD_jnt
+      parentName: player_rig:R_pinkyC_jnt
+      position: {x: 0.00091546593, y: 1.2434498e-16, z: 0.000000002973847}
+      rotation: {x: 3.5380054e-10, y: -0.046820164, z: 0.000000033015592, w: 0.9989034}
+      scale: {x: 1.0000538, y: 1.0000467, z: 0.99998367}
+    - name: player_rig:R_pinky_top
+      parentName: player_rig:R_pinkyD_jnt
+      position: {x: 0.009999989, y: 3.1974422e-16, z: 0.000000004945559}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_thigh_jnt
+      parentName: player_rig:root_jnt
+      position: {x: 0.0005881948, y: -0.008626874, z: 0.0013573627}
+      rotation: {x: -0.043031406, y: -0.00000025704503, z: 0.9990738, w: 0}
+      scale: {x: 1.0000606, y: 1.0000515, z: 0.9999929}
+    - name: player_rig:L_knee_jnt
+      parentName: player_rig:L_thigh_jnt
+      position: {x: -0.029976351, y: 4.440892e-18, z: -5.2180482e-17}
+      rotation: {x: -0.000000006603112, y: -0.10852704, z: 0.000000031453293, w: 0.9940935}
+      scale: {x: 0.9999748, y: 0.99999523, z: 1.0000361}
+    - name: player_rig:L_ankle_jnt
+      parentName: player_rig:L_knee_jnt
+      position: {x: -0.031653643, y: -2.2204459e-17, z: -1.9428903e-18}
+      rotation: {x: 0.00000003180847, y: 0.09060144, z: -0.0000000080365545, w: 0.9958872}
+      scale: {x: 0.9998466, y: 1.0000015, z: 1.0001577}
+    - name: player_rig:L_ankle_top
+      parentName: player_rig:L_ankle_jnt
+      position: {x: -0.01, y: -1.5543122e-17, z: 1.2143064e-18}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:L_toe_jnt
+      parentName: player_rig:L_ankle_jnt
+      position: {x: -0.00901462, y: -0.0003004693, z: 0.007495971}
+      rotation: {x: 0.000000041966143, y: 0.68918604, z: -0.000000068718165, w: 0.7245846}
+      scale: {x: 1.0000125, y: 1.0000263, z: 1.0000612}
+    - name: player_rig:L_toe_top
+      parentName: player_rig:L_toe_jnt
+      position: {x: -0.01, y: -4.440892e-18, z: 4.1633362e-19}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_thigh_jnt
+      parentName: player_rig:root_jnt
+      position: {x: 0.0005881984, y: 0.00862687, z: 0.00135736}
+      rotation: {x: 0.9990738, y: -0, z: 0.043031402, w: -0.0000000018626451}
+      scale: {x: 1.0000336, y: 1.000052, z: 1.0000993}
+    - name: player_rig:R_knee_jnt
+      parentName: player_rig:R_thigh_jnt
+      position: {x: 0.029976394, y: 1.5543122e-17, z: 0.0000000039829096}
+      rotation: {x: -0.0000000044234976, y: -0.10852708, z: 0.000000059671706, w: 0.9940935}
+      scale: {x: 0.9999775, y: 1.000026, z: 1.0000565}
+    - name: player_rig:R_ankle_jnt
+      parentName: player_rig:R_knee_jnt
+      position: {x: 0.0316536, y: 3.1086245e-17, z: 0.0000000022464568}
+      rotation: {x: 0.0000000034482106, y: 0.09060148, z: -0.000000029847932, w: 0.9958872}
+      scale: {x: 1.000068, y: 0.9999911, z: 0.99993265}
+    - name: player_rig:R_ankle_top
+      parentName: player_rig:R_ankle_jnt
+      position: {x: 0.009999995, y: 6.661338e-18, z: -3.3072858e-10}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: player_rig:R_toe_jnt
+      parentName: player_rig:R_ankle_jnt
+      position: {x: 0.009014617, y: 0.00030046998, z: -0.0074959677}
+      rotation: {x: 0.000000022565056, y: 0.689186, z: -0.00000008065948, w: 0.72458464}
+      scale: {x: 1.0000235, y: 1.000031, z: 1.0000476}
+    - name: player_rig:R_toe_top
+      parentName: player_rig:R_toe_jnt
+      position: {x: 0.009999979, y: -1.8873792e-17, z: 1.7902346e-17}
+      rotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
