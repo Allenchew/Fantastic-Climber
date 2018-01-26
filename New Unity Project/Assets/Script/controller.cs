@@ -19,7 +19,7 @@ public class controller : MonoBehaviour
     public float jumpSpeed = 0.5f;
     public static bool pulling = false;
     public bool PlayM = false;
-    public GameObject test1;
+    public GameObject GrabRope;
 
     bool isGrounded = true;
     public Rigidbody RB;
@@ -281,8 +281,6 @@ public class controller : MonoBehaviour
     {
         PullTargetTemp = PullTarget;
         PState = State.pull;
-        
-      
         
     }
 
@@ -860,17 +858,18 @@ public class controller : MonoBehaviour
         //transform.rotation = FindParent.transform.rotation;
         Debug.DrawRay(transform.position, (transform.up * 0.1f), Color.blue);
 
-        if (Physics.Raycast(transform.position, (transform.forward) * 0.05f, out CurrentParent, 0.05f, Rope))
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            hitpos = CurrentParent.transform.position;
-            if (Input.GetKeyDown(KeyCode.T))
+            hitpos = GrabRope.transform.position;
+            Debug.Log(Vector3.Distance(transform.position, GrabRope.transform.position));
+            if (Vector3.Distance(transform.position, GrabRope.transform.position) < 0.07f)
             {
                 EndClimb = false;
                 if (Trigg == false)
                 {
                     Trigg = true;
                     RB.isKinematic = true;
-                    transform.position = CurrentParent.transform.position - new Vector3(0, 0, 0.05f);
+                    transform.position =GrabRope.transform.position - new Vector3(0, 0, 0.006f);
                     transform.rotation = new Quaternion(0, 0, 0, 0);
                 }
                 else if (Trigg == true)
@@ -900,8 +899,10 @@ public class controller : MonoBehaviour
             {
                 HeadAlert = false;
             }
-            if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, Rope))
+            Debug.DrawRay(transform.position - transform.forward*0.05f, (transform.forward) * 0.06f + transform.up*0.06f,Color.green);
+            if (Physics.Raycast(transform.position - transform.forward * 0.05f, (transform.forward) * 0.06f + transform.up * 0.06f, out FindParent, 1,Rope))
             {
+                Debug.Log(FindParent.transform.name);
                 if (Input.GetKeyDown(KeyCode.Z) && !climbAnim && !HeadAlert)
                 {
                     if (FindParent.transform.tag == "TopRope")
