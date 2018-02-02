@@ -77,7 +77,8 @@ public class controller : MonoBehaviour
 
     private bool EndClimb = true;
     private bool HeadAlert = false;
-    private bool climbAnim = false;
+    
+    private bool RopeAnim = false;
     private Vector3 nextParent;
 
     // character state
@@ -313,14 +314,15 @@ public class controller : MonoBehaviour
     }
     IEnumerator SmoothMov(Vector3 Dest)
     {
-        climbAnim = true;
+        RopeAnim = true;
         for (int i = 0; i < 10; i++)
         {
             transform.position = Vector3.Lerp(transform.position, Dest, 0.1f * i);
             yield return new WaitForSeconds(0.01f);
         }
         StopCoroutine("SmoothMov");
-        climbAnim = false;
+        Anim.SetBool("RopeUp", false);
+        RopeAnim = false;
     }
     IEnumerator TopRp(Quaternion Rot)
     {
@@ -857,17 +859,21 @@ public class controller : MonoBehaviour
         RaycastHit HeadDetect;
         //transform.rotation = FindParent.transform.rotation;
         Debug.DrawRay(transform.position, (transform.up * 0.1f), Color.blue);
-
+        if(Physics.Raycast(transform.position - transform.forward * 0.06f, (transform.forward), out CurrentParent, 1, Rope))
+        {
+            hitpos = CurrentParent.transform.position;
+        }
         if (Input.GetKeyDown(KeyCode.T))
         {
-            hitpos = GrabRope.transform.position;
-            Debug.Log(Vector3.Distance(transform.position, GrabRope.transform.position));
+            hitpos =   GrabRope.transform.position;
+
             if (Vector3.Distance(transform.position, GrabRope.transform.position) < 0.07f)
             {
                 EndClimb = false;
                 if (Trigg == false)
                 {
                     Trigg = true;
+                    Anim.SetBool("grabRope", true);
                     RB.isKinematic = true;
                     transform.position =GrabRope.transform.position - new Vector3(0, 0, 0.006f);
                     transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -875,6 +881,7 @@ public class controller : MonoBehaviour
                 else if (Trigg == true)
                 {
                     Trigg = false;
+                    Anim.SetBool("grabRope", false);
                     RB.isKinematic = false;
                 }
             }
@@ -900,31 +907,34 @@ public class controller : MonoBehaviour
                 HeadAlert = false;
             }
             Debug.DrawRay(transform.position - transform.forward*0.05f, (transform.forward) * 0.06f + transform.up*0.06f,Color.green);
-            if (Physics.Raycast(transform.position - transform.forward * 0.05f, (transform.forward) * 0.06f + transform.up * 0.06f, out FindParent, 1,Rope))
+            if (Physics.Raycast(transform.position - transform.forward * 0.06f, (transform.forward) * 0.06f + transform.up * 0.06f, out FindParent, 1,Rope))
             {
-                Debug.Log(FindParent.transform.name);
-                if (Input.GetKeyDown(KeyCode.Z) && !climbAnim && !HeadAlert)
+               // Debug.Log(FindParent.transform.name);
+                if (Input.GetKeyDown(KeyCode.Z) && !RopeAnim && !HeadAlert)
                 {
                     if (FindParent.transform.tag == "TopRope")
                     {
                         Debug.Log("Top");
-                        var nextpos = FindParent.transform.position + new Vector3(0, 0, 0.05f);
+                        var nextpos = FindParent.transform.position - new Vector3(0, 0, 0.006f);
                         var nextRot = new Quaternion(0, 180, 0, 0);
+                        Anim.SetBool("RopeUp", true);
                         StartCoroutine(SmoothMov(nextpos));
                         StartCoroutine(TopRp(nextRot));
+                        
                     }
                     else if (FindParent.transform.tag != "TopRope")
                     {
                         Debug.Log("Norm");
                         var nextpos = FindParent.transform.position - (hitpos - transform.position);
+                        Anim.SetBool("RopeUp", true);
                         StartCoroutine(SmoothMov(nextpos));
                     }
 
                 }
             }
-            if (Physics.Raycast(transform.position, (transform.forward) * 0.05f + new Vector3(0, 0.05f, 0), out FindParent, 1, RopeEnd))
+            if (Physics.Raycast(transform.position - transform.forward * 0.05f, (transform.forward) * 0.05f + transform.up * 0.06f, out FindParent, 1, RopeEnd))
             {
-                if (Input.GetKeyDown(KeyCode.Z) && !climbAnim && !HeadAlert)
+                if (Input.GetKeyDown(KeyCode.Z) && !RopeAnim && !HeadAlert)
                 {
                     nextParent = FindParent.transform.position;
                     StartCoroutine(FinClimb(0, 1));
@@ -932,14 +942,13 @@ public class controller : MonoBehaviour
                     Trigg = false;
                 }
             }
-            if (Physics.Raycast(transform.position, (transform.forward) * 0.05f - new Vector3(0, 0.05f, 0), out PastParent, 1, Rope) && !EndClimb)
+            if (Physics.Raycast(transform.position - transform.forward * 0.05f, (transform.forward) * 0.05f - transform.up * 0.06f, out PastParent, 1, Rope) && !EndClimb)
             {
-                if (Input.GetKeyDown(KeyCode.X) && !climbAnim && Trigg)
+                Debug.Log(PastParent.transform.name);
+                if (Input.GetKeyDown(KeyCode.X) && !RopeAnim && Trigg)
                 {
                     var Prepos = PastParent.transform.position - (hitpos - transform.position);
                     StartCoroutine(SmoothMov(Prepos));
-
-
                 }
             }
         }

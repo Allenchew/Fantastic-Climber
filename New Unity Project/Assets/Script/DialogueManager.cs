@@ -35,6 +35,6 @@ public class DialogueManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        Debug.Log(SentencesCount);
+        //Debug.Log(SentencesCount);
 	}
 }
