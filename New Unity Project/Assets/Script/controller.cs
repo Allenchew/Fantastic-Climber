@@ -205,8 +205,8 @@ public class controller : MonoBehaviour
         float distToGround = this.gameObject.GetComponent<Collider>().bounds.extents.y;
         if (Physics.Raycast(rayStart, -Vector3.up, out hit, 0.01f))
         {
-
             isGrounded = true;
+            Anim.SetBool("Jump", false);
         }
         else
         {
@@ -720,6 +720,7 @@ public class controller : MonoBehaviour
             CheckGround();
             if (isGrounded && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Joystick1Button3)) && (PState == State.Idle || PState == State.Move))
             {
+                Anim.SetBool("Jump", true);
                 RB.AddForce(0, jumpSpeed, 0, ForceMode.Impulse);
             }
 
@@ -792,6 +793,7 @@ public class controller : MonoBehaviour
                     {
                         isGrabPressed = !isGrabPressed;
                         Anim.SetBool("grabPencil", true);
+                        ClosestObject.GetComponent<Rigidbody>().isKinematic = true;
                         StartCoroutine(GrabItem(ClosestObject));
                         isGrabPressed = false;
                     }
@@ -802,6 +804,7 @@ public class controller : MonoBehaviour
                     float handOutPos = Right.GetComponent<Collider>().bounds.extents.x;
                     isGrabbed = false;
                     Anim.SetBool("grabPencil", false);
+                    grabTemp.GetComponent<Rigidbody>().isKinematic = false;
                     grabTemp.GetComponent<Rigidbody>().useGravity = true;
                     Debug.Log("drop");
                     if (Physics.Raycast(Right.transform.position, Right.transform.forward, out hit, 0.5f) && hit.transform.name == "BookShelf")
