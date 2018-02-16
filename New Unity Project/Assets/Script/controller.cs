@@ -91,6 +91,7 @@ public class controller : MonoBehaviour
         ClimbHigh,
         Death,
         pull,
+        Rope
     }
 
     public State PState = State.Idle;
@@ -360,6 +361,7 @@ public class controller : MonoBehaviour
             // Debug.Log(Input.GetAxis("JoystickY"));
             switch (PState)
             {
+                
                 case State.Idle:
                     {
 
@@ -866,7 +868,7 @@ public class controller : MonoBehaviour
         {
             hitpos = CurrentParent.transform.position;
         }
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             hitpos =   GrabRope.transform.position;
 
@@ -876,6 +878,7 @@ public class controller : MonoBehaviour
                 if (Trigg == false)
                 {
                     Trigg = true;
+                    PState = State.Rope;
                     Anim.SetBool("grabRope", true);
                     RB.isKinematic = true;
                     transform.position =GrabRope.transform.position - new Vector3(0, 0, 0.006f);
@@ -892,11 +895,11 @@ public class controller : MonoBehaviour
         if (Trigg)
         {
 
-            if (Input.GetKey(KeyCode.C))
+            if (Input.GetKey(KeyCode.C) || JoyLeft)
             {
                 transform.RotateAround(hitpos, Vector3.up, 90 * Time.deltaTime);
             }
-            else if (Input.GetKey(KeyCode.V))
+            else if (Input.GetKey(KeyCode.V)|| JoyRight)
             {
                 transform.RotateAround(hitpos, Vector3.up, -90 * Time.deltaTime);
             }
@@ -913,7 +916,7 @@ public class controller : MonoBehaviour
             if (Physics.Raycast(transform.position - transform.forward * 0.06f, (transform.forward) * 0.06f + transform.up * 0.06f, out FindParent, 1,Rope))
             {
                // Debug.Log(FindParent.transform.name);
-                if (Input.GetKeyDown(KeyCode.Z) && !RopeAnim && !HeadAlert)
+                if ((Input.GetKeyDown(KeyCode.Z)|| JoyUp) && !RopeAnim && !HeadAlert)
                 {
                     if (FindParent.transform.tag == "TopRope")
                     {
@@ -937,18 +940,19 @@ public class controller : MonoBehaviour
             }
             if (Physics.Raycast(transform.position - transform.forward * 0.05f, (transform.forward) * 0.05f + transform.up * 0.06f, out FindParent, 1, RopeEnd))
             {
-                if (Input.GetKeyDown(KeyCode.Z) && !RopeAnim && !HeadAlert)
+                if ((Input.GetKeyDown(KeyCode.Z) || JoyUp) && !RopeAnim && !HeadAlert)
                 {
                     nextParent = FindParent.transform.position;
                     StartCoroutine(FinClimb(0, 1));
                     EndClimb = true;
+                    Anim.SetBool("grabRope",false);
                     Trigg = false;
                 }
             }
             if (Physics.Raycast(transform.position - transform.forward * 0.05f, (transform.forward) * 0.05f - transform.up * 0.06f, out PastParent, 1, Rope) && !EndClimb)
             {
                 Debug.Log(PastParent.transform.name);
-                if (Input.GetKeyDown(KeyCode.X) && !RopeAnim && Trigg)
+                if ((Input.GetKeyDown(KeyCode.X)|| JoyDown) && !RopeAnim && Trigg)
                 {
                     var Prepos = PastParent.transform.position - (hitpos - transform.position);
                     StartCoroutine(SmoothMov(Prepos));
@@ -957,8 +961,9 @@ public class controller : MonoBehaviour
         }
         if (Physics.Raycast(transform.position, (transform.forward) * 0.05f, out CurrentParent, 0.05f, RopeEnd) && EndClimb)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.Joystick1Button5))
             {
+                PState = State.Idle;
                 RB.isKinematic = true;
                 nextParent = TpRop.transform.position;
                 StartCoroutine(FinClimb(3, -1));
