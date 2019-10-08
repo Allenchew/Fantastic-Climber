@@ -358,7 +358,7 @@ public class controller : MonoBehaviour
         if (!ClimbAnim)
         {
             // Debug.Log(Vector2.Distance(new Vector2(Input.GetAxis("JoystickX"), -Input.GetAxis("JoystickY")), new Vector2(0, 0)));
-            // Debug.Log(Input.GetAxis("JoystickY"));
+             Debug.Log(Input.GetAxis("JoystickY"));
             switch (PState)
             {
                 

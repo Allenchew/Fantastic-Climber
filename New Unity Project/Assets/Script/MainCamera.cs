@@ -1,9 +1,9 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MainCamera : MonoBehaviour {
-    public Transform lookAt;
+    public Transform lookAt;       
     public Transform CamTransform;
     public Vector3 Pos;
     public float smoothness = 0.125f;
@@ -139,19 +139,22 @@ public class CollideHandler
     [HideInInspector]
     public bool colliding = false;
     [HideInInspector]
-    public Vector3[] adjustedCamCP;
+    public Vector3[] adjustedCamCP;   
     [HideInInspector]
     public Vector3[] desiredCamCP;
 
     Camera camera;
     
-
+    //初期化
     public void initialize(Camera cam)
     {
         camera = cam;
-        adjustedCamCP = new Vector3[5];
-        desiredCamCP = new Vector3[5];
+        adjustedCamCP = new Vector3[5];　//当たり判定を計算した後の位置
+        desiredCamCP = new Vector3[5]; //当たり判定を見る前の位置
     }
+
+    //更新カメラの位置
+
     public void UpdateCameraCP(Vector3 cameraPos, Quaternion atRotation, ref Vector3[] intoArray)
     {
         if (!camera)
@@ -160,7 +163,7 @@ public class CollideHandler
         intoArray = new Vector3[5];
 
         float z = camera.nearClipPlane;
-        float x = Mathf.Tan(camera.fieldOfView / testNo) * z;
+        float x = Mathf.Tan(camera.fieldOfView / testNo) * z;　//カメラのnearClipPlaneの頂点座標をゲットする
         float y = x / camera.aspect;
 
         intoArray[0] = (atRotation * new Vector3(-x, y, z)) + cameraPos;
@@ -169,6 +172,9 @@ public class CollideHandler
         intoArray[3] = (atRotation * new Vector3(x, -y, z)) + cameraPos;
         intoArray[4] = cameraPos - (camera.transform.forward*0.1f);
     }
+
+    //ClipPlaneの当たり判定
+    //clipPlaneの４個頂点からキャラクターのレーを投射し、当たり判定をゲット
     bool CollisionDetectedAtCP(Vector3[] clipPoints,Vector3 fromPos)
     {
         for(int i = 0; i < clipPoints.Length; i++)
@@ -187,6 +193,7 @@ public class CollideHandler
         return false;
     }
    
+    //当たり判定で距離を調整する機能
     public float GetAdjustedDistance(Vector3 from)
     {
         float distance = -1;
@@ -212,14 +219,10 @@ public class CollideHandler
         else
             return distance;
     }
+
+    //カメラに当たったものを半透明するフラグ設定
     public void checkingColliding(Vector3 targetPos)
     {
-        if (CollisionDetectedAtCP(desiredCamCP, targetPos))
-        {
-            colliding = true;
-        }else
-        {
-            colliding = false;
-        }
+       colliding = CollisionDetectedAtCP(desiredCamCP, targetPos);
     }
 }
